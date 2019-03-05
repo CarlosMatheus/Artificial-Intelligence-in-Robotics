@@ -51,7 +51,14 @@ class State(object):
 
 
 def get_delta_time(initial_state_time):
+    a = initial_state_time
+    b = pygame.time.get_ticks()
     return (pygame.time.get_ticks() - initial_state_time) / 1000
+
+
+def on_state_change(agent):
+    agent.angular_speed = 0
+    agent.linear_speed = 0
 
 
 class MoveForwardState(State):
@@ -64,6 +71,7 @@ class MoveForwardState(State):
         delta_time = get_delta_time(self.initial_state_time)
         if delta_time > self.state_duration:
             agent.behavior.change_state(MoveInSpiralState())
+            on_state_change(agent)
 
     def execute(self, agent):
         agent.linear_speed = FORWARD_SPEED
@@ -73,15 +81,18 @@ class MoveInSpiralState(State):
     def __init__(self):
         super().__init__("MoveInSpiral")
         self.initial_state_time = pygame.time.get_ticks()
+        self.state_duration = MOVE_IN_SPIRAL_TIME
 
     def check_transition(self, agent, state_machine):
-        # Todo: add logic to check and execute state transition
-        pass
+        delta_time = get_delta_time(self.initial_state_time)
+        if delta_time > self.state_duration:
+            agent.behavior.change_state(MoveForwardState())
+            on_state_change(agent)
 
     def execute(self, agent):
-        agent.linear_speed = FORWARD_SPEED
         delta_time = get_delta_time(self.initial_state_time)
         radios = INITIAL_RADIUS_SPIRAL + SPIRAL_FACTOR * delta_time
+        agent.linear_speed = FORWARD_SPEED
         agent.angular_speed = agent.linear_speed / radios
 
 
