@@ -1,5 +1,6 @@
 import random
 import math
+import pygame
 from constants import *
 
 
@@ -49,32 +50,39 @@ class State(object):
         raise NotImplementedError("This method is abstract and must be implemented in derived classes")
 
 
+def get_delta_time(initial_state_time):
+    return (pygame.time.get_ticks() - initial_state_time) / 1000
+
+
 class MoveForwardState(State):
     def __init__(self):
         super().__init__("MoveForward")
-        # Todo: add initialization code
+        self.initial_state_time = pygame.time.get_ticks()
+        self.state_duration = MOVE_FORWARD_TIME
 
     def check_transition(self, agent, state_machine):
-        # Todo: add logic to check and execute state transition
-        pass
+        delta_time = get_delta_time(self.initial_state_time)
+        if delta_time > self.state_duration:
+            agent.behavior.change_state(MoveInSpiralState())
 
     def execute(self, agent):
-        # Todo: add execution logic
-        pass
+        agent.linear_speed = FORWARD_SPEED
 
 
 class MoveInSpiralState(State):
     def __init__(self):
         super().__init__("MoveInSpiral")
-        # Todo: add initialization code
-    
+        self.initial_state_time = pygame.time.get_ticks()
+
     def check_transition(self, agent, state_machine):
         # Todo: add logic to check and execute state transition
         pass
 
     def execute(self, agent):
-        # Todo: add execution logic
-        pass
+        agent.linear_speed = FORWARD_SPEED
+        delta_time = get_delta_time(self.initial_state_time)
+        radios = INITIAL_RADIUS_SPIRAL + SPIRAL_FACTOR * delta_time
+        agent.angular_speed = agent.linear_speed / radios
 
 
 class GoBackState(State):
@@ -97,6 +105,7 @@ class RotateState(State):
         # Todo: add initialization code
 
     def check_transition(self, agent, state_machine):
+
         # Todo: add logic to check and execute state transition
         pass
     
