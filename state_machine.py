@@ -99,27 +99,30 @@ class MoveInSpiralState(State):
 class GoBackState(State):
     def __init__(self):
         super().__init__("GoBack")
-        # Todo: add initialization code
+        self.initial_state_time = pygame.time.get_ticks()
+        self.state_duration = GO_BACK_TIME
 
     def check_transition(self, agent, state_machine):
-        # Todo: add logic to check and execute state transition
-        pass
+        delta_time = get_delta_time(self.initial_state_time)
+        if delta_time > self.state_duration:
+            agent.behavior.change_state(RotateState())
+            on_state_change(agent)
 
     def execute(self, agent):
-        # Todo: add execution logic
-        pass
+        agent.linear_speed = BACKWARD_SPEED
 
 
 class RotateState(State):
     def __init__(self):
         super().__init__("Rotate")
-        # Todo: add initialization code
+        self.initial_state_time = pygame.time.get_ticks()
+        self.state_duration = random.random() * TURN_AROUND_MAX_TIME
 
     def check_transition(self, agent, state_machine):
-
-        # Todo: add logic to check and execute state transition
-        pass
+        delta_time = get_delta_time(self.initial_state_time)
+        if delta_time > self.state_duration:
+            agent.behavior.change_state(MoveForwardState())
+            on_state_change(agent)
     
     def execute(self, agent):
-        # Todo: add execution logic
-        pass
+        agent.angular_speed = ANGULAR_SPEED

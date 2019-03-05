@@ -17,3 +17,6 @@ BACKWARD_SPEED = -0.1 # default backward speed when going back after hitting a w
 INITIAL_RADIUS_SPIRAL = 0.2  # initial spiral radius
 SPIRAL_FACTOR = 0.05  # factor used to make the spiral grow while the time passes
 ANGULAR_SPEED = 0.5  # default angular speed
+
+TURN_AROUND_MAX_TIME = 3.0
+
