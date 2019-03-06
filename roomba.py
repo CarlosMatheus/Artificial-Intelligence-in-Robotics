@@ -1,5 +1,6 @@
 from math import sin, cos, fabs
 from constants import SAMPLE_TIME
+import pygame
 
 
 def clamp(value, min, max):
@@ -44,6 +45,7 @@ class Roomba(object):
         self.radius = radius
         self.bumper_state = False
         self.behavior = behavior
+        self.clock = pygame.time.Clock()
 
     def set_velocity(self, linear_speed, angular_speed):
         """
@@ -79,7 +81,9 @@ class Roomba(object):
         """
         Moves the robot during one time step.
         """
-        dt = SAMPLE_TIME
+        dt = 0
+        if self.clock.get_fps() != 0:
+            dt = 1.0 / self.clock.get_fps()
         v = self.linear_speed
         w = self.angular_speed
         # If the angular speed is too low, the complete movement equation fails due to a division by zero.
@@ -99,4 +103,5 @@ class Roomba(object):
         """
         self.behavior.update(self)
         self.move()
+        self.clock.tick()
 
