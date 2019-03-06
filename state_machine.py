@@ -51,12 +51,11 @@ class State(object):
 
 
 def get_delta_time(initial_state_time):
-    a = initial_state_time
-    b = pygame.time.get_ticks()
     return (pygame.time.get_ticks() - initial_state_time) / 1000
 
 
 def on_state_change(agent):
+    agent.bumper_state = False
     agent.angular_speed = 0
     agent.linear_speed = 0
 
@@ -70,8 +69,11 @@ class MoveForwardState(State):
     def check_transition(self, agent, state_machine):
         delta_time = get_delta_time(self.initial_state_time)
         if delta_time > self.state_duration:
-            agent.behavior.change_state(MoveInSpiralState())
             on_state_change(agent)
+            agent.behavior.change_state(MoveInSpiralState())
+        if agent.bumper_state:
+            on_state_change(agent)
+            agent.behavior.change_state(GoBackState())
 
     def execute(self, agent):
         agent.linear_speed = FORWARD_SPEED
@@ -88,6 +90,9 @@ class MoveInSpiralState(State):
         if delta_time > self.state_duration:
             agent.behavior.change_state(MoveForwardState())
             on_state_change(agent)
+        if agent.bumper_state:
+            on_state_change(agent)
+            agent.behavior.change_state(GoBackState())
 
     def execute(self, agent):
         delta_time = get_delta_time(self.initial_state_time)
