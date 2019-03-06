@@ -218,17 +218,17 @@ class MoveForwardNode(LeafNode):
         self.state_duration = 0
 
     def enter(self, agent):
+        on_state_change(agent)
         self.initial_state_time = pygame.time.get_ticks()
         self.state_duration = MOVE_FORWARD_TIME
+        agent.linear_speed = FORWARD_SPEED
 
     def execute(self, agent):
-        agent.linear_speed = FORWARD_SPEED
         delta_time = get_delta_time(self.initial_state_time)
+
         if delta_time > self.state_duration:
-            on_state_change(agent)
             return ExecutionStatus.SUCCESS
         elif agent.bumper_state:
-            on_state_change(agent)
             return ExecutionStatus.FAILURE
         else:
             return ExecutionStatus.RUNNING
@@ -241,20 +241,19 @@ class MoveInSpiralNode(LeafNode):
         self.state_duration = 0
 
     def enter(self, agent):
+        on_state_change(agent)
         self.initial_state_time = pygame.time.get_ticks()
         self.state_duration = MOVE_IN_SPIRAL_TIME
+        agent.linear_speed = FORWARD_SPEED
 
     def execute(self, agent):
         delta_time = get_delta_time(self.initial_state_time)
         radios = INITIAL_RADIUS_SPIRAL + SPIRAL_FACTOR * delta_time
-        agent.linear_speed = FORWARD_SPEED
         agent.angular_speed = agent.linear_speed / radios
 
         if delta_time > self.state_duration:
-            on_state_change(agent)
             return ExecutionStatus.SUCCESS
         elif agent.bumper_state:
-            on_state_change(agent)
             return ExecutionStatus.FAILURE
         else:
             return ExecutionStatus.RUNNING
@@ -267,15 +266,15 @@ class GoBackNode(LeafNode):
         self.state_duration = 0
 
     def enter(self, agent):
+        on_state_change(agent)
         self.initial_state_time = pygame.time.get_ticks()
         self.state_duration = GO_BACK_TIME
+        agent.linear_speed = BACKWARD_SPEED
 
     def execute(self, agent):
-        agent.linear_speed = BACKWARD_SPEED
         delta_time = get_delta_time(self.initial_state_time)
 
         if delta_time > self.state_duration:
-            on_state_change(agent)
             return ExecutionStatus.SUCCESS
         else:
             return ExecutionStatus.RUNNING
@@ -288,15 +287,15 @@ class RotateNode(LeafNode):
         self.state_duration = 0
 
     def enter(self, agent):
+        on_state_change(agent)
         self.initial_state_time = pygame.time.get_ticks()
         self.state_duration = random.random() * TURN_AROUND_MAX_TIME
+        agent.angular_speed = ANGULAR_SPEED
 
     def execute(self, agent):
-        agent.angular_speed = ANGULAR_SPEED
         delta_time = get_delta_time(self.initial_state_time)
 
         if delta_time > self.state_duration:
-            on_state_change(agent)
             return ExecutionStatus.SUCCESS
         else:
             return ExecutionStatus.RUNNING
