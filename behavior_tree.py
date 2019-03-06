@@ -1,5 +1,6 @@
 from enum import Enum
 from constants import *
+import pygame
 import random
 import math
 
@@ -183,21 +184,54 @@ class RoombaBehaviorTree(BehaviorTree):
     """
     def __init__(self):
         super().__init__()
-        # Todo: construct the tree here
+
+        root_selection = SelectorNode('root_selection')
+        idle_selector = SequenceNode('idle_selector')
+        collision_selector = SequenceNode('collision_selector')
+
+        root_selection.add_child(idle_selector)
+        root_selection.add_child(collision_selector)
+
+        idle_selector.add_child(MoveForwardNode())
+        idle_selector.add_child(MoveInSpiralNode())
+
+        collision_selector.add_child(GoBackNode())
+        collision_selector.add_child(RotateNode())
+
+        self.root = root_selection
+
+
+def get_delta_time(initial_state_time):
+    return (pygame.time.get_ticks() - initial_state_time) / 1000
+
+
+def on_state_change(agent):
+    agent.bumper_state = False
+    agent.angular_speed = 0
+    agent.linear_speed = 0
 
 
 class MoveForwardNode(LeafNode):
     def __init__(self):
         super().__init__("MoveForward")
-        # Todo: add initialization code
+        self.initial_state_time = 0
+        self.state_duration = 0
 
     def enter(self, agent):
-        # Todo: add enter logic
-        pass
+        self.initial_state_time = pygame.time.get_ticks()
+        self.state_duration = MOVE_FORWARD_TIME
 
     def execute(self, agent):
-        # Todo: add execution logic
-        pass
+        agent.linear_speed = FORWARD_SPEED
+        delta_time = get_delta_time(self.initial_state_time)
+        if delta_time > self.state_duration:
+            on_state_change(agent)
+            return ExecutionStatus.SUCCESS
+        elif agent.bumper_state:
+            on_state_change(agent)
+            return ExecutionStatus.FAILURE
+        else:
+            return ExecutionStatus.RUNNING
 
 
 class MoveInSpiralNode(LeafNode):
