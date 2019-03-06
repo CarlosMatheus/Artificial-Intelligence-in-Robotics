@@ -237,15 +237,27 @@ class MoveForwardNode(LeafNode):
 class MoveInSpiralNode(LeafNode):
     def __init__(self):
         super().__init__("MoveInSpiral")
-        # Todo: add initialization code
+        self.initial_state_time = 0
+        self.state_duration = 0
 
     def enter(self, agent):
-        # Todo: add enter logic
-        pass
+        self.initial_state_time = pygame.time.get_ticks()
+        self.state_duration = MOVE_IN_SPIRAL_TIME
 
     def execute(self, agent):
-        # Todo: add execution logic
-        pass
+        delta_time = get_delta_time(self.initial_state_time)
+        radios = INITIAL_RADIUS_SPIRAL + SPIRAL_FACTOR * delta_time
+        agent.linear_speed = FORWARD_SPEED
+        agent.angular_speed = agent.linear_speed / radios
+
+        if delta_time > self.state_duration:
+            on_state_change(agent)
+            return ExecutionStatus.SUCCESS
+        elif agent.bumper_state:
+            on_state_change(agent)
+            return ExecutionStatus.FAILURE
+        else:
+            return ExecutionStatus.RUNNING
 
 
 class GoBackNode(LeafNode):
