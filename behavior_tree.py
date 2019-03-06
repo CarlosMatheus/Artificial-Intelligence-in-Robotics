@@ -263,27 +263,40 @@ class MoveInSpiralNode(LeafNode):
 class GoBackNode(LeafNode):
     def __init__(self):
         super().__init__("GoBack")
-        # Todo: add initialization code
+        self.initial_state_time = 0
+        self.state_duration = 0
 
     def enter(self, agent):
-        # Todo: add enter logic
-        pass
+        self.initial_state_time = pygame.time.get_ticks()
+        self.state_duration = GO_BACK_TIME
 
     def execute(self, agent):
-        # Todo: add execution logic
-        pass
+        agent.linear_speed = BACKWARD_SPEED
+        delta_time = get_delta_time(self.initial_state_time)
+
+        if delta_time > self.state_duration:
+            on_state_change(agent)
+            return ExecutionStatus.SUCCESS
+        else:
+            return ExecutionStatus.RUNNING
 
 
 class RotateNode(LeafNode):
     def __init__(self):
         super().__init__("Rotate")
-        # Todo: add initialization code
+        self.initial_state_time = 0
+        self.state_duration = 0
 
     def enter(self, agent):
-        # Todo: add enter logic
-        pass
+        self.initial_state_time = pygame.time.get_ticks()
+        self.state_duration = random.random() * TURN_AROUND_MAX_TIME
 
     def execute(self, agent):
-        # Todo: add execution logic
-        pass
+        agent.angular_speed = ANGULAR_SPEED
+        delta_time = get_delta_time(self.initial_state_time)
 
+        if delta_time > self.state_duration:
+            on_state_change(agent)
+            return ExecutionStatus.SUCCESS
+        else:
+            return ExecutionStatus.RUNNING
