@@ -8,7 +8,7 @@ import time
 
 # Select planning algorithm
 # algorithm = 'dijkstra'
-algorithm = 'greedy'
+# algorithm = 'greedy'
 # algorithm = 'a_star'
 
 # Number of path plannings used in the Monte Carlo analysis
@@ -18,7 +18,9 @@ num_iterations = 100  # Monte Carlo
 
 # Plot options
 save_fig = True  # if the figure will be used to the hard disk
+# save_fig = False  # if the figure will be used to the hard disk
 show_fig = True  # if the figure will be shown in the screen
+# show_fig = False  # if the figure will be shown in the screen
 fig_format = 'png'
 # Recommended figure formats: .eps for Latex/Linux, .svg for MS Office, and .png for easy visualization in Windows.
 # The quality of .eps and .svg is far superior since these are vector graphics formats.
@@ -55,6 +57,8 @@ def plot_path(cost_map, start, goal, path, filename, save_fig=True, show_fig=Tru
         plt.title('Greedy Best-First')
     else:
         plt.title('A*')
+
+    # print(filename)
 
     if save_fig:
         plt.savefig('%s.%s' % (filename, fig_format), format=fig_format)

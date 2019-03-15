@@ -94,34 +94,45 @@ class PathPlanner(object):
         :rtype: list of tuples and float.
         """
 
-        found = False
         pq = []
         node = start_position
         cost = PathPlanner.heuristic(node, goal_position)
         self.node_grid.get_node(node[0], node[1]).f = 0
         heapq.heappush(pq, (cost, node))
 
-        while len(pq) != 0 and not found:
+        i = 0
+        max_itarations = 100000
+        while len(pq) != 0:
+            # i += 1
+            # if i > max_itarations:
+            #     goal_position = node
+            #     break
+
             (cost, node) = heapq.heappop(pq)
             node_node = self.node_grid.get_node(node[0], node[1])
+
+            # while node_node.closed:
+            #     print(1)
+            #     (cost, node) = heapq.heappop(pq)
+            #     node_node = self.node_grid.get_node(node[0], node[1])
+
             node_node.closed = True
+
+            if node == goal_position:
+                break
+
             for successor in self.node_grid.get_successors(node[0], node[1]):
                 successor_node = self.node_grid.get_node(successor[0], successor[1])
                 if not successor_node.closed:
-                    calculated_cost = node_node.f + self.cost_map.get_edge_cost(node, successor)
-                    successor_cost = PathPlanner.heuristic(successor, goal_position)
+                    successor_node.f = node_node.f + self.cost_map.get_edge_cost(node, successor)
                     successor_node.parent = node_node
-                    successor_node.f = calculated_cost
+                    successor_cost = PathPlanner.heuristic(successor, goal_position)
                     heapq.heappush(pq, (successor_cost, successor))
-                    if successor == goal_position:
-                        found = True
-                        break
+                    successor_node.closed = True
 
         path = PathPlanner.construct_path(self.node_grid.get_node(goal_position[0], goal_position[1]))
         cost = self.node_grid.get_node(goal_position[0], goal_position[1]).f
-
         self.node_grid.reset()
-
         return path, cost
 
     def a_star(self, start_position, goal_position):
@@ -135,7 +146,7 @@ class PathPlanner(object):
         :return: the path as a sequence of positions and the path cost.
         :rtype: list of tuples and float.
         """
-        # found = False
+
         pq = []
         node = start_position
         node_node = self.node_grid.get_node(node[0], node[1])
@@ -151,9 +162,8 @@ class PathPlanner(object):
             node_node.closed = True
 
             if node == goal_position:
-                # print('aaaa')
                 break
-            # print(1)
+
             for successor in self.node_grid.get_successors(node[0], node[1]):
                 successor_node = self.node_grid.get_node(successor[0], successor[1])
 
@@ -161,11 +171,11 @@ class PathPlanner(object):
                 f_calculated_cost = g_calculated_cost + PathPlanner.heuristic(successor, goal_position)
 
                 if successor_node.f > f_calculated_cost:
-                    # if not successor_node.closed:
-                    successor_node.g = g_calculated_cost
-                    successor_node.f = f_calculated_cost
-                    successor_node.parent = node_node
-                    heapq.heappush(pq, (successor_node.f, successor))
+                    if not successor_node.closed:
+                        successor_node.g = g_calculated_cost
+                        successor_node.f = f_calculated_cost
+                        successor_node.parent = node_node
+                        heapq.heappush(pq, (successor_node.f, successor))
 
         path = PathPlanner.construct_path(self.node_grid.get_node(goal_position[0], goal_position[1]))
         cost = self.node_grid.get_node(goal_position[0], goal_position[1]).g
