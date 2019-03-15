@@ -1,0 +1,6 @@
+.idea/
+__pycache__/
+venv/
+
+dijkstra_0.png
+greedy_0.png
