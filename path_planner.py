@@ -100,21 +100,10 @@ class PathPlanner(object):
         self.node_grid.get_node(node[0], node[1]).f = 0
         heapq.heappush(pq, (cost, node))
 
-        i = 0
-        max_itarations = 100000
         while len(pq) != 0:
-            # i += 1
-            # if i > max_itarations:
-            #     goal_position = node
-            #     break
 
             (cost, node) = heapq.heappop(pq)
             node_node = self.node_grid.get_node(node[0], node[1])
-
-            # while node_node.closed:
-            #     print(1)
-            #     (cost, node) = heapq.heappop(pq)
-            #     node_node = self.node_grid.get_node(node[0], node[1])
 
             node_node.closed = True
 
