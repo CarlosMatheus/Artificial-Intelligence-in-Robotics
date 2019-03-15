@@ -2,5 +2,6 @@
 __pycache__/
 venv/
 
-dijkstra_0.png
-greedy_0.png
+dijkstra_*
+greedy_*
+a_star_*
