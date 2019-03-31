@@ -6,6 +6,8 @@ from gradient_descent import gradient_descent
 from hill_climbing import hill_climbing
 from simulated_annealing import simulated_annealing
 import matplotlib.pyplot as plt
+from math import inf
+import math
 
 
 def cost_function(theta):
@@ -17,6 +19,8 @@ def cost_function(theta):
     :return: cost value at theta.
     :rtype: float.
     """
+    if theta is None:
+        return inf
     return sum((theta[0] + theta[1] * t - v) ** 2) / (2.0 * m)
 
 
@@ -68,6 +72,7 @@ def fit_hill_climbing():
     # Hyperparameters used for computing the neighbors
     delta = 2.0e-3
     num_neighbors = 8
+    sqt = math.sqrt(2)/2
 
     def neighbors(theta):
         """
@@ -80,8 +85,17 @@ def fit_hill_climbing():
         :return: neighbors of theta.
         :rtype: list of numpy.array.
         """
+
         neighbors_list = []
-        # Todo: Implement
+        neighbors_list.append(np.array( [ theta[0] + delta, theta[1]] ) )
+        neighbors_list.append(np.array( [ theta[0] - delta, theta[1]] ) )
+        neighbors_list.append(np.array( [ theta[0] , theta[1] + delta] ) )
+        neighbors_list.append(np.array( [ theta[0] , theta[1] - delta] ) )
+        neighbors_list.append(np.array( [ theta[0] + delta*sqt, theta[1] + delta*sqt] ) )
+        neighbors_list.append(np.array( [ theta[0] - delta*sqt, theta[1] + delta*sqt] ) )
+        neighbors_list.append(np.array( [ theta[0] + delta*sqt, theta[1] - delta*sqt] ) )
+        neighbors_list.append(np.array( [ theta[0] - delta*sqt, theta[1] - delta*sqt] ) )
+
         return neighbors_list
 
     theta, history = hill_climbing(cost_function, neighbors, np.array([0.0, 0.0]), 1.0e-10, 1000)

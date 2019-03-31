@@ -1,6 +1,10 @@
 from math import inf
 
 
+def check_stopping_condition(max_iterations, i, cost_function, epsilon, theta):
+    return i > max_iterations or cost_function(theta) < epsilon
+
+
 def hill_climbing(cost_function, neighbors, theta0, epsilon, max_iterations):
     """
     Executes the Hill Climbing (HC) algorithm to minimize (optimize) a cost function.
@@ -22,5 +26,21 @@ def hill_climbing(cost_function, neighbors, theta0, epsilon, max_iterations):
     """
     theta = theta0
     history = [theta0]
-    # Todo: Implement Hill Climbing
+    i = 0
+    while not check_stopping_condition(max_iterations, i, cost_function, epsilon, theta):
+        best = None  # J(None) = -inf
+        for neighbor in neighbors(theta):
+            # print(cost_function(neighbor))
+            # print(cost_function(best))
+            if cost_function(neighbor) < cost_function(best):
+                best = neighbor
+        if cost_function(best) > cost_function(theta):
+            history.append(theta)
+            # print(history)
+            break
+        theta = best
+        history.append(theta)
+        # print(history)
+        i += 1
+
     return theta, history
