@@ -1,3 +1,7 @@
+def check_stopping_condition(max_iterations, i, cost_function, epsilon, theta):
+    return i > max_iterations or cost_function(theta) < epsilon
+
+
 def gradient_descent(cost_function, gradient_function, theta0, alpha, epsilon, max_iterations):
     """
     Executes the Gradient Descent (GD) algorithm to minimize (optimize) a cost function.
@@ -21,5 +25,9 @@ def gradient_descent(cost_function, gradient_function, theta0, alpha, epsilon, m
     """
     theta = theta0
     history = [theta0]
-    # Todo: Implement Gradient Descent
+    i = 0
+    while not check_stopping_condition(max_iterations, i, cost_function, epsilon, theta):
+        theta = theta - alpha * gradient_function(theta)
+        history.append(theta)
+        i += 1
     return theta, history
