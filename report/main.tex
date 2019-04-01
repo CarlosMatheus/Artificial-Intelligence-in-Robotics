@@ -1,10 +1,16 @@
-\documentclass[a4paper, 8pt]{article}
+\documentclass[a4paper, 9pt]{article}
 \usepackage[english,brazil]{babel}
 \usepackage[utf8]{inputenc}
 \usepackage{fullpage}
 
-\usepackage{multicol}
+\usepackage{multicol, caption}
 \setlength{\columnsep}{30pt}
+
+\usepackage{graphicx}
+\usepackage{lipsum}
+\newenvironment{Figure}
+  {\par\medskip\noindent\minipage{\linewidth}}
+  {\endminipage\par\medskip}
 
 
 % Definitions an Theorems: ------------
@@ -13,7 +19,7 @@
 \theoremstyle{plain}
 \newtheorem{statement}{Enunciado}
 
-\theoremstyle{plain}
+\theoremstyle{definition}
 \newtheorem{explanation}{Explicação}
 
 \theoremstyle{definition}
@@ -64,7 +70,7 @@
 
 Foram estudados e implementados três métodos de otimização que possuem algoritmos baseados em busca local. Esses métodos foram Gradient Descent, Hill Climbing e Simulated Anneling.
 
-Os métodos foram testados em um problema proposto no roteiro dessa atividade[]. Esse problema utilizou regressão linear para ober parâmetros físicos relativos ao movimento de uma bola.
+Os métodos foram testados em um problema proposto no roteiro dessa atividade. Esse problema utilizou regressão linear para ober parâmetros físicos relativos ao movimento de uma bola.
 
 Como o problema tratado possui solução analítica, o experimento é a titulo educacional, já que, dessa forma, pode-se obter facilmente sua solução pelo Método dos Mínimos Quadrados (MMQ).
 
@@ -73,7 +79,9 @@ De maneira geral, o Laboratório foi desenvolvido com sucesso. Em cada uma das s
 \section*{Gradient Descent}
 
 \begin{explanation}
-    De maneira simplificada possvel reduzir o funcionamento de todas as classes dos estados implementadas funo execute e funo checktransition Em execute sero setados os parmetros no agente para que ele execute a ao do estado corretamente enquanto que no checktransition ser verificado se determinada condio para mudana de estado atendida e se for o estado mudar A construo dos estados foi feita de acordo com o Esquema 1 Todos as classes que representam os estados da mquina de estados finitos foram completadas com sucesso e seus cdigos esto definidos do Cdigo 1 ao Cdigo 4 Os cdigos Cdigo 5 e Cdigo 6 se referem a funes auxiliares criadas e usada nas classes dos estados As imagens mostradas da Figura 1 Figura 5 denotam o comportamento do rob bem como suas transies de estados.
+    O código para a o algoritmo do Gradient Descent pode ser visto no Código \ref{code:gradient_descent}. Para a implementação desse código foram utilizados, também as funções no Código \ref{code:printhistory} e no Código \ref{code:stopcondition}.
+
+    O resultado desse algoritmo pode ser visto no hitórico de \textit{theta} represetado pelo Código \ref{code:gradient_descent_history} e pode ser visto também na análise da trajetória apresentada na Figura \ref{fig:gradient_descent}.
 \end{explanation}
 
 \lstinputlisting[
@@ -90,57 +98,128 @@ De maneira geral, o Laboratório foi desenvolvido com sucesso. Em cada uma das s
     label={code:printhistory},
     style=cStyle,
     firstline=13,
-    lastline=16
+    lastline=18
 ]{./../code/ball_fit.py}
 \lstinputlisting[
     language=python,
     caption={Código para checagem da condição de parada.},
     label={code:stopcondition},
     style=cStyle,
-    firstline=19,
-    lastline=20
+    firstline=21,
+    lastline=22
 ]{./../code/ball_fit.py}
 \lstinputlisting[
     language=python,
-    caption={Histórico de \textit{theta} para o algoritmo \textit{Gradient Descent}},
+    caption={Histórico de \textit{theta} para o algoritmo \textit{Gradient Descent} para as 10 primeiras iterações e para as 10 útilmas},
     label={code:gradient_descent_history},
     style=cStyle,
     numbers=none,
-    linerange={1-10,992-1002},
+    linerange={1-10,993-1002},
 ]{./../code/gradient_descent.txt}
 
-\begin{discussion}
-\label{dicussionproblem1}
-O resultado foi obtido dessa forma devido ao fato de que a uma das primeiras coisas que o programa pai faz é chamar \textit{fork()} de modo que logo em seguida seu filho chama \textit{fork()} também. Então ficaram os 3 processos rodando paralelamente, de modo que cada um desses 3 começaram a fazer o que estava descrito no enunciado do problema.
+\begin{Figure}
+    \centering
+    \includegraphics[width=\linewidth]
+    {./../code/gradient_descent.png}
+    \captionof{figure}{Trajetório com o método \textit{Gradient Descent}.}
+    \label{fig:gradient_descent}
+\end{Figure}
 
-Dessa forma, como pôde ser visto na saída do problema, os três processos estavam executando paralelamente. Como cada um desses 3 processos \textit{printava} ``simultaneamente'' foi visto que o Neto foi \textit{printado} ante do filho, o que é algo possível, já que como todos estão rodando mais ou menos na mesma posição o que chamar a função \textit{printf} primeiro seria \textit{printado} antes.
+%-------------------------------------------------------------------------------
 
-Os três processos ficaram em seus ciclos \textit{printando} de acordo com o previsto, até que eles morreram. O pai, como era previsto, morreu primeiro, já que ele havia começado a \textit{printar} antes. Logo em seguida, o filho e o neto também terminaram.
-\end{discussion}
+\section*{Hill Climbing}
 
-%-------------------------------------------------------------------------------------------------------
+\begin{explanation}
+    O código para a o algoritmo do Hill Climbing pode ser visto no Código \ref{code:hill_climbing}. Para a implementação desse código foram utilizados, também as funções no Código \ref{code:printhistory} e no Código \ref{code:stopcondition}.
 
-\section*{Problema  2}
+    O resultado desse algoritmo pode ser visto no hitórico de \textit{theta} represetado pelo Código \ref{code:hill_climbing_history} e pode ser visto também na análise da trajetória apresentada na Figura \ref{fig:hill_climbing}.
+\end{explanation}
 
-\begin{statement}
-Altere o programa 1 para que primeiro sejam exibidos primeiramente apenas os prints do neto, depois so os do filho e por ultimo so os do pai.
-\end{statement}
+\lstinputlisting[
+    language=python,
+    caption={Interior da função \textit{Hill Climbing}.},
+    label={code:hill_climbing},
+    style=cStyle,
+    firstline=26,
+    lastline=49
+]{./../code/hill_climbing.py}
+\lstinputlisting[
+    language=python,
+    caption={Histórico de \textit{theta} para o algoritmo \textit{Hill Climbing} para as 10 primeiras iterações e para as 10 útilmas},
+    label={code:hill_climbing_history},
+    style=cStyle,
+    numbers=none,
+    linerange={1-10,291-300},
+]{./../code/hill_climbing.txt}
 
-\begin{answer}
-O Problema 2 foi resolvido com sucesso. Seu código pode ser conferido no Código \ref{codeproblem2}. Seu funcionamento pode ser observado pela saída representada pelo Código \ref{outputproblem2}. As respostas às perguntas referentes a esse problema podem ser vistas na Discussão \ref{dicussionproblem2}.
-\end{answer}
+\begin{Figure}
+    \centering
+    \includegraphics[width=\linewidth]
+    {./../code/hill_climbing.png}
+    \captionof{figure}{Trajetório com o método \textit{Hill Climbing}.}
+    \label{fig:hill_climbing}
+\end{Figure}
 
-%\lstinputlisting[language=C, caption={Código do Problema 2}, label={codeproblem2}, style=cStyle]{programa2.c}
-%\lstinputlisting[language=C, caption={Saída do Problema 2}, label={outputproblem2}, style=cStyle]{programa2.output}
 
-\begin{discussion}
-\label{dicussionproblem2}
-A alteração necessária para a mudança requisitada foi bem simples e direta, já que o que foi pedido foi que rodasse o neto antes do filho, bastava fazer o filho esperar terminar a execução do neto para então executar o que ele ia fazer, e como foi pedido também que o filho rodasse antes do pai, bastava que o pai, também, esperasse o termino da execução do filho para que então executasse o que ia executar.
+%-------------------------------------------------------------------------------
 
-Portanto foi necessário apenas acrescentar duas linhas com a função \textit{wait()}, a Linha $34$ e a Linha $40$.
-\end{discussion}
+\section*{Simulated Anneling}
 
-%-------------------------------------------------------------------------------------------------------
+\begin{explanation}
+    O código para a o algoritmo do Simulated Anneling pode ser visto no Código \ref{code:simulated_annealing}. Para a implementação desse código foram utilizados, também as funções no Código \ref{code:printhistory} e no Código \ref{code:stopcondition}.
+
+    O resultado desse algoritmo pode ser visto no hitórico de \textit{theta} represetado pelo Código \ref{code:simulated_annealing_history} e pode ser visto também na análise da trajetória apresentada na Figura \ref{fig:simulated_annealing}.
+\end{explanation}
+
+\lstinputlisting[
+    language=python,
+    caption={Interior da função \textit{Simulated Anneling}.},
+    label={code:simulated_annealing},
+    style=cStyle,
+    firstline=32,
+    lastline=57
+]{./../code/simulated_annealing.py}
+\lstinputlisting[
+    language=python,
+    caption={Histórico de \textit{theta} para o algoritmo \textit{Simulated Anneling} para as 10 primeiras iterações e para as 10 útilmas},
+    label={code:simulated_annealing_history},
+    style=cStyle,
+    numbers=none,
+    linerange={1-10,4991-5000},
+]{./../code/simulated_annealing.txt}
+
+\begin{Figure}
+    \centering
+    \includegraphics[width=\linewidth]
+    {./../code/simulated_annealing.png}
+    \captionof{figure}{Trajetório com o método \textit{Simulated Anneling}.}
+    \label{fig:simulated_annealing}
+\end{Figure}
+
+%-------------------------------------------------------------------------------
+
+\section*{Comparações}
+
+De maneira visual a comparação dos métodos pode ser vista na Figura \ref{fig:curve_fit} e na Figura \ref{fig:comparation}.
+
+Como foi observado o método \textit{Hill Climbing} converge mais rapidamente para um mínimo local, enquanto que o método \textit{Simulated Anneling} converge mais devagar, mas apreseta maior capacidade de encontrar um minimo global ao invez de local. Isso se deve ao fato de que randomicamente ele erra a fim de que possa encontrar outros caminhos.
+
+\begin{Figure}
+    \centering
+    \includegraphics[width=\linewidth]
+    {./../code/fit_comparison.png}
+    \captionof{figure}{Comparação das cursvas sobre os pontos amostrados.}
+    \label{fig:curve_fit}
+\end{Figure}
+
+\begin{Figure}
+    \centering
+    \includegraphics[width=\linewidth]
+    {./../code/optimization_comparison.png}
+    \captionof{figure}{Comparação das trajetórias entre os métodos}
+    \label{fig:comparation}
+\end{Figure}
+
 
 \end{multicols}
 
