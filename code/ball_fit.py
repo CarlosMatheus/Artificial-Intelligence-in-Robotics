@@ -9,8 +9,16 @@ import matplotlib.pyplot as plt
 from math import inf
 import math
 
+
+def create_history_file(history, algorithm):
+    f = open(algorithm + ".txt", "w+")
+    for theta in history:
+        f.write(str(theta)+"\n")
+
+
 def check_stopping_condition(max_iterations, i, cost_function, epsilon, theta):
     return i > max_iterations or cost_function(theta) < epsilon
+
 
 def cost_function(theta):
     """
@@ -58,7 +66,7 @@ def fit_gradient_descent():
     :return history: history of points visited by the algorithm.
     :rtype history: list of numpy.array.
     """
-    theta, history = gradient_descent(cost_function, gradient_function, np.array([0.0, 0.0]), 0.1, 1.0e-10, 1000, check_stopping_condition)
+    theta, history = gradient_descent(cost_function, gradient_function, np.array([0.0, 0.0]), 0.1, 1.0e-10, 1000, check_stopping_condition, create_history_file)
     return theta, history
 
 
@@ -100,7 +108,7 @@ def fit_hill_climbing():
 
         return neighbors_list
 
-    theta, history = hill_climbing(cost_function, neighbors, np.array([0.0, 0.0]), 1.0e-10, 1000, check_stopping_condition)
+    theta, history = hill_climbing(cost_function, neighbors, np.array([0.0, 0.0]), 1.0e-10, 1000, check_stopping_condition, create_history_file)
     return theta, history
 
 
@@ -146,7 +154,7 @@ def fit_simulated_annealing():
         t = temperature0 / (1 + beta*i)
         return t
 
-    theta, history = simulated_annealing(cost_function, random_neighbor, schedule, np.array([0.0, 0.0]), 1.0e-10, 5000, check_stopping_condition)
+    theta, history = simulated_annealing(cost_function, random_neighbor, schedule, np.array([0.0, 0.0]), 1.0e-10, 5000, check_stopping_condition, create_history_file)
     return theta, history
 
 

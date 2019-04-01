@@ -2,13 +2,9 @@ from math import exp
 import random
 
 
-def make_history_file(history):
-    f = open("simulated_annealing.txt", "w+")
-    for theta in history:
-        f.write(str(theta)+"\n")
-
-
-def simulated_annealing(cost_function, random_neighbor, schedule, theta0, epsilon, max_iterations, check_stopping_condition):
+def simulated_annealing(cost_function, random_neighbor, schedule,
+                        theta0, epsilon, max_iterations,
+                        check_stopping_condition, create_history_file):
     """
     Executes the Simulated Annealing (SA) algorithm to minimize (optimize) a cost function.
 
@@ -33,6 +29,8 @@ def simulated_annealing(cost_function, random_neighbor, schedule, theta0, epsilo
     history = [theta0]
     i = 0
 
+    algorithm = "simulated_annealing"
+
     while not check_stopping_condition(max_iterations, i, cost_function, epsilon, theta):
         T = schedule(i)
         # print(T)
@@ -54,6 +52,6 @@ def simulated_annealing(cost_function, random_neighbor, schedule, theta0, epsilo
         i += 1
 
     # print(history)
-    make_history_file(history)
+    create_history_file(history, algorithm)
 
     return theta, history

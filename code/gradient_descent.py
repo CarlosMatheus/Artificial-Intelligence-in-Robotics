@@ -2,7 +2,7 @@
 
 def gradient_descent(cost_function, gradient_function, theta0,
                      alpha, epsilon, max_iterations,
-                     check_stopping_condition):
+                     check_stopping_condition, create_history_file):
     """
     Executes the Gradient Descent (GD)
     algorithm to minimize (optimize) a cost function.
@@ -24,6 +24,9 @@ def gradient_descent(cost_function, gradient_function, theta0,
     :return history: history of points visited by the algorithm.
     :rtype history: list of numpy.array.
     """
+
+    algorithm = "gradient_descent"
+
     theta = theta0
     history = [theta0]
     i = 0
@@ -31,4 +34,7 @@ def gradient_descent(cost_function, gradient_function, theta0,
         theta = theta - alpha * gradient_function(theta)
         history.append(theta)
         i += 1
+
+    create_history_file(history, algorithm)
+
     return theta, history

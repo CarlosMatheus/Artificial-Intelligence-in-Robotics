@@ -3,7 +3,7 @@ from math import inf
 
 def hill_climbing(cost_function, neighbors, theta0,
                   epsilon, max_iterations,
-                  check_stopping_condition):
+                  check_stopping_condition, create_history_file):
     """
     Executes the Hill Climbing (HC) algorithm to minimize (optimize) a cost function.
 
@@ -22,6 +22,9 @@ def hill_climbing(cost_function, neighbors, theta0,
     :return history: history of points visited by the algorithm.
     :rtype history: list of numpy.array.
     """
+
+    algorithm = "hill_climbing"
+
     theta = theta0
     history = [theta0]
     i = 0
@@ -40,5 +43,7 @@ def hill_climbing(cost_function, neighbors, theta0,
         history.append(theta)
         # print(history)
         i += 1
+
+    create_history_file(history, algorithm)
 
     return theta, history
