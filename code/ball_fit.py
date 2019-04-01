@@ -9,6 +9,8 @@ import matplotlib.pyplot as plt
 from math import inf
 import math
 
+def check_stopping_condition(max_iterations, i, cost_function, epsilon, theta):
+    return i > max_iterations or cost_function(theta) < epsilon
 
 def cost_function(theta):
     """
@@ -128,8 +130,9 @@ def fit_simulated_annealing():
         :return: random neighbor.
         :rtype: numpy.array.
         """
-        # Todo: Implement
-        pass  # Remove pass after implementing
+        angle = random.uniform(-math.pi, math.pi)
+        random_neig = np.array([theta[0] + delta*math.cos(angle), theta[1] + delta*math.sin(angle)])
+        return random_neig
 
     def schedule(i):
         """
@@ -140,10 +143,10 @@ def fit_simulated_annealing():
         :return: current temperature.
         :rtype: float.
         """
-        # Todo: Implement
-        pass  # Remove pass after implementing
+        t = temperature0 / (1 + beta*i)
+        return t
 
-    theta, history = simulated_annealing(cost_function, random_neighbor, schedule, np.array([0.0, 0.0]), 1.0e-10, 5000)
+    theta, history = simulated_annealing(cost_function, random_neighbor, schedule, np.array([0.0, 0.0]), 1.0e-10, 5000, check_stopping_condition)
     return theta, history
 
 
