@@ -1,11 +1,9 @@
 from math import inf
 
 
-def check_stopping_condition(max_iterations, i, cost_function, epsilon, theta):
-    return i > max_iterations or cost_function(theta) < epsilon
-
-
-def hill_climbing(cost_function, neighbors, theta0, epsilon, max_iterations):
+def hill_climbing(cost_function, neighbors, theta0,
+                  epsilon, max_iterations,
+                  check_stopping_condition):
     """
     Executes the Hill Climbing (HC) algorithm to minimize (optimize) a cost function.
 

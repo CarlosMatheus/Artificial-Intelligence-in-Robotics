@@ -1,10 +1,11 @@
-def check_stopping_condition(max_iterations, i, cost_function, epsilon, theta):
-    return i > max_iterations or cost_function(theta) < epsilon
 
 
-def gradient_descent(cost_function, gradient_function, theta0, alpha, epsilon, max_iterations):
+def gradient_descent(cost_function, gradient_function, theta0,
+                     alpha, epsilon, max_iterations,
+                     check_stopping_condition):
     """
-    Executes the Gradient Descent (GD) algorithm to minimize (optimize) a cost function.
+    Executes the Gradient Descent (GD)
+    algorithm to minimize (optimize) a cost function.
 
     :param cost_function: function to be minimized.
     :type cost_function: function.

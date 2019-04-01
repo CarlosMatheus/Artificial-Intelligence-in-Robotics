@@ -58,7 +58,7 @@ def fit_gradient_descent():
     :return history: history of points visited by the algorithm.
     :rtype history: list of numpy.array.
     """
-    theta, history = gradient_descent(cost_function, gradient_function, np.array([0.0, 0.0]), 0.1, 1.0e-10, 1000)
+    theta, history = gradient_descent(cost_function, gradient_function, np.array([0.0, 0.0]), 0.1, 1.0e-10, 1000, check_stopping_condition)
     return theta, history
 
 
@@ -100,7 +100,7 @@ def fit_hill_climbing():
 
         return neighbors_list
 
-    theta, history = hill_climbing(cost_function, neighbors, np.array([0.0, 0.0]), 1.0e-10, 1000)
+    theta, history = hill_climbing(cost_function, neighbors, np.array([0.0, 0.0]), 1.0e-10, 1000, check_stopping_condition)
     return theta, history
 
 
