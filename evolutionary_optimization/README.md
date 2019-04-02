@@ -22,4 +22,4 @@ In an evolution strategy, new candidate solutions are sampled according to a mul
 
 Adaptation of the covariance matrix amounts to learning a second order model of the underlying objective function similar to the approximation of the inverse Hessian matrix in the Quasi-Newton method in classical optimization. In contrast to most classical methods, fewer assumptions on the nature of the underlying objective function are made. Only the ranking between candidate solutions is exploited for learning the sample distribution and neither derivatives nor even the function values themselves are required by the method.
 
-####Results coming soon!
+#### Results coming soon!
