@@ -8,3 +8,6 @@ venv/
 dijkstra_*
 greedy_*
 a_star_*
+*_proposal
+*z_other
+*send
