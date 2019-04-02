@@ -2,3 +2,9 @@
 *.idea
 venv/
 *__pycache__*
+.idea/
+__pycache__/
+venv/
+dijkstra_*
+greedy_*
+a_star_*
