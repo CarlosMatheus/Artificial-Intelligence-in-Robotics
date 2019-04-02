@@ -17,7 +17,7 @@ Setup the environment:
 cd Artificial-Intelligence-in-Robotics
 python3 -m venv venv
 source venv/bin/activate
-pip install requirements.txt
+pip install -r requirements.txt
 ```
 
 Run:

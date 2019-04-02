@@ -13,8 +13,8 @@ algorithm = 'dijkstra'
 
 # Number of path plannings used in the Monte Carlo analysis
 # num_iterations = 1
-# num_iterations = 10
-num_iterations = 100  # Monte Carlo
+num_iterations = 10
+# num_iterations = 100  # Monte Carlo
 
 # Plot options
 # save_fig = True  # if the figure will be used to the hard disk

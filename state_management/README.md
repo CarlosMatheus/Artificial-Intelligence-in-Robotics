@@ -9,13 +9,14 @@ Setup the environment:
 cd Artificial-Intelligence-in-Robotics
 python3 -m venv venv
 source venv/bin/activate
-pip install requirements.txt
+pip install -r requirements.txt
 ```
 
 Run:
 ```bash
 cd Artificial-Intelligence-in-Robotics/state_management/code
-python simulation.py
+python state_machine_test.py
+python behavior_tree_test.py
 ```
 
 ## Some results
