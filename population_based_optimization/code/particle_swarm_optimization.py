@@ -43,7 +43,9 @@ class Particle:
                             best_position - self.position)
 
     def update_particle_position(self):
+        # todo: reflexion
         self.position = self.position + self.velocity
+
 
 class ParticleSwarmOptimization:
     """
@@ -65,7 +67,7 @@ class ParticleSwarmOptimization:
 
         self.lower_bound = lower_bound
         self.upper_bound = upper_bound
-        self.particles = [Particle(-100, 100)]*hyperparams.num_particles
+        self.particles = [Particle(-100, 100, hyperparams) for _ in range(hyperparams.num_particles)]
         self.get_best_position()
 
         return
@@ -73,7 +75,6 @@ class ParticleSwarmOptimization:
     def get_best_position(self):
         """
         Obtains the best position so far found by the algorithm.
-
         :return: the best position.
         :rtype: numpy array.
         """
@@ -82,7 +83,6 @@ class ParticleSwarmOptimization:
     def get_best_value(self):
         """
         Obtains the value of the best position so far found by the algorithm.
-
         :return: value of the best position.
         :rtype: float.
         """
@@ -107,8 +107,10 @@ class ParticleSwarmOptimization:
         """
         Advances the generation of particles.
         """
-        # Todo: implement
-        pass  # Remove this line
+        best_position = self.get_best_position()
+        for particle in self.particles:
+            particle.update_particle_velocity(best_position)
+            particle.update_particle_position()
 
     def notify_evaluation(self, value):
         """
