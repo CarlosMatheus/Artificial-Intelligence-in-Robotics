@@ -64,13 +64,12 @@ class ParticleSwarmOptimization:
     :type upper_bound: numpy array.
     """
     def __init__(self, hyperparams, lower_bound, upper_bound):
-
-        self.lower_bound = lower_bound
-        self.upper_bound = upper_bound
-        self.particles = [Particle(-100, 100, hyperparams) for _ in range(hyperparams.num_particles)]
-        self.get_best_position()
-
-        return
+        self._lower_bound = lower_bound
+        self._upper_bound = upper_bound
+        self._particles = [Particle(-100, 100, hyperparams) for _ in range(hyperparams.num_particles)]
+        self._best_value = -inf
+        self._best_particle = self._particles[0]
+        self._evaluate_idx = 0
 
     def get_best_position(self):
         """
