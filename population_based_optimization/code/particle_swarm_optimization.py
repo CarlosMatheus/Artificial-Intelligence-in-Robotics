@@ -77,7 +77,7 @@ class ParticleSwarmOptimization:
         :return: the best position.
         :rtype: numpy array.
         """
-        return self.lower_bound  # Remove this line
+        return self._best_particle.position
 
     def get_best_value(self):
         """
@@ -85,9 +85,7 @@ class ParticleSwarmOptimization:
         :return: value of the best position.
         :rtype: float.
         """
-
-        # Todo: implement
-        return 0.0  # Remove this line
+        return self._best_value
 
     def get_position_to_evaluate(self):
         """
@@ -96,18 +94,16 @@ class ParticleSwarmOptimization:
         :return: position to evaluate.
         :rtype: numpy array.
         """
-        best_postition = self.get_best_position()
-
-        # 𝐯 = 𝜔𝐯 + 𝜑𝑟(𝐛−𝐱) + 𝜑𝑟(𝐛−𝐱)
-
-        return self.lower_bound  # Remove this line
+        particle = self._particles[self._evaluate_idx]
+        self._evaluate_idx += 1
+        return particle
 
     def advance_generation(self):
         """
         Advances the generation of particles.
         """
         best_position = self.get_best_position()
-        for particle in self.particles:
+        for particle in self._particles:
             particle.update_particle_velocity(best_position)
             particle.update_particle_position()
 
@@ -118,6 +114,8 @@ class ParticleSwarmOptimization:
         :param value: quality of the particle position.
         :type value: float.
         """
-        # Todo: implement
-        pass  # Remove this line
+        if value > self._best_value:
+            self._best_value = value
+            self._best_particle = self._particles[self._evaluate_idx]
+
 
