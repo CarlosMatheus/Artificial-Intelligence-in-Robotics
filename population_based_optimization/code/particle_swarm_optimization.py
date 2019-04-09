@@ -7,7 +7,7 @@ class Particle:
     """
     Represents a particle of the Particle Swarm Optimization algorithm.
     """
-    def __init__(self, lower_bound, upper_bound, hyperparams, i):
+    def __init__(self, lower_b, upper_b, hyperparams, i):
         """
         Creates a particle of the Particle Swarm Optimization algorithm.
 
@@ -16,20 +16,22 @@ class Particle:
         :param upper_bound: upper bound of the particle position.
         :type upper_bound: numpy array.
         """
+        upper_bound_hyper = 1.5
+
         self.hyperparams = hyperparams
-        self.lower_bound = lower_bound
-        self.upper_bound = upper_bound
+        self.lower_bound = lower_b
+        self.upper_bound = upper_b * upper_bound_hyper
         self.idx = i
 
-        num_of_params = len(lower_bound)
+        num_of_params = len(self.lower_bound)
 
         position = [0]*num_of_params
         velocity = [0]*num_of_params
 
-        max_bound = max(max(lower_bound), max(upper_bound)) * 3
+        max_bound = max(max(self.lower_bound), max(self.upper_bound))
 
         for idx in range(len(position)):
-            position[idx] = random.uniform(lower_bound[idx], upper_bound[idx])
+            position[idx] = random.uniform(self.lower_bound[idx], self.upper_bound[idx])
             velocity[idx] = random.uniform(-1*max_bound, max_bound)
 
         self.position = np.array(position)
