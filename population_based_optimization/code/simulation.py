@@ -146,7 +146,7 @@ class Simulation:
         if dot_product < 0.7:
             penalty -= 50
         penalty -= abs(error*100)
-        bonus = (3*dot_product + 10*linear + angular)
+        bonus = (5*dot_product + 20*linear + 2*angular)
         score = bonus + penalty
 
         return score
