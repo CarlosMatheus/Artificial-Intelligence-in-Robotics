@@ -139,9 +139,17 @@ class Simulation:
         track_tangent = self.track.get_tangent(self.line_follower.pose.position)  # t_k
         robot_direction = Vector2(cos(self.line_follower.pose.rotation), sin(self.line_follower.pose.rotation))  # r_k
         dot_product = track_tangent.dot(robot_direction)  # dot(r_k, t_k)
-        max_dot_product = track_tangent.dot(track_tangent)
 
-        return (dot_product/max_dot_product) + linear/10 - error
+        penalty = 0
+        if not detection:
+            penalty -= 100
+        if dot_product < 0.7:
+            penalty -= 50
+        penalty -= abs(error*100)
+        bonus = (3*dot_product + 10*linear + angular)
+        score = bonus + penalty
+
+        return score
 
     def draw(self, window):
         """
