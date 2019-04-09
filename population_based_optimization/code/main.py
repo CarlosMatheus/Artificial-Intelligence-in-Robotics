@@ -85,6 +85,14 @@ def plot_results():
     plt.grid()
     plt.savefig('line_best_convergence.%s' % fig_format, format=fig_format)
     plt.show()
+    f_1 = open("quality_history.txt", "w+")
+    f_2 = open("position_history.txt", "w+")
+    for idx in range(len(quality_history)):
+        f_1.write("{:05d}".format(idx+1) + ": " + str(quality_history[idx]) + "\n")
+    for idx in range(len(position_history)):
+        f_2.write("{:05d}".format(idx+1) + ": " + str(position_history[idx].tolist()) + "\n")
+    f_1.close()
+    f_2.close()
 
 
 def print_text():
