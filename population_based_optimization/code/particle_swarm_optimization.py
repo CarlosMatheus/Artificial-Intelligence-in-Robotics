@@ -21,7 +21,7 @@ class Particle:
         self.upper_bound = upper_bound
         self.idx = i
 
-        num_of_params = 3
+        num_of_params = len(lower_bound)
 
         position = [0]*num_of_params
         velocity = [0]*num_of_params
