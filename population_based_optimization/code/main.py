@@ -215,7 +215,7 @@ line_follower = LineFollower(Pose(0.5, 0.5, 45.0 * pi / 180.0), controller_param
 
 # Defining PSO hyperparameters
 hyperparams = Params()
-hyperparams.num_particles = 40
+hyperparams.num_particles = 500
 hyperparams.inertia_weight = 0.7
 hyperparams.cognitive_parameter = 0.6
 hyperparams.social_parameter = 0.8
