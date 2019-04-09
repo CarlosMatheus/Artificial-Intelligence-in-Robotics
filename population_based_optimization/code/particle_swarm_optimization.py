@@ -7,7 +7,7 @@ class Particle:
     """
     Represents a particle of the Particle Swarm Optimization algorithm.
     """
-    def __init__(self, lower_bound, upper_bound, hyperparams):
+    def __init__(self, lower_bound, upper_bound, hyperparams, i):
         """
         Creates a particle of the Particle Swarm Optimization algorithm.
 
@@ -17,34 +17,44 @@ class Particle:
         :type upper_bound: numpy array.
         """
         self.hyperparams = hyperparams
+        self.lower_bound = lower_bound
+        self.upper_bound = upper_bound
+        self.idx = i
 
         num_of_params = 3
 
-        position = []*num_of_params
-        velocity = []*num_of_params
+        position = [0]*num_of_params
+        velocity = [0]*num_of_params
+
+        max_bound = max(max(lower_bound), max(upper_bound)) * 3
 
         for idx in range(len(position)):
-            position[idx] = random.uniform(lower_bound, upper_bound)
-            velocity[idx] = random.uniform(lower_bound/100, upper_bound/100)
+            position[idx] = random.uniform(lower_bound[idx], upper_bound[idx])
+            velocity[idx] = random.uniform(-1*max_bound, max_bound)
 
         self.position = np.array(position)
         self.velocity = np.array(velocity)
 
         self.particle_best_position = self.position.copy()
+        self.particle_best_value = -inf
 
     def update_particle_velocity(self, best_position):
         rp = random.uniform(0.0, 1.0)
         rg = random.uniform(0.0, 1.0)
 
-        self.velocity = self.hyperparams.inertia_weight * self.velocity + \
-                        self.hyperparams.cognitive_parameter*rp(
-                            self.particle_best_position - self.position) + \
-                        self.hyperparams.social_parameter*rg*(
-                            best_position - self.position)
+        inertial_factor = self.hyperparams.inertia_weight * self.velocity
+        cognitive_factor = self.hyperparams.cognitive_parameter * rp * (self.particle_best_position - self.position)
+        social_factor = self.hyperparams.social_parameter * rg * (best_position - self.position)
+
+        self.velocity = inertial_factor + cognitive_factor + social_factor
 
     def update_particle_position(self):
-        # todo: reflexion
-        self.position = self.position + self.velocity
+        new_position = self.position + self.velocity
+        for idx in range(len(new_position)):
+            if not self.lower_bound[idx] < new_position[idx] < self.upper_bound[idx]:
+                self.velocity[idx] *= -1
+                new_position[idx] = self.position[idx]
+        self.position = new_position
 
 
 class ParticleSwarmOptimization:
@@ -64,11 +74,12 @@ class ParticleSwarmOptimization:
     :type upper_bound: numpy array.
     """
     def __init__(self, hyperparams, lower_bound, upper_bound):
+        self._hyperparams = hyperparams
         self._lower_bound = lower_bound
         self._upper_bound = upper_bound
-        self._particles = [Particle(-100, 100, hyperparams) for _ in range(hyperparams.num_particles)]
+        self._particles = [Particle(lower_bound, upper_bound, hyperparams, i) for i in range(hyperparams.num_particles)]
         self._best_value = -inf
-        self._best_particle = self._particles[0]
+        self._best_particle = None
         self._evaluate_idx = 0
 
     def get_best_position(self):
@@ -95,8 +106,7 @@ class ParticleSwarmOptimization:
         :rtype: numpy array.
         """
         particle = self._particles[self._evaluate_idx]
-        self._evaluate_idx += 1
-        return particle
+        return particle.position
 
     def advance_generation(self):
         """
@@ -114,8 +124,17 @@ class ParticleSwarmOptimization:
         :param value: quality of the particle position.
         :type value: float.
         """
+        actual_particle = self._particles[self._evaluate_idx]
+        if value > actual_particle.particle_best_value:
+            actual_particle.particle_best_value = value
+            actual_particle.particle_best_position = actual_particle.position
+
         if value > self._best_value:
             self._best_value = value
-            self._best_particle = self._particles[self._evaluate_idx]
+            self._best_particle = actual_particle
 
+        self._evaluate_idx += 1
+        if self._evaluate_idx >= self._hyperparams.num_particles:
+            self.advance_generation()
+            self._evaluate_idx = 0
 
