@@ -268,6 +268,8 @@ The implementation of Particle Class is shown from Code \ref{code:particle} to C
     lastline=59
 ]{./../code/particle_swarm_optimization.py}
 
+\subsubsection{Update velocity}
+
 The \texit{updatae velocity} method uses Equation \ref{equation:update_velocity}. Where $r_p$ and $r_g$ are two different random numbers between 0 and 1 generated on every time the equation is calculated.
 
 The $\phi_p$ is called the congnitve parameter, and it is a constant that multiplies the vector $(b_i - x_i)$ which is the direction to the best position of that particle.
@@ -282,6 +284,110 @@ Basicly this is a balance between explorateion and explotation. The bigger the i
     \label{equation:update_velocity}
     v_{i+1} = \omega v_i + \phi_p r_p (b_i - x_i) + \phi_g r_g (b_g - x_i)
 \end{equation}
+
+\subsubsection {Update position}
+
+In order to update the particle position. Its current position is added to its calculated new velocity. This can is seen in the Code \ref{code:update_particle_position}.
+
+As professor Maximo suggested during his lecture, it was implemented a particle reflection, when one of them fall out of the bounderies while updating its position.
+
+\section{PSO result in test function}
+
+As suggested, the PSO implementation was fist tested using an easy test function in order to verify its correctness.
+
+The cost function used in the test was described on Equation \ref{equation:test_fuction}, in which has a global maximum $[1 2 3]$.
+
+\begin{equation}
+    \label{equation:test_fuction}
+    f(x, y, z) = -((x - 1)^2 + (y-2)^2 + (z-3)^2)
+\end{equation}
+
+In tests conducted usin 40 particles and 1000 generations, the PSO converged rapdly to the global maximum. The position an quality of the results can be seen in Code \ref{code:position_test_function} and Code \ref{code:quality_test_function}.
+
+\lstinputlisting[
+    language=python,
+    caption={Positions results on Test function, shown only the first 10 and the last 10.},
+    label={code:position_test_function},
+    style=cStyle,
+]{./../code/test_function_result/test_short_position_history.txt}
+
+\lstinputlisting[
+    language=python,
+    caption={Quality result on Test function, shown only the first 10 and the last 10},
+    label={code:quality_test_function},
+    style=cStyle,
+]{./../code/test_function_result/test_short_quality_history.txt}
+
+It is possible to see with the Figure \ref{img:test_best_quality_converge} to Figure \ref{img:test_parameters_quality_converge}, the convergency on the best position, the overall converge, and the converge of the parameters.
+
+\begin{figure}
+  \begin{center}
+  \includegraphics[width=2.8in]{./../code/test_function_result/test_best_convergence.png}
+  %\vspace{-15pt}
+  \caption{Test best quality convergency}
+  \label{img:test_best_quality_converge}
+  \end{center}
+\end{figure}
+
+\begin{figure}
+  \begin{center}
+  \includegraphics[width=2.8in]{./../code/test_function_result/test_quality_converge.png}
+  %\vspace{-15pt}
+  \caption{Test quality convergency}
+  \label{img:test_quality_converge}
+  \end{center}
+\end{figure}
+
+\begin{figure}
+  \begin{center}
+  \includegraphics[width=2.8in]{./../code/test_function_result/test_parameters_converge.png}
+  %\vspace{-15pt}
+  \caption{Test parameters convergency}
+  \label{img:test_parameters_quality_converge}
+  \end{center}
+\end{figure}
+
+Thus it is clear that the algorithm works and converges accordingly. That said, the algorithm is ready to be used on the line follower problem.
+
+\section {PSO on Line Follower Problem}
+
+From a car circuit simulation, it was developed a line follower opmization on the \textit{proportional–integral–derivative controller (PID controller)} Control technique.
+
+From the Equation \ref{equation:control_equation}, the objectve of this optimization is to optimize $K_p$, $K_i$, $K_d$, and the linear velocity of the car.
+
+\begin{equation}
+    \label{equation:control_equation}
+    u(t) =  K_p e(t) + K_i \int_{0}^{t} e(t')dt'+K_d \frac{de(t)}{dt}
+\end{equation}
+
+In oder to do that, the \textit{PSO} algorithm was runned with 40 particles and it was developed the \textit{evaluate} method. With this method every positon of the car were evaluated and the sum of all evaluations was the score of the position of that particle.
+
+The \textit{evaluate} method can be seen in the Code \ref{code:evaluate}, where by the end of the implementation was defined a high weight on linear speed and severe penalty for high errors and miss the track.
+
+\lstinputlisting[
+    language=python,
+    caption={Method \textit{evaluate} of \textit{Simulation} Class, it is intended atribute a score for the situation of a particle.},
+    label={code:evaluate},
+    style=cStyle,
+    firstline=130,
+    lastline=152
+]{./../code/simulation.py}
+
+\subsection{Initials Tests}
+
+In the firsts tests, it was clear that the convergency was always slow and always tending first to a quite slow velocity.
+
+Therefore a higher weight was given to linear speed and 
+
+
+
+
+
+
+
+
+
+
 
 
 Consider the microwave rectifier shown in Fig.~\ref{circuit_diagram}.  A sinusoidal microwave power source with voltage magnitude $V_s$ and impedance $R_s$ drives the rectifying element having a resistance $R(v)$ defined as
