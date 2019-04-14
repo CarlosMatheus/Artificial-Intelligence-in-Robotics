@@ -65,3 +65,31 @@ plt.title('Best Quality Convergence')
 plt.grid()
 plt.savefig('test_best_convergence.%s' % fig_format, format=fig_format)
 plt.show()
+
+f_1 = open("test_short_quality_history.txt", "w+")
+f_2 = open("test_complete_quality_history.txt", "w+")
+f_3 = open("test_short_position_history.txt", "w+")
+f_4 = open("test_complete_position_history.txt", "w+")
+window = 10
+first = True
+for idx in range(len(quality_history)):
+    f_2.write("{:05d}".format(idx + 1) + ": " + str(quality_history[idx]) + "\n")
+    if idx < window or idx >= len(quality_history) - window:
+        f_1.write("{:05d}".format(idx + 1) + ": " + str('%.3f' % quality_history[idx]) + "\n")
+    else:
+        if first:
+            f_1.write("..." + "\n")
+            first = False
+first = True
+for idx in range(len(position_history)):
+    f_4.write("{:05d}".format(idx + 1) + ": " + str(position_history[idx].tolist()) + "\n")
+    if idx < window or idx >= len(position_history) - window:
+        f_3.write("{:05d}".format(idx + 1) + ": " + str(['%.3f' % m for m in position_history[idx]]) + "\n")
+    else:
+        if first:
+            f_3.write("..." + "\n")
+            first = False
+f_1.close()
+f_2.close()
+f_3.close()
+f_4.close()
