@@ -237,7 +237,7 @@ This advance index step is quite important, bacause if the index reaches the pop
 
 \subsection {Particle Class Implementation}
 
-Objects of this class stores its position, its velocity, and its best position. The class provides, ass well, methods to the particle update its velocity and its position.
+Objects of this class stores its position, its velocity, and its best position. The class provides, as well, methods to the particle update its velocity and its position.
 
 The implementation of Particle Class is shown from Code \ref{code:particle} to Code \ref{code:update_particle_position}.
 
@@ -268,9 +268,21 @@ The implementation of Particle Class is shown from Code \ref{code:particle} to C
     lastline=59
 ]{./../code/particle_swarm_optimization.py}
 
-The
+The \texit{updatae velocity} method uses Equation \ref{equation:update_velocity}. Where $r_p$ and $r_g$ are two different random numbers between 0 and 1 generated on every time the equation is calculated.
 
-𝐯=𝜔𝐯+𝜑𝑟𝐛−𝐱 +𝜑𝑟(𝐛−𝐱)
+The $\phi_p$ is called the congnitve parameter, and it is a constant that multiplies the vector $(b_i - x_i)$ which is the direction to the best position of that particle.
+
+The $\phi_g$ is called the social parameter, and it is a constant that multiplies the vector $(b_g - x_i)$ which is the direction to the best position in all particles.
+
+Therefore the constants $\phi_p$ and $\phi_g$ balance how much important will be the best position locally and the best position globally.
+
+Basicly this is a balance between explorateion and explotation. The bigger the importancy of the global best, the more proprable to converge to a not so good local maximum. The bigger the importancy of local best, the more problable to find a better solution, but with a more slow convergency.
+
+\begin{equation}
+    \label{equation:update_velocity}
+    v_{i+1} = \omega v_i + \phi_p r_p (b_i - x_i) + \phi_g r_g (b_g - x_i)
+\end{equation}
+
 
 Consider the microwave rectifier shown in Fig.~\ref{circuit_diagram}.  A sinusoidal microwave power source with voltage magnitude $V_s$ and impedance $R_s$ drives the rectifying element having a resistance $R(v)$ defined as
 \begin{equation}\label{ideal_rectifier_resistance}
