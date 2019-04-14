@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.4.16)  14 APR 2019 20:05
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.4.16)  14 APR 2019 20:24
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -335,35 +335,37 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 ))
 \c@lstlisting=\count121
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <9> on input line 104.
+(Font)              <9> on input line 93.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 104.
+(Font)              <6> on input line 93.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 104.
+(Font)              <5> on input line 93.
 
-Underfull \hbox (badness 2343) in paragraph at lines 102--105
+Underfull \hbox (badness 2343) in paragraph at lines 91--94
 []\OT1/ptm/b/it/9 Abstract\OT1/ptm/b/n/9 ---This pa-per presents a the-o-ret-i-cal anal-y-sis of
  []
 
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 152.
-[1{/usr/local/texlive/2018/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
-
-
-]
-<pdf/01.pdf, id=14, 699.61375pt x 161.60374pt>
+(Font)              <7> on input line 141.
+<pdf/01.pdf, id=1, 699.61375pt x 161.60374pt>
 File: pdf/01.pdf Graphic file (type pdf)
 <use pdf/01.pdf>
-Package pdftex.def Info: pdf/01.pdf  used on input line 169.
+Package pdftex.def Info: pdf/01.pdf  used on input line 158.
 (pdftex.def)             Requested size: 252.94499pt x 58.42635pt.
 
-Overfull \hbox (0.94499pt too wide) in paragraph at lines 169--169
+Overfull \hbox (0.94499pt too wide) in paragraph at lines 158--158
  [] 
  []
 
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 170.
-(/usr/local/texlive/2018/texmf-dist/tex/latex/listings/lstlang1.sty
+(Font)              <8> on input line 159.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [1{/usr/local/texlive/2018/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
+
+
+] (/usr/local/texlive/2018/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2015/06/04 1.6 listings language file
 ) (./../code/particle_swarm_optimization.py) (./../code/particle_swarm_optimization.py) (./../code/particle_swarm_optimization.py) (./../code/particle_swarm_optimization.py) (./../code/particle_swarm_optimization.py) (./../code/particle_swarm_optimization.py
 LaTeX Font Info:    Try loading font information for OML+ptm on input line 130.
@@ -379,9 +381,9 @@ File: omsptm.fd
 )
 LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <7> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 23.
-) (./../code/particle_swarm_optimization.py [2 <./pdf/01.pdf>]) (./../code/particle_swarm_optimization.py)
-./MTT_reveyrand.tex:273: Undefined control sequence.
-l.273 The \texit
+) (./../code/particle_swarm_optimization.py) (./../code/particle_swarm_optimization.py)
+./MTT_reveyrand.tex:262: Undefined control sequence.
+l.262 The \texit
                 {updatae velocity} method uses Equation \ref{equation:update...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -389,182 +391,179 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-(./../code/test_function_result/test_short_position_history.txt) (./../code/test_function_result/test_short_quality_history.txt)
+[2 <./pdf/01.pdf>] (./../code/test_function_result/test_short_position_history.txt) (./../code/test_function_result/test_short_quality_history.txt)
 <./../code/test_function_result/test_best_convergence.png, id=43, 462.528pt x 346.896pt>
 File: ./../code/test_function_result/test_best_convergence.png Graphic file (type png)
 <use ./../code/test_function_result/test_best_convergence.png>
-Package pdftex.def Info: ./../code/test_function_result/test_best_convergence.png  used on input line 325.
+Package pdftex.def Info: ./../code/test_function_result/test_best_convergence.png  used on input line 314.
 (pdftex.def)             Requested size: 202.35622pt x 151.76662pt.
 <./../code/test_function_result/test_quality_converge.png, id=45, 462.528pt x 346.896pt>
 File: ./../code/test_function_result/test_quality_converge.png Graphic file (type png)
 <use ./../code/test_function_result/test_quality_converge.png>
-Package pdftex.def Info: ./../code/test_function_result/test_quality_converge.png  used on input line 334.
+Package pdftex.def Info: ./../code/test_function_result/test_quality_converge.png  used on input line 323.
 (pdftex.def)             Requested size: 202.35622pt x 151.76662pt.
 <./../code/test_function_result/test_parameters_converge.png, id=46, 462.528pt x 346.896pt>
 File: ./../code/test_function_result/test_parameters_converge.png Graphic file (type png)
 <use ./../code/test_function_result/test_parameters_converge.png>
-Package pdftex.def Info: ./../code/test_function_result/test_parameters_converge.png  used on input line 343.
+Package pdftex.def Info: ./../code/test_function_result/test_parameters_converge.png  used on input line 332.
 (pdftex.def)             Requested size: 202.35622pt x 151.76662pt.
-
-Underfull \vbox (badness 2452) has occurred while \output is active []
-
- [3 <./../code/test_function_result/test_best_convergence.png>] (./../code/simulation.py) (./../code/results/short_position_history.txt) (./../code/results/short_quality_history.txt [4 <./../code/test_function_result/test_quality_converge.png> <./../code/test_function_result/test_parameters_converge.png>])
-<./../code/results/line_best_convergence.png, id=60, 462.528pt x 346.896pt>
+ [3 <./../code/test_function_result/test_best_convergence.png> <./../code/test_function_result/test_quality_converge.png>] (./../code/simulation.py) (./../code/results/short_position_history.txt) (./../code/results/short_quality_history.txt)
+<./../code/results/line_best_convergence.png, id=55, 462.528pt x 346.896pt>
 File: ./../code/results/line_best_convergence.png Graphic file (type png)
 <use ./../code/results/line_best_convergence.png>
-Package pdftex.def Info: ./../code/results/line_best_convergence.png  used on input line 404.
+Package pdftex.def Info: ./../code/results/line_best_convergence.png  used on input line 393.
 (pdftex.def)             Requested size: 202.35622pt x 151.76662pt.
-<./../code/results/line_quality_convergence.png, id=61, 462.528pt x 346.896pt>
+<./../code/results/line_quality_convergence.png, id=56, 462.528pt x 346.896pt>
 File: ./../code/results/line_quality_convergence.png Graphic file (type png)
 <use ./../code/results/line_quality_convergence.png>
-Package pdftex.def Info: ./../code/results/line_quality_convergence.png  used on input line 413.
+Package pdftex.def Info: ./../code/results/line_quality_convergence.png  used on input line 402.
 (pdftex.def)             Requested size: 202.35622pt x 151.76662pt.
-<./../code/results/line_parameters_convergence.png, id=62, 462.528pt x 346.896pt>
+<./../code/results/line_parameters_convergence.png, id=57, 462.528pt x 346.896pt>
 File: ./../code/results/line_parameters_convergence.png Graphic file (type png)
 <use ./../code/results/line_parameters_convergence.png>
-Package pdftex.def Info: ./../code/results/line_parameters_convergence.png  used on input line 422.
+Package pdftex.def Info: ./../code/results/line_parameters_convergence.png  used on input line 411.
 (pdftex.def)             Requested size: 202.35622pt x 151.76662pt.
+ [4 <./../code/test_function_result/test_parameters_converge.png>]
 <./../code/results/initial_line_follower_solution.png, id=63, 790.955pt x 584.1825pt>
 File: ./../code/results/initial_line_follower_solution.png Graphic file (type png)
 <use ./../code/results/initial_line_follower_solution.png>
-Package pdftex.def Info: ./../code/results/initial_line_follower_solution.png  used on input line 439.
+Package pdftex.def Info: ./../code/results/initial_line_follower_solution.png  used on input line 428.
 (pdftex.def)             Requested size: 202.35622pt x 149.45036pt.
 <./../code/results/line_follower_solution.png, id=64, 790.955pt x 567.11874pt>
 File: ./../code/results/line_follower_solution.png Graphic file (type png)
 <use ./../code/results/line_follower_solution.png>
-Package pdftex.def Info: ./../code/results/line_follower_solution.png  used on input line 448.
+Package pdftex.def Info: ./../code/results/line_follower_solution.png  used on input line 437.
 (pdftex.def)             Requested size: 202.35622pt x 145.08498pt.
 
-Underfull \vbox (badness 3919) has occurred while \output is active []
 
- [5 <./../code/results/line_best_convergence.png> <./../code/results/line_quality_convergence.png> <./../code/results/line_parameters_convergence.png> <./../code/results/initial_line_follower_solution.png> <./../code/results/line_follower_solution.png>]
+LaTeX Warning: Reference `ideal_rectifier_resistance' on page 5 undefined on input line 452.
 
-LaTeX Warning: Reference `ideal_rectifier_resistance' on page 6 undefined on input line 463.
-
+[5 <./../code/results/line_best_convergence.png> <./../code/results/line_quality_convergence.png> <./../code/results/line_parameters_convergence.png> <./../code/results/initial_line_follower_solution.png> <./../code/results/line_follower_solution.png>]
 <pdf/02.pdf, id=73, 512.91624pt x 371.3875pt>
 File: pdf/02.pdf Graphic file (type pdf)
 <use pdf/02.pdf>
-Package pdftex.def Info: pdf/02.pdf  used on input line 498.
+Package pdftex.def Info: pdf/02.pdf  used on input line 487.
 (pdftex.def)             Requested size: 202.35622pt x 146.51794pt.
 <pdf/03.pdf, id=74, 562.8631pt x 375.32222pt>
 File: pdf/03.pdf Graphic file (type pdf)
 <use pdf/03.pdf>
-Package pdftex.def Info: pdf/03.pdf  used on input line 507.
+Package pdftex.def Info: pdf/03.pdf  used on input line 496.
 (pdftex.def)             Requested size: 252.94499pt x 168.66435pt.
 
-Overfull \hbox (0.94499pt too wide) in paragraph at lines 507--509
+Overfull \hbox (0.94499pt too wide) in paragraph at lines 496--498
  [] 
  []
 
+
+LaTeX Warning: Reference `ideal_rectifier_resistance' on page 6 undefined on input line 518.
+
 [6 <./pdf/02.pdf> <./pdf/03.pdf>]
 
-LaTeX Warning: Reference `ideal_rectifier_resistance' on page 7 undefined on input line 529.
-
-
-LaTeX Warning: Reference `ideal_rectifier_resistance' on page 7 undefined on input line 545.
+LaTeX Warning: Reference `ideal_rectifier_resistance' on page 7 undefined on input line 534.
 
 <pdf/04.pdf, id=146, 557.80423pt x 371.82915pt>
 File: pdf/04.pdf Graphic file (type pdf)
 <use pdf/04.pdf>
-Package pdftex.def Info: pdf/04.pdf  used on input line 583.
+Package pdftex.def Info: pdf/04.pdf  used on input line 572.
 (pdftex.def)             Requested size: 252.94499pt x 168.60948pt.
 
-Overfull \hbox (0.94499pt too wide) in paragraph at lines 583--585
+Overfull \hbox (0.94499pt too wide) in paragraph at lines 572--574
  [] 
  []
 
 
-LaTeX Warning: Reference `nonideal_rectifier_resistance' on page 7 undefined on input line 589.
+LaTeX Warning: Reference `nonideal_rectifier_resistance' on page 7 undefined on input line 578.
 
 
-Underfull \hbox (badness 1769) in paragraph at lines 589--590
+Underfull \hbox (badness 1769) in paragraph at lines 578--579
 \OT1/ptm/m/n/10 old volt-age are next in-ves-ti-gated as-sum-ing the rec-ti-fier
  []
 
 <pdf/05.pdf, id=147, 506.89375pt x 366.36874pt>
 File: pdf/05.pdf Graphic file (type pdf)
 <use pdf/05.pdf>
-Package pdftex.def Info: pdf/05.pdf  used on input line 610.
+Package pdftex.def Info: pdf/05.pdf  used on input line 599.
 (pdftex.def)             Requested size: 216.81pt x 156.70253pt.
-[7 <./pdf/04.pdf> <./pdf/05.pdf>] [8]
-<pdf/06.pdf, id=210, 389.455pt x 200.75pt>
+[7 <./pdf/04.pdf> <./pdf/05.pdf>]
+<pdf/06.pdf, id=207, 389.455pt x 200.75pt>
 File: pdf/06.pdf Graphic file (type pdf)
 <use pdf/06.pdf>
-Package pdftex.def Info: pdf/06.pdf  used on input line 737.
+Package pdftex.def Info: pdf/06.pdf  used on input line 726.
 (pdftex.def)             Requested size: 216.81pt x 111.75757pt.
-<pdf/07.pdf, id=211, 420.57124pt x 316.18124pt>
+<pdf/07.pdf, id=208, 420.57124pt x 316.18124pt>
 File: pdf/07.pdf Graphic file (type pdf)
 <use pdf/07.pdf>
-Package pdftex.def Info: pdf/07.pdf  used on input line 747.
+Package pdftex.def Info: pdf/07.pdf  used on input line 736.
 (pdftex.def)             Requested size: 252.94499pt x 190.16371pt.
 
-Overfull \hbox (0.94499pt too wide) in paragraph at lines 747--747
+Overfull \hbox (0.94499pt too wide) in paragraph at lines 736--736
  [] 
  []
 
+[8]
 <pdf/08.pdf, id=212, 285.065pt x 199.74625pt>
 File: pdf/08.pdf Graphic file (type pdf)
 <use pdf/08.pdf>
-Package pdftex.def Info: pdf/08.pdf  used on input line 790.
+Package pdftex.def Info: pdf/08.pdf  used on input line 779.
 (pdftex.def)             Requested size: 216.81pt x 151.91844pt.
 <pdf/09.pdf, id=213, 541.02126pt x 365.365pt>
 File: pdf/09.pdf Graphic file (type pdf)
 <use pdf/09.pdf>
-Package pdftex.def Info: pdf/09.pdf  used on input line 799.
+Package pdftex.def Info: pdf/09.pdf  used on input line 788.
 (pdftex.def)             Requested size: 216.81pt x 146.41658pt.
-[9 <./pdf/06.pdf> <./pdf/07.pdf> <./pdf/08.pdf>]
+ [9 <./pdf/06.pdf> <./pdf/07.pdf> <./pdf/08.pdf>]
 <pdf/10.pdf, id=269, 715.67375pt x 474.77374pt>
 File: pdf/10.pdf Graphic file (type pdf)
 <use pdf/10.pdf>
-Package pdftex.def Info: pdf/10.pdf  used on input line 823.
+Package pdftex.def Info: pdf/10.pdf  used on input line 812.
 (pdftex.def)             Requested size: 252.94499pt x 167.79605pt.
 
-Overfull \hbox (0.94499pt too wide) in paragraph at lines 823--824
+Overfull \hbox (0.94499pt too wide) in paragraph at lines 812--813
  [][] 
  []
 
 <pdf/11.png, id=270, 1377.145pt x 867.24pt>
 File: pdf/11.png Graphic file (type png)
 <use pdf/11.png>
-Package pdftex.def Info: pdf/11.png  used on input line 857.
+Package pdftex.def Info: pdf/11.png  used on input line 846.
 (pdftex.def)             Requested size: 245.71754pt x 154.73346pt.
 
-Underfull \hbox (badness 7030) in paragraph at lines 858--858
+Underfull \hbox (badness 7030) in paragraph at lines 847--847
 \OT1/ptm/m/n/8 Fig. 19.   []Time[]-[]do[]-[]main[] [][][]wave[]-[]forms[] [][][]mea[]-[]sured[] [][][]at[] [][][]drain[] [][][](a)[] [][][]and[]
  []
 
 
-Underfull \hbox (badness 4531) in paragraph at lines 858--858
+Underfull \hbox (badness 4531) in paragraph at lines 847--847
 [][][]\OT1/ptm/m/n/8 gate[] [][][](b)[] [][][]of[] [][][]the[] [][][]rec[]-[]ti[]-[]fier[] [][][]with[] [][][][]V,[] [][][][][][] [][][]and[]
  []
 
 <pdf/12.pdf, id=271, 1068.99374pt x 808.01875pt>
 File: pdf/12.pdf Graphic file (type pdf)
 <use pdf/12.pdf>
-Package pdftex.def Info: pdf/12.pdf  used on input line 873.
+Package pdftex.def Info: pdf/12.pdf  used on input line 862.
 (pdftex.def)             Requested size: 245.71754pt x 185.72943pt.
-[10 <./pdf/09.pdf> <./pdf/10.pdf>]
-<pdf/13.pdf, id=289, 549.05125pt x 374.39874pt>
+[10 <./pdf/09.pdf> <./pdf/10.pdf> <./pdf/11.png>]
+<pdf/13.pdf, id=290, 549.05125pt x 374.39874pt>
 File: pdf/13.pdf Graphic file (type pdf)
 <use pdf/13.pdf>
-Package pdftex.def Info: pdf/13.pdf  used on input line 892.
+Package pdftex.def Info: pdf/13.pdf  used on input line 881.
 (pdftex.def)             Requested size: 245.71754pt x 167.55238pt.
-<pdf/14.pdf, id=290, 427.5975pt x 290.08376pt>
+<pdf/14.pdf, id=291, 427.5975pt x 290.08376pt>
 File: pdf/14.pdf Graphic file (type pdf)
 <use pdf/14.pdf>
-Package pdftex.def Info: pdf/14.pdf  used on input line 901.
+Package pdftex.def Info: pdf/14.pdf  used on input line 890.
 (pdftex.def)             Requested size: 216.81pt x 147.08205pt.
-<pdf/15.pdf, id=291, 579.16376pt x 373.395pt>
+<pdf/15.pdf, id=292, 579.16376pt x 373.395pt>
 File: pdf/15.pdf Graphic file (type pdf)
 <use pdf/15.pdf>
-Package pdftex.def Info: pdf/15.pdf  used on input line 918.
+Package pdftex.def Info: pdf/15.pdf  used on input line 907.
 (pdftex.def)             Requested size: 245.71754pt x 158.41444pt.
- [11 <./pdf/11.png> <./pdf/12.pdf> <./pdf/13.pdf> <./pdf/14.pdf>] (./MTT_reveyrand.bbl [12 <./pdf/15.pdf>]
+ [11 <./pdf/12.pdf> <./pdf/13.pdf> <./pdf/14.pdf> <./pdf/15.pdf>] (./MTT_reveyrand.bbl
 Underfull \hbox (badness 6608) in paragraph at lines 170--174
 []\OT1/ptm/m/n/8 M. Roberg, E. Falken-stein, and Z. Popovic, ``High-efficiency
  []
 
-
+[12]
 Underfull \hbox (badness 2478) in paragraph at lines 192--197
 []\OT1/ptm/m/n/8 G. Cal-let, J. Faraj, O. Jardel, C. Char-bon-ni-aud, J.-C. Jacquet,
  []
@@ -573,47 +572,47 @@ Underfull \hbox (badness 2478) in paragraph at lines 192--197
 <photo/mike.png, id=322, 278.03876pt x 348.30125pt>
 File: photo/mike.png Graphic file (type png)
 <use photo/mike.png>
-Package pdftex.def Info: photo/mike.png  used on input line 1104.
+Package pdftex.def Info: photo/mike.png  used on input line 1093.
 (pdftex.def)             Requested size: 72.11443pt x 90.33829pt.
 File: photo/mike.png Graphic file (type png)
 <use photo/mike.png>
-Package pdftex.def Info: photo/mike.png  used on input line 1104.
+Package pdftex.def Info: photo/mike.png  used on input line 1093.
 (pdftex.def)             Requested size: 72.11443pt x 90.33829pt.
 <photo/tibo.png, id=325, 279.0425pt x 350.30875pt>
 File: photo/tibo.png Graphic file (type png)
 <use photo/tibo.png>
-Package pdftex.def Info: photo/tibo.png  used on input line 1107.
+Package pdftex.def Info: photo/tibo.png  used on input line 1096.
 (pdftex.def)             Requested size: 71.95749pt x 90.33513pt.
 File: photo/tibo.png Graphic file (type png)
 <use photo/tibo.png>
-Package pdftex.def Info: photo/tibo.png  used on input line 1107.
+Package pdftex.def Info: photo/tibo.png  used on input line 1096.
 (pdftex.def)             Requested size: 71.95749pt x 90.33513pt.
 <photo/ignacio.png, id=328, 279.0425pt x 350.30875pt>
 File: photo/ignacio.png Graphic file (type png)
 <use photo/ignacio.png>
-Package pdftex.def Info: photo/ignacio.png  used on input line 1112.
+Package pdftex.def Info: photo/ignacio.png  used on input line 1101.
 (pdftex.def)             Requested size: 71.95749pt x 90.33513pt.
 File: photo/ignacio.png Graphic file (type png)
 <use photo/ignacio.png>
-Package pdftex.def Info: photo/ignacio.png  used on input line 1112.
+Package pdftex.def Info: photo/ignacio.png  used on input line 1101.
 (pdftex.def)             Requested size: 71.95749pt x 90.33513pt.
 <photo/erez.png, id=331, 91.323pt x 114.6465pt>
 File: photo/erez.png Graphic file (type png)
 <use photo/erez.png>
-Package pdftex.def Info: photo/erez.png  used on input line 1115.
+Package pdftex.def Info: photo/erez.png  used on input line 1104.
 (pdftex.def)             Requested size: 71.9618pt x 90.34056pt.
 File: photo/erez.png Graphic file (type png)
 <use photo/erez.png>
-Package pdftex.def Info: photo/erez.png  used on input line 1115.
+Package pdftex.def Info: photo/erez.png  used on input line 1104.
 (pdftex.def)             Requested size: 71.9618pt x 90.34056pt.
 <photo/zoya.png, id=334, 279.0425pt x 350.30875pt>
 File: photo/zoya.png Graphic file (type png)
 <use photo/zoya.png>
-Package pdftex.def Info: photo/zoya.png  used on input line 1118.
+Package pdftex.def Info: photo/zoya.png  used on input line 1107.
 (pdftex.def)             Requested size: 71.95749pt x 90.33513pt.
 File: photo/zoya.png Graphic file (type png)
 <use photo/zoya.png>
-Package pdftex.def Info: photo/zoya.png  used on input line 1118.
+Package pdftex.def Info: photo/zoya.png  used on input line 1107.
 (pdftex.def)             Requested size: 71.95749pt x 90.33513pt.
  [13 <./photo/mike.png> <./photo/tibo.png> <./photo/ignacio.png> <./photo/erez.png> <./photo/zoya.png>] (./MTT_reveyrand.aux)
 
@@ -621,16 +620,16 @@ LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 6061 strings out of 492649
- 87215 string characters out of 6129622
- 391900 words of memory out of 5000000
- 9779 multiletter control sequences out of 15000+600000
+ 6064 strings out of 492649
+ 87239 string characters out of 6129622
+ 456651 words of memory out of 5000000
+ 9782 multiletter control sequences out of 15000+600000
  47085 words of font info for 83 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
- 41i,19n,43p,1914b,1708s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 41i,19n,43p,1914b,1558s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/loc
 al/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmss17.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on MTT_reveyrand.pdf (13 pages, 3589107 bytes).
+Output written on MTT_reveyrand.pdf (13 pages, 3586468 bytes).
 PDF statistics:
  415 PDF objects out of 1000 (max. 8388607)
  265 compressed objects within 3 object streams

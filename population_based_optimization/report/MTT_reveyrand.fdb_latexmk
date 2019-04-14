@@ -1,13 +1,13 @@
 # Fdb version 3
-["bibtex MTT_reveyrand"] 1555283121 "MTT_reveyrand.aux" "MTT_reveyrand.bbl" "MTT_reveyrand" 1555283129
+["bibtex MTT_reveyrand"] 1555283949 "MTT_reveyrand.aux" "MTT_reveyrand.bbl" "MTT_reveyrand" 1555284255
   "./IEEEtran.bst" 1554827274 56877 4c81423924dc505d67d7e5fcc3311d54 ""
   "Bibliography.bib" 1554827274 61047 686fddc5a4d8b1ee617283755835300e ""
   "IEEEabrv.bib" 1554827274 17393 5017858dd4731000246872d62e3bb2d0 ""
-  "MTT_reveyrand.aux" 1555283129 15336 6931b51a94e50a3e59f9e57c25664730 ""
+  "MTT_reveyrand.aux" 1555284255 15335 ef5edcec8b3bec90dd76662ce37a4362 ""
   (generated)
   "MTT_reveyrand.bbl"
   "MTT_reveyrand.blg"
-["pdflatex"] 1555283122 "MTT_reveyrand.tex" "MTT_reveyrand.pdf" "MTT_reveyrand" 1555283129
+["pdflatex"] 1555284252 "MTT_reveyrand.tex" "MTT_reveyrand.pdf" "MTT_reveyrand" 1555284255
   "../code/particle_swarm_optimization.py" 1554821838 5107 f3a31dad6dbec5bcee4133669b55f5a2 ""
   "../code/results/initial_line_follower_solution.png" 1555282378 310264 7d364514cf01c2108515b18755583cdd ""
   "../code/results/line_best_convergence.png" 1554782193 19897 0c998092709267f20acaa8b2176913cd ""
@@ -118,9 +118,9 @@
   "/usr/local/texlive/2018/texmf-var/web2c/pdftex/pdflatex.fmt" 1523934516 4220280 10cab8fbd7c5a7c52aba9917e190d018 ""
   "/usr/local/texlive/2018/texmf.cnf" 1523934483 577 0b39adfd7c93507ff20c9c14c2f1a33f ""
   "IEEEtran.cls" 1554827274 201353 775b18b42342447aea341b76a89fcb61 ""
-  "MTT_reveyrand.aux" 1555283129 15336 6931b51a94e50a3e59f9e57c25664730 ""
-  "MTT_reveyrand.bbl" 1555283122 9002 2d4929954906bf305930609f36acbea7 "bibtex MTT_reveyrand"
-  "MTT_reveyrand.tex" 1555283112 71026 5194c8723ae23fe1379ca355d5ff852e ""
+  "MTT_reveyrand.aux" 1555284255 15335 ef5edcec8b3bec90dd76662ce37a4362 ""
+  "MTT_reveyrand.bbl" 1555283949 9002 2d4929954906bf305930609f36acbea7 "bibtex MTT_reveyrand"
+  "MTT_reveyrand.tex" 1555284251 69546 1448569ec6c64268dee4d704170fc34b ""
   "pdf/01.pdf" 1554827274 14646 a1ef3e300e48210972df0e5a77d25697 ""
   "pdf/02.pdf" 1554827274 13684 6e1b4d4f213ab3c27035222bc80f5f94 ""
   "pdf/03.pdf" 1554827274 31282 8d7c05379708ebb2c2522722e7ac8aae ""
@@ -142,6 +142,6 @@
   "photo/tibo.png" 1554827276 41253 835aabcb3e142d7b08ca7a2f288c8065 ""
   "photo/zoya.png" 1554827276 60102 d327bb941f561df15c0474af63358a93 ""
   (generated)
-  "MTT_reveyrand.log"
   "MTT_reveyrand.aux"
+  "MTT_reveyrand.log"
   "MTT_reveyrand.pdf"
