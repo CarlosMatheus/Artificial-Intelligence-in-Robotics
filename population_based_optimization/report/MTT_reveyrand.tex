@@ -373,46 +373,84 @@ The \textit{evaluate} method can be seen in the Code \ref{code:evaluate}, where 
     lastline=152
 ]{./../code/simulation.py}
 
-\subsection{Initials Tests}
-
 In the firsts tests, it was clear that the convergency was always slow and always tending first to a quite slow velocity.
 
-Therefore a higher weight was given to linear speed and 
+Therefore a higher weight was given to linear speed and the velocity upper bounder was increased.
 
+\subsection{Concise convercency}
 
+After the adjustment, the algorithm was run with 40 particles for about two hours, what resulted in 5477 iterations.
 
+The quality history and the position history can be seen in the Code \ref{code:position_pso} and Code \ref{code:quality_pso}.
 
+The convergencies can be seen in the figures from Figure \ref{img:best_quality_converge} to Figure \ref{img:quality_converge}.
 
+\lstinputlisting[
+    language=python,
+    caption={Positions results on PSO optimization, shown only the first 10 and the last 10.},
+    label={code:position_pso},
+    style=cStyle,
+]{./../code/results/short_position_history.txt}
 
+\lstinputlisting[
+    language=python,
+    caption={Quality result on PSO optimization, shown only the first 10 and the last 10},
+    label={code:quality_pso},
+    style=cStyle,
+]{./../code/results/short_quality_history.txt}
 
+\begin{figure}
+  \begin{center}
+  \includegraphics[width=2.8in]{./../code/results/line_best_convergence.png}
+  %\vspace{-15pt}
+  \caption{Best quality convergency}
+  \label{img:best_quality_converge}
+  \end{center}
+\end{figure}
 
+\begin{figure}
+  \begin{center}
+  \includegraphics[width=2.8in]{./../code/results/line_quality_convergence.png}
+  %\vspace{-15pt}
+  \caption{Quality convergency}
+  \label{img:quality_converge}
+  \end{center}
+\end{figure}
 
+\begin{figure}
+  \begin{center}
+  \includegraphics[width=2.8in]{./../code/results/line_parameters_convergence.png}
+  %\vspace{-15pt}
+  \caption{Parameters convergency}
+  \label{img:parameters_quality_converge}
+  \end{center}
+\end{figure}
 
+\section {Conclusion}
 
+It was clear, therefore, that \textit{PSO} method was implemented successfully. And by analysing its results, it can be seen that \textit{PSO} has a fast conversion, but it does not converge to something necessarily great.
 
-Consider the microwave rectifier shown in Fig.~\ref{circuit_diagram}.  A sinusoidal microwave power source with voltage magnitude $V_s$ and impedance $R_s$ drives the rectifying element having a resistance $R(v)$ defined as
-\begin{equation}\label{ideal_rectifier_resistance}
-R(v) =
-\begin{cases}
-    \infty, & v > 0\\
-    0, & v \leq 0
-\end{cases}
-\end{equation}
-where $v$ and $i$ are the instantaneous voltage across and current through the rectifying element, respectively. The rectifying element depicted by $R(v)$ in Fig.~\ref{circuit_diagram} can in general be any nonlinear device that acts as a switch, such as a diode or a transistor. When a non-zero on-resistance $R_{on}$ and non-zero threshold voltage $V_{tr}$ are taken into account, the resistance of the rectifying element is given by
+In fact, it finds local maximums and can easyly be stocked on it. But for many cases it is good enought. In the case test, the solution found was able to complete the entire track in about 11 seconds, that is, it was realy fast and precise at the same time.
 
-\begin{equation}\label{nonideal_rectifier_resistance}
-R(v) =
-\begin{cases}
-    \infty, & v > -V_{tr}\\
-    R_{on}, & v \leq -V_{tr}
-\end{cases}
-\end{equation}
+As it is possible to see on the on Figure \ref{img:initial_line_follower_solution} and Figure \ref{img:initial_line_follower_solution} that at inititals iterations the parameters are realy bad, and with the time after many itarations it has a convergency to somethig good.
 
-The analysis of different classes of power rectifiers will next be analyzed based on the harmonic terminations presented to the rectifying element, and independent of the physical nonlinear device which performs the rectification.
+\begin{figure}
+  \begin{center}
+  \includegraphics[width=2.8in]{./../code/results/initial_line_follower_solution.png}
+  %\vspace{-15pt}
+  \caption{Screenshot of the begging of the solution. Clearly the line follower was with bad parameter at this iteration.}
+  \label{img:initial_line_follower_solution}
+  \end{center}
+\end{figure}
 
-
-
-
+\begin{figure}
+  \begin{center}
+  \includegraphics[width=2.8in]{./../code/results/line_follower_solution.png}
+  %\vspace{-15pt}
+  \caption{Screenshot at iteration number 5478. Clearly the line follower is now with good parameters.}
+  \label{img:line_follower_solution}
+  \end{center}
+\end{figure}
 
 
 
