@@ -16,45 +16,45 @@ Database file #2: Bibliography.bib
 Warning--empty note in SWAP
 
 Done.
-You've used 36 entries,
+You've used 14 entries,
             3975 wiz_defined-function locations,
-            1388 strings with 20370 characters,
-and the built_in function-call counts, 29145 in all, are:
-= -- 2346
-> -- 696
-< -- 282
-+ -- 388
-- -- 123
-* -- 1410
-:= -- 4317
-add.period$ -- 70
-call.type$ -- 36
-change.case$ -- 39
-chr.to.int$ -- 650
-cite$ -- 37
-duplicate$ -- 2085
-empty$ -- 2261
-format.name$ -- 133
-if$ -- 6774
+            1250 strings with 16701 characters,
+and the built_in function-call counts, 10228 in all, are:
+= -- 797
+> -- 277
+< -- 89
++ -- 157
+- -- 58
+* -- 502
+:= -- 1543
+add.period$ -- 26
+call.type$ -- 14
+change.case$ -- 18
+chr.to.int$ -- 215
+cite$ -- 15
+duplicate$ -- 740
+empty$ -- 791
+format.name$ -- 54
+if$ -- 2334
 int.to.chr$ -- 0
-int.to.str$ -- 36
-missing$ -- 348
-newline$ -- 128
-num.names$ -- 35
-pop$ -- 725
+int.to.str$ -- 14
+missing$ -- 126
+newline$ -- 62
+num.names$ -- 13
+pop$ -- 283
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 4
-skip$ -- 2267
+skip$ -- 776
 stack$ -- 0
-substring$ -- 1523
-swap$ -- 1827
-text.length$ -- 70
+substring$ -- 476
+swap$ -- 611
+text.length$ -- 22
 text.prefix$ -- 0
 top$ -- 6
 type$ -- 0
 warning$ -- 1
-while$ -- 117
-width$ -- 38
-write$ -- 372
+while$ -- 40
+width$ -- 16
+write$ -- 147
 (There was 1 warning)
