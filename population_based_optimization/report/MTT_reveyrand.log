@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.4.16)  14 APR 2019 22:48
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.4.16)  14 APR 2019 23:10
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -344,33 +344,50 @@ Underfull \hbox (badness 10000) in paragraph at lines 99--101
 \OT1/ptm/b/n/9 pop-u-la-tion based op-ti-miza-tion, op-ti-miza-tion, pro-por-
  []
 
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line 136.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 136.
+./MTT_reveyrand.tex:136: Undefined control sequence.
+l.136 Formally, let $f: \mathbb
+                               {R}^{n} \to \mathbb{R}$ be the cost function ...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./MTT_reveyrand.tex:136: Undefined control sequence.
+l.136 Formally, let $f: \mathbb{R}^{n} \to \mathbb
+                                                  {R}$ be the cost function ...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
 (/usr/local/texlive/2018/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2015/06/04 1.6 listings language file
-) (./../code/particle_swarm_optimization.py
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 83.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 83.
-) (./../code/particle_swarm_optimization.py) (./../code/particle_swarm_optimization.py) (./../code/particle_swarm_optimization.py) (./../code/particle_swarm_optimization.py) (./../code/particle_swarm_optimization.py
+) (./../code/particle_swarm_optimization.py) (./../code/particle_swarm_optimization.py) (./../code/particle_swarm_optimization.py) (./../code/particle_swarm_optimization.py) (./../code/particle_swarm_optimization.py) (./../code/particle_swarm_optimization.py
 LaTeX Font Info:    Try loading font information for OML+ptm on input line 130.
  (/usr/local/texlive/2018/texmf-dist/tex/latex/psnfss/omlptm.fd
 File: omlptm.fd 
 )
 LaTeX Font Info:    Font shape `OML/ptm/m/n' in size <7> not available
 (Font)              Font shape `OML/cmm/m/it' tried instead on input line 130.
-) (./../code/particle_swarm_optimization.py
+) [1{/usr/local/texlive/2018/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
+
+
+] (./../code/particle_swarm_optimization.py
 LaTeX Font Info:    Try loading font information for OMS+ptm on input line 23.
  (/usr/local/texlive/2018/texmf-dist/tex/latex/psnfss/omsptm.fd
 File: omsptm.fd 
 )
 LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <7> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 23.
- [1{/usr/local/texlive/2018/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
-
-
-]) (./../code/particle_swarm_optimization.py) (./../code/particle_swarm_optimization.py)
-./MTT_reveyrand.tex:238: Undefined control sequence.
-l.238 The \texit
+) (./../code/particle_swarm_optimization.py) (./../code/particle_swarm_optimization.py)
+./MTT_reveyrand.tex:241: Undefined control sequence.
+l.241 The \texit
                 {updatae velocity} method uses Equation \ref{equation:update...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -378,61 +395,63 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-(./../code/test_function_result/test_short_position_history.txt) (./../code/test_function_result/test_short_quality_history.txt)
-<./../code/test_function_result/test_best_convergence.png, id=12, 462.528pt x 346.896pt>
+(./../code/test_function_result/test_short_position_history.txt) (./../code/test_function_result/test_short_quality_history.txt [2])
+<./../code/test_function_result/test_best_convergence.png, id=19, 462.528pt x 346.896pt>
 File: ./../code/test_function_result/test_best_convergence.png Graphic file (type png)
 <use ./../code/test_function_result/test_best_convergence.png>
-Package pdftex.def Info: ./../code/test_function_result/test_best_convergence.png  used on input line 290.
+Package pdftex.def Info: ./../code/test_function_result/test_best_convergence.png  used on input line 293.
 (pdftex.def)             Requested size: 202.35622pt x 151.76662pt.
-<./../code/test_function_result/test_quality_converge.png, id=14, 462.528pt x 346.896pt>
+<./../code/test_function_result/test_quality_converge.png, id=21, 462.528pt x 346.896pt>
 File: ./../code/test_function_result/test_quality_converge.png Graphic file (type png)
 <use ./../code/test_function_result/test_quality_converge.png>
-Package pdftex.def Info: ./../code/test_function_result/test_quality_converge.png  used on input line 299.
+Package pdftex.def Info: ./../code/test_function_result/test_quality_converge.png  used on input line 302.
 (pdftex.def)             Requested size: 202.35622pt x 151.76662pt.
-<./../code/test_function_result/test_parameters_converge.png, id=15, 462.528pt x 346.896pt>
+<./../code/test_function_result/test_parameters_converge.png, id=22, 462.528pt x 346.896pt>
 File: ./../code/test_function_result/test_parameters_converge.png Graphic file (type png)
 <use ./../code/test_function_result/test_parameters_converge.png>
-Package pdftex.def Info: ./../code/test_function_result/test_parameters_converge.png  used on input line 308.
+Package pdftex.def Info: ./../code/test_function_result/test_parameters_converge.png  used on input line 311.
 (pdftex.def)             Requested size: 202.35622pt x 151.76662pt.
- [2] (./../code/simulation.py) (./../code/results/short_position_history.txt [3 <./../code/test_function_result/test_best_convergence.png> <./../code/test_function_result/test_quality_converge.png> <./../code/test_function_result/test_parameters_converge.png>]) (./../code/results/short_quality_history.txt)
+ (./../code/simulation.py) [3 <./../code/test_function_result/test_best_convergence.png> <./../code/test_function_result/test_quality_converge.png> <./../code/test_function_result/test_parameters_converge.png>] (./../code/results/short_position_history.txt) (./../code/results/short_quality_history.txt)
 <./../code/results/line_best_convergence.png, id=30, 462.528pt x 346.896pt>
 File: ./../code/results/line_best_convergence.png Graphic file (type png)
 <use ./../code/results/line_best_convergence.png>
-Package pdftex.def Info: ./../code/results/line_best_convergence.png  used on input line 369.
+Package pdftex.def Info: ./../code/results/line_best_convergence.png  used on input line 372.
 (pdftex.def)             Requested size: 202.35622pt x 151.76662pt.
 <./../code/results/line_quality_convergence.png, id=31, 462.528pt x 346.896pt>
 File: ./../code/results/line_quality_convergence.png Graphic file (type png)
 <use ./../code/results/line_quality_convergence.png>
-Package pdftex.def Info: ./../code/results/line_quality_convergence.png  used on input line 378.
+Package pdftex.def Info: ./../code/results/line_quality_convergence.png  used on input line 381.
 (pdftex.def)             Requested size: 202.35622pt x 151.76662pt.
 <./../code/results/line_parameters_convergence.png, id=32, 462.528pt x 346.896pt>
 File: ./../code/results/line_parameters_convergence.png Graphic file (type png)
 <use ./../code/results/line_parameters_convergence.png>
-Package pdftex.def Info: ./../code/results/line_parameters_convergence.png  used on input line 387.
+Package pdftex.def Info: ./../code/results/line_parameters_convergence.png  used on input line 390.
 (pdftex.def)             Requested size: 202.35622pt x 151.76662pt.
-<./../code/results/initial_line_follower_solution.png, id=33, 790.955pt x 584.1825pt>
+ [4 <./../code/results/line_best_convergence.png> <./../code/results/line_quality_convergence.png> <./../code/results/line_parameters_convergence.png>]
+<./../code/results/initial_line_follower_solution.png, id=39, 790.955pt x 584.1825pt>
 File: ./../code/results/initial_line_follower_solution.png Graphic file (type png)
 <use ./../code/results/initial_line_follower_solution.png>
-Package pdftex.def Info: ./../code/results/initial_line_follower_solution.png  used on input line 404.
+Package pdftex.def Info: ./../code/results/initial_line_follower_solution.png  used on input line 407.
 (pdftex.def)             Requested size: 202.35622pt x 149.45036pt.
-<./../code/results/line_follower_solution.png, id=34, 790.955pt x 567.11874pt>
+<./../code/results/line_follower_solution.png, id=40, 790.955pt x 567.11874pt>
 File: ./../code/results/line_follower_solution.png Graphic file (type png)
 <use ./../code/results/line_follower_solution.png>
-Package pdftex.def Info: ./../code/results/line_follower_solution.png  used on input line 413.
+Package pdftex.def Info: ./../code/results/line_follower_solution.png  used on input line 416.
 (pdftex.def)             Requested size: 202.35622pt x 145.08498pt.
- [4 <./../code/results/line_best_convergence.png> <./../code/results/line_quality_convergence.png> <./../code/results/line_parameters_convergence.png> <./../code/results/initial_line_follower_solution.png>] [5
+ [5
 
- <./../code/results/line_follower_solution.png>] (./MTT_reveyrand.aux) ) 
+ <./../code/results/initial_line_follower_solution.png> <./../code/results/line_follower_solution.png>] (./MTT_reveyrand.aux) ) 
 Here is how much of TeX's memory you used:
  5841 strings out of 492649
  83692 string characters out of 6129622
- 491293 words of memory out of 5000000
+ 491273 words of memory out of 5000000
  9596 multiletter control sequences out of 15000+600000
  41058 words of font info for 71 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
- 41i,7n,43p,558b,1725s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on MTT_reveyrand.pdf (5 pages, 728335 bytes).
+ 41i,7n,43p,616b,1717s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/urw/times/ut
+mri8a.pfb>
+Output written on MTT_reveyrand.pdf (5 pages, 732205 bytes).
 PDF statistics:
  82 PDF objects out of 1000 (max. 8388607)
  47 compressed objects within 1 object stream

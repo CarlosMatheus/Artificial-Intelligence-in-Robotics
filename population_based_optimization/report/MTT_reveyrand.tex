@@ -1,6 +1,6 @@
 %
 % IEEE Transactions on Microwave Theory and Techniques example
-% Tibault Reveyrand - http://www.microwave.fr
+% Thibault Reveyrand - http://www.microwave.fr
 %
 % http://www.microwave.fr/LaTeX.html
 % ---------------------------------------
@@ -111,7 +111,7 @@ In this paper is avaliated a population based optimization called Particle Swarm
 % \begin{center} \bfseries EDICS Category: 3-BBND \end{center}
 % \fi
 %
-% For peerreview papers, this IEEEtran command inserts a page break and
+% For peer review papers, this IEEEtran command inserts a page break and
 % creates the second title. It will be ignored for other modes.
 \IEEEpeerreviewmaketitle
 
@@ -129,8 +129,11 @@ In this paper is avaliated a population based optimization called Particle Swarm
 
 PSO allows to optimize a problem from a population of candidate solutions, denoted as "particles", moving them throughout the search space according to mathematical rules that take into account the position and velocity of the particles. The movement of each particle is influenced by its best local position found so far, as well as by the best global positions found by other particles as they travel through the search space. The theoretical foundation of this is to make the particle cloud converge rapidly towards the best solutions.
 
-PSO is a metaheuristic, since it assumes few or no hypotheses about the problem to be optimized and can be applied in large spaces of candidate solutions. However, like all metaheuristics, PSO does not guarantee obtaining an optimal solution in all cases.
+PSO is a metaheuristic since it assumes few or no hypotheses about the problem to be optimized and can be applied in large spaces of candidate solutions. However, like all metaheuristics, PSO does not guarantee to obtain an optimal solution in all cases.
 
+A basic variant of the PSO algorithm works by having a population (called a swarm) of candidate solutions (called particles). These particles are moved around in the search-space according to a few simple formulae. The movements of the particles are guided by their own best known position in the search-space as well as the entire swarm's best known position. When improved positions are being discovered these will then come to guide the movements of the swarm. The process is repeated and by doing so it is hoped, but not guaranteed, that a satisfactory solution will eventually be discovered.
+
+Formally, let $f: \mathbb{R}^{n} \to \mathbb{R}$ be the cost function which must be minimized. The function takes a candidate solution as an argument in the form of a vector of real numbers and produces a real number as output which indicates the objective function value of the given candidate solution. The gradient of $f$ is not known. The goal is to find a solution a for which $f(a) \leq f(b)$ for all $b$ in the search-space, which would mean a is the global minimum. Maximization can be performed by considering the function $h = -f$ instead.
 
 % === II. Harmonically-Terminated Power Rectifier Analysis =================
 % ==========================================================================
@@ -138,7 +141,7 @@ PSO is a metaheuristic, since it assumes few or no hypotheses about the problem 
 
 The implementation was based on the file \textit{particle swarm optimization}. The essence is on \textit{ParticleSwarmOptimization} Class and \textit{Particle} Class development. The first one provides the interface in which the simulation communicates with the PSO.
 
-Based on this, the development of \textit{ParticleSwarmOptimization} Class was oriented on receive inputs, provides information, and have methods that triggers the algorithm continuation.
+Based on this, the development of \textit{ParticleSwarmOptimization} Class was oriented to receive inputs, provides information, and have methods that trigger the algorithm continuation.
 
 In order to achieve this, it was developed the methods shown from the Code \ref{code:particle_swarm_optimization} to the Code \ref{code:notify_evaluation}.
 
@@ -196,13 +199,13 @@ In order to achieve this, it was developed the methods shown from the Code \ref{
     lastline=141
 ]{./../code/particle_swarm_optimization.py}
 
-The two main methods during the execution are \textit{get position to evaluate} that returns to simulation the position of on particle, and the \textit{nofify evalutation} that gives the simuation result of that position to the \textit{PSO} algorithm. With the result the code check if it is the best of that specific particle, or if it is the best overall. Then advance the index to next iteration.
+The two main methods during the execution are the \textit{get position to evaluate} that returns to simulation the position of one particle, and the \textit{nofify evalutation} that gives the simulation result of that position to the \textit{PSO} algorithm. With the result, the code checks if it is the best of that specific particle, or if it is the best overall. Then advance the index to next iteration.
 
 This advance index step is quite important, bacause if the index reaches the population size, it calls the method \textit{advance generation} that will update the velocity and the position of every particle and reset the index.
 
 \subsection {Particle Class Implementation}
 
-Objects of this class stores its position, its velocity, and its best position. The class provides, as well, methods to the particle update its velocity and its position.
+Objects of this class store its position, its velocity, and its best position. The class provides, as well, methods to the particle update its velocity and its position.
 
 The implementation of Particle Class is shown from Code \ref{code:particle} to Code \ref{code:update_particle_position}.
 
@@ -241,7 +244,7 @@ The $\phi_p$ is called the congnitve parameter, and it is a constant that multip
 
 The $\phi_g$ is called the social parameter, and it is a constant that multiplies the vector $(b_g - x_i)$ which is the direction to the best position in all particles.
 
-Therefore the constants $\phi_p$ and $\phi_g$ balance how much important will be the best position locally and the best position globally.
+Therefore the constants $\phi_p$ and $\phi_g$ balance how much importance will be the best position locally and the best position globally.
 
 Basicly this is a balance between explorateion and explotation. The bigger the importancy of the global best, the more proprable to converge to a not so good local maximum. The bigger the importancy of local best, the more problable to find a better solution, but with a more slow convergency.
 
@@ -258,7 +261,7 @@ As professor Maximo suggested during his lecture, it was implemented a particle 
 
 \section{PSO result in test function}
 
-As suggested, the PSO implementation was fist tested using an easy test function in order to verify its correctness.
+As suggested, the PSO implementation was first tested using an easy test function in order to verify its correctness.
 
 The cost function used in the test was described on Equation \ref{equation:test_fuction}, in which has a global maximum $[1 2 3]$.
 
@@ -325,7 +328,7 @@ From the Equation \ref{equation:control_equation}, the objectve of this optimiza
     u(t) =  K_p e(t) + K_i \int_{0}^{t} e(t')dt'+K_d \frac{de(t)}{dt}
 \end{equation}
 
-In oder to do that, the \textit{PSO} algorithm was runned with 40 particles and it was developed the \textit{evaluate} method. With this method every positon of the car were evaluated and the sum of all evaluations was the score of the position of that particle.
+In order to do that, the \textit{PSO} algorithm was run with 40 particles and it was developed the \textit{evaluate} method. With this method, every position of the car was evaluated and the sum of all evaluations was the score of the position of that particle.
 
 The \textit{evaluate} method can be seen in the Code \ref{code:evaluate}, where by the end of the implementation was defined a high weight on linear speed and severe penalty for high errors and miss the track.
 
@@ -344,7 +347,7 @@ Therefore a higher weight was given to linear speed and the velocity upper bound
 
 \subsection{Concise convercency}
 
-After the adjustment, the algorithm was run with 40 particles for about two hours, what resulted in 5477 iterations.
+After the adjustment, the algorithm was run with 40 particles for about two hours, which resulted in 5477 iterations.
 
 The quality history and the position history can be seen in the Code \ref{code:position_pso} and Code \ref{code:quality_pso}.
 
@@ -393,11 +396,11 @@ The convergencies can be seen in the figures from Figure \ref{img:best_quality_c
 
 \section {Conclusion}
 
-It was clear, therefore, that \textit{PSO} method was implemented successfully. And by analysing its results, it can be seen that \textit{PSO} has a fast conversion, but it does not converge to something necessarily great.
+It was clear, therefore, that \textit{PSO} method was implemented successfully. And by analyzing its results, it can be seen that \textit{PSO} has a fast conversion, but it does not converge to something necessarily great.
 
-In fact, it finds local maximums and can easily be stocked on it. But for many cases it is good enought. In the case test, the solution found was able to complete the entire track in about 11 seconds, that is, it was realy fast and precise at the same time.
+In fact, it finds local maximums and can easily be stocked on it. But for many cases, it is good enough. In the case test, the solution found was able to complete the entire track in about 11 seconds, that is, it was really fast and precise at the same time.
 
-As it is possible to see on the on Figure \ref{img:initial_line_follower_solution} and Figure \ref{img:initial_line_follower_solution} that at inititals iterations the parameters are realy bad, and with the time after many itarations it has a convergency to somethig good.
+As it is possible to see on the on Figure \ref{img:initial_line_follower_solution} and Figure \ref{img:initial_line_follower_solution} that at initials iterations the parameters are really bad, and with the time after many iterations it has a convergence to something good.
 
 \begin{figure}
   \begin{center}
@@ -416,9 +419,6 @@ As it is possible to see on the on Figure \ref{img:initial_line_follower_solutio
   \label{img:line_follower_solution}
   \end{center}
 \end{figure}
-
-
-
 
 
 \vfill

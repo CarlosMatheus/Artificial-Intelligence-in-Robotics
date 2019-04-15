@@ -1,5 +1,5 @@
 # Fdb version 3
-["pdflatex"] 1555292883 "MTT_reveyrand.tex" "MTT_reveyrand.pdf" "MTT_reveyrand" 1555292887
+["pdflatex"] 1555294235 "MTT_reveyrand.tex" "MTT_reveyrand.pdf" "MTT_reveyrand" 1555294239
   "../code/particle_swarm_optimization.py" 1554821838 5107 f3a31dad6dbec5bcee4133669b55f5a2 ""
   "../code/results/initial_line_follower_solution.png" 1555282378 310264 7d364514cf01c2108515b18755583cdd ""
   "../code/results/line_best_convergence.png" 1554782193 19897 0c998092709267f20acaa8b2176913cd ""
@@ -89,9 +89,9 @@
   "/usr/local/texlive/2018/texmf-var/web2c/pdftex/pdflatex.fmt" 1523934516 4220280 10cab8fbd7c5a7c52aba9917e190d018 ""
   "/usr/local/texlive/2018/texmf.cnf" 1523934483 577 0b39adfd7c93507ff20c9c14c2f1a33f ""
   "IEEEtran.cls" 1554827274 201353 775b18b42342447aea341b76a89fcb61 ""
-  "MTT_reveyrand.aux" 1555292886 4876 6b4ca306de091a44bf9ec7dd9c474445 ""
-  "MTT_reveyrand.tex" 1555292879 17076 1a044a83647b593e00a136921268cf0e ""
+  "MTT_reveyrand.aux" 1555294239 4876 e37f02cc33c4c02a04fc1a65280095f5 ""
+  "MTT_reveyrand.tex" 1555294235 18232 278250fe078c6e1e30beaa9fdc5a35b8 ""
   (generated)
-  "MTT_reveyrand.log"
   "MTT_reveyrand.pdf"
+  "MTT_reveyrand.log"
   "MTT_reveyrand.aux"
