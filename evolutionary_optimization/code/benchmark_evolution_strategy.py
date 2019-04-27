@@ -11,6 +11,8 @@ num_trials = 200  # recommended for all other functions
 # num_iterations = 200  # recommended for schaffer2d
 num_iterations = 100  # recommended for all other functions
 function = translated_sphere  # translated_sphere, ackley, schaffer2d, rastrigin
+functions = [translated_sphere, ackley, schaffer2d, rastrigin]
+
 fig_format = 'png'  # 'svg' (Word), 'eps' (Latex), 'png' (best compatibility/worst quality)
 
 
@@ -74,46 +76,50 @@ def benchmark_algorithm(num_trials, num_iterations, algorithm, function, hyperpa
     return mean_fitness, best_fitness
 
 
-hyperparams = Params()
-# lower and upper are used for sampling the initial guess
-hyperparams.lower = np.array([-3.0, -3.0])  # SES and CMA-ES
-hyperparams.upper = np.array([3.0, 3.0])  # SES and CMA-ES
-hyperparams.C0 = np.identity(2)  # SES only
-hyperparams.sigma0 = 1.0  # CMA-ES only
+for function in functions:
 
-# The default CMA-ES strategy (which is used here) uses mu = 3 and population_size = 6
-hyperparams.mu = 3  # SES only
-hyperparams.population_size = 6  # SES only
-# Benchmarking (3,6)-SES
-mean_ses6, best_ses6 = benchmark_algorithm(num_trials, num_iterations, 'ses', function, hyperparams)
-hyperparams.mu = 6  # SES only
-hyperparams.population_size = 12  # SES only
-# Benchmarking (6,12)-SES
-mean_ses12, best_ses12 = benchmark_algorithm(num_trials, num_iterations, 'ses', function, hyperparams)
-hyperparams.mu = 12  # SES only
-hyperparams.population_size = 24  # SES only
-# Benchmarking (12,24)-SES
-mean_ses24, best_ses24 = benchmark_algorithm(num_trials, num_iterations, 'ses', function, hyperparams)
-# Benchmarking (3_w,6)-CMA-ES
-mean_cmaes, best_cmaes = benchmark_algorithm(num_trials, num_iterations, 'cmaes', function, hyperparams)
-plt.figure()
-plt.plot(mean_ses6)
-plt.plot(mean_ses12)
-plt.plot(mean_ses24)
-plt.plot(mean_cmaes)
-plt.legend(['(3,6)-SES', '(6,12)-SES', '(12,24)-SES', 'CMA-ES'])
-plt.xlabel('Iteration')
-plt.ylabel('Fitness')
-plt.title('Mean Fitness - %s' % function.__name__)
-plt.savefig('mean_fitness.%s' % fig_format, fig_format=fig_format)
-plt.figure()
-plt.plot(best_ses6)
-plt.plot(best_ses12)
-plt.plot(best_ses24)
-plt.plot(best_cmaes)
-plt.legend(['(3,6)-SES', '(6,12)-SES', '(12,24)-SES', 'CMA-ES'])
-plt.xlabel('Iteration')
-plt.ylabel('Fitness')
-plt.title('Best Fitness - %s' % function.__name__)
-plt.savefig('best_fitness.%s' % fig_format, fig_format=fig_format)
-plt.show()
+    function_name = function.__name__
+
+    hyperparams = Params()
+    # lower and upper are used for sampling the initial guess
+    hyperparams.lower = np.array([-3.0, -3.0])  # SES and CMA-ES
+    hyperparams.upper = np.array([3.0, 3.0])  # SES and CMA-ES
+    hyperparams.C0 = np.identity(2)  # SES only
+    hyperparams.sigma0 = 1.0  # CMA-ES only
+
+    # The default CMA-ES strategy (which is used here) uses mu = 3 and population_size = 6
+    hyperparams.mu = 3  # SES only
+    hyperparams.population_size = 6  # SES only
+    # Benchmarking (3,6)-SES
+    mean_ses6, best_ses6 = benchmark_algorithm(num_trials, num_iterations, 'ses', function, hyperparams)
+    hyperparams.mu = 6  # SES only
+    hyperparams.population_size = 12  # SES only
+    # Benchmarking (6,12)-SES
+    mean_ses12, best_ses12 = benchmark_algorithm(num_trials, num_iterations, 'ses', function, hyperparams)
+    hyperparams.mu = 12  # SES only
+    hyperparams.population_size = 24  # SES only
+    # Benchmarking (12,24)-SES
+    mean_ses24, best_ses24 = benchmark_algorithm(num_trials, num_iterations, 'ses', function, hyperparams)
+    # Benchmarking (3_w,6)-CMA-ES
+    mean_cmaes, best_cmaes = benchmark_algorithm(num_trials, num_iterations, 'cmaes', function, hyperparams)
+    plt.figure()
+    plt.plot(mean_ses6)
+    plt.plot(mean_ses12)
+    plt.plot(mean_ses24)
+    plt.plot(mean_cmaes)
+    plt.legend(['(3,6)-SES', '(6,12)-SES', '(12,24)-SES', 'CMA-ES'])
+    plt.xlabel('Iteration')
+    plt.ylabel('Fitness')
+    plt.title('Mean Fitness - %s' % function.__name__)
+    plt.savefig('mean_fitness-' + function_name + '.%s' % fig_format, fig_format=fig_format)
+    plt.figure()
+    plt.plot(best_ses6)
+    plt.plot(best_ses12)
+    plt.plot(best_ses24)
+    plt.plot(best_cmaes)
+    plt.legend(['(3,6)-SES', '(6,12)-SES', '(12,24)-SES', 'CMA-ES'])
+    plt.xlabel('Iteration')
+    plt.ylabel('Fitness')
+    plt.title('Best Fitness - %s' % function.__name__)
+    plt.savefig('best_fitness-' + function_name + '.%s' % fig_format, fig_format=fig_format)
+    # plt.show()
