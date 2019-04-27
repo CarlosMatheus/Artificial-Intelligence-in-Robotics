@@ -1,0 +1,94 @@
+\begin{thebibliography}{10}
+\providecommand{\url}[1]{#1}
+\csname url@rmstyle\endcsname
+\providecommand{\newblock}{\relax}
+\providecommand{\bibinfo}[2]{#2}
+\providecommand\BIBentrySTDinterwordspacing{\spaceskip=0pt\relax}
+\providecommand\BIBentryALTinterwordstretchfactor{4}
+\providecommand\BIBentryALTinterwordspacing{\spaceskip=\fontdimen2\font plus
+\BIBentryALTinterwordstretchfactor\fontdimen3\font minus
+  \fontdimen4\font\relax}
+\providecommand\BIBforeignlanguage[2]{{%
+\expandafter\ifx\csname l@#1\endcsname\relax
+\typeout{** WARNING: IEEEtran.bst: No hyphenation pattern has been}%
+\typeout{** loaded for the language `#1'. Using the pattern for}%
+\typeout{** the default language instead.}%
+\else
+\language=\csname l@#1\endcsname
+\fi
+#2}}
+\renewcommand\BIBentryALTinterwordstretchfactor{4}
+
+\bibitem{robergIMS2012}
+M.~Roberg, E.~Falkenstein, and Z.~Popovic, ``High-efficiency
+  harmonically-terminated rectifier for wireless powering applications,'' in
+  \emph{IEEE MTT-S International Microwave Symposium Digest}, Montr\'{e}al,
+  2012.
+
+\bibitem{gan_pa_letter}
+M.~Roberg, J.~Hoversten, and Z.~Popovi\'c, ``{GaN HEMT PA with over 84\% power
+  added efficiency},'' \emph{Electronics Letters}, vol.~46, no.~23, pp. 1553
+  --1554, 11 2010.
+
+\bibitem{SWAP}
+\BIBentryALTinterwordspacing
+{VTD}, ``Swap-x402 data sheet.'' [Online]. Available:
+  \url{http://www.vtd-rf.com/pdf/productpresentation.pdf}
+\BIBentrySTDinterwordspacing
+
+\bibitem{verspecht}
+J.~Verspecht, ``Calibration of a measurement system for high frequency
+  nonlinear devices,'' Ph.D. dissertation, Vrije Universiteit Brussel (VUB),
+  1995.
+
+\bibitem{switch}
+G.~Callet, J.~Faraj, O.~Jardel, C.~Charbonniaud, J.-C. Jacquet, T.~Reveyrand,
+  E.~Morvan, S.~Piotrowicz, J.-P. Teyssier, and R.~Qu\'{e}r\'{e}, ``A new
+  nonlinear hemt model for algan/gan switch applications,'' \emph{International
+  Journal of Microwave and Wireless Technologies}, vol.~2, no. Special Issue
+  3-4, pp. 283--291, 2010.
+
+\bibitem{faraj_arftg_2012}
+J.~Faraj, G.~Callet, O.~Jardel, A.~El-Rafei, F.~De~Groote, R.~Qu\'{e}r\'{e},
+  and J.~Teyssier, ``Time domain large signal characterization of self-biasing
+  phenomena in switch-mode algan/gan hemts,'' in \emph{74th ARFTG Symposium,
+  International Microwave Symposium Digest}, Montr\'{e}al, Canada, 2012.
+
+\bibitem{JoseIMS-rect}
+M.~Nieves~Ruiz, R.~Marante, and J.~A. Garcia, ``A class e synchronous rectifier
+  based on an e-phemt device for wireless powering applications,'' in
+  \emph{IEEE MTT-S International Microwave Symposium Digest}, Montr\'{e}al,
+  2012.
+
+\bibitem{Kaz}
+M.~Kazimierczuk and J.~Jozwik, ``Analysis and design of class e
+  zero-current-switching rectifier,'' \emph{Circuits and Systems, IEEE
+  Transactions on}, vol.~37, no.~8, pp. 1000 --1009, aug 1990.
+
+\bibitem{brown_rect2}
+W.~Brown, J.~Mims, and N.~Heenan, ``An experimental microwave-powered
+  helicopter,'' in \emph{IRE International Convention Record}, vol.~13, mar
+  1965, pp. 225 -- 235.
+
+\bibitem{asbeck}
+X.~Zhang, L.~Larson, P.~Asbeck, and R.~Langridge, ``Analysis of power recycling
+  techniques for rf and microwave outphasing power amplifiers,'' \emph{Circuits
+  and Systems II: Analog and Digital Signal Processing, IEEE Trans. on},
+  vol.~49, no.~5, pp. 312 -- 320, may 2002.
+
+\bibitem{4500dcdc}
+S.~Djukic, D.~Maksimovic, and Z.~Popovic, ``A planar 4.5-ghz dc-dc power
+  converter,'' \emph{Microwave Theory and Tech., IEEE Trans. on}, vol.~47,
+  no.~8, pp. 1457 --1460, aug 1999.
+
+\bibitem{roberg_phd}
+M.~Roberg, ``{Analysis \& Design of Non-Linear Amplifiers for Efficient
+  Microwave Transmitters},'' Ph.D. dissertation, University of Colorado at
+  Boulder (CU-Boulder), 2012.
+
+\bibitem{erezMTT2012}
+E.~Falkenstein, M.~Roberg, and Z.~Popovic, ``Low-power wireless power
+  delivery,'' \emph{Microwave Theory and Techniques, IEEE Transactions on},
+  vol.~60, no.~7, pp. 2277 --2286, july 2012.
+
+\end{thebibliography}
