@@ -138,8 +138,6 @@ CMA-ES stands for covariance matrix adaptation evolution strategy. Evolution str
 
 In an evolution strategy, new candidate solutions are sampled according to a multivariate normal distribution in ${R}^{n}$. Recombination amounts to selecting a new mean value for the distribution. Mutation amounts to adding a random vector, a perturbation with zero mean. Pairwise dependencies between the variables in the distribution are represented by a covariance matrix. The covariance matrix adaptation (CMA) is a method to update the covariance matrix of this distribution. This is particularly useful if the function $f$ is ill-conditioned.
 
-Adaptation of the covariance matrix amounts to learning a second order model of the underlying objective function similar to the approximation of the inverse Hessian matrix in the Quasi-Newton method in classical optimization. In contrast to most classical methods, fewer assumptions on the nature of the underlying objective function are made. Only the ranking between candidate solutions is exploited for learning the sample distribution and neither derivatives nor even the function values themselves are required by the method.
-
 Two main principles for the adaptation of parameters of the search distribution are exploited in the CMA-ES algorithm.
 
 First, a maximum-likelihood principle, based on the idea to increase the probability of successful candidate solutions and search steps. The mean of the distribution is updated such that the likelihood of previously successful candidate solutions is maximized. The covariance matrix of the distribution is updated (incrementally) such that the likelihood of previously successful search steps is increased. Both updates can be interpreted as a natural gradient descent. Also, in consequence, the CMA conducts an iterated principal components analysis of successful search steps while retaining all principal axes. Estimation of distribution algorithms and the Cross-Entropy Method are based on very similar ideas, but estimate (non-incrementally) the covariance matrix by maximizing the likelihood of successful solution points instead of successful search steps.
@@ -214,29 +212,29 @@ On the images Image \ref{img:test_evolution_strategy-translated_sphere-SES} and 
     style=cStyle,
 ]{./../code/test_evolution_strategy_results/test_evolution_strategy-ackley-CMAES_history_sample_short.txt}
 
-But it was verified as well that for more dificult functions like Schaffer function and Rastrigin (2D) the SES can easily be stocked on a local minimum. The images
+But it was verified as well that for more dificult functions like Schaffer function and Rastrigin (2D) the SES can easily be stocked on a local minimum. The images Image \ref{img:test_evolution_strategy-schaffer-SES} and Image \ref{img:test_evolution_strategy-rastrigin-SES} shows Schaffer and Rastrigin respectively. And for these two tests the codes from Code \ref{code:schaffer_fitness} to Code \ref{code:rastrigin_samples} shown its fitness and sample progresses.
 
 \begin{figure}
   \begin{center}
-  \includegraphics[width=2.8in]{./../code/test_evolution_strategy_results/test_evolution_strategy-rastrigin-SES.png}
-  \caption{Convergence of SES on Rastrigin (2D) function}
-  \label{img:test_evolution_strategy-rastrigin-SES}
+  \includegraphics[width=2.8in]{./../code/test_evolution_strategy_results/test_evolution_strategy-schaffer2d-SES.png}
+  \caption{Convergence of SES on Schaffer function}
+  \label{img:test_evolution_strategy-schaffer-SES}
   \end{center}
 \end{figure}
 
 \lstinputlisting[
     language=python,
-    caption={First 10 and last 10 fitness results of SES on Rastrigin (2D) function},
-    label={code:translated_sphere_fitness},
+    caption={First 10 and last 10 fitness results of SES on Schaffer function},
+    label={code:schaffer_fitness},
     style=cStyle,
-]{./../code/test_evolution_strategy_results/test_evolution_strategy-translated_sphere-SES_fitness_short.txt}
+]{./../code/test_evolution_strategy_results/test_evolution_strategy-schaffer2d-SES_fitness_short.txt}
 
 \lstinputlisting[
     language=python,
-    caption={First 10 and last 10 samples of SES on Rastrigin (2D) function},
-    label={code:translated_sphere_samples},
+    caption={First 10 and last 10 samples of SES on Schaffer function},
+    label={code:schaffer_samples},
     style=cStyle,
-]{./../code/test_evolution_strategy_results/test_evolution_strategy-rastrigin-SES_history_sample_short.txt}
+]{./../code/test_evolution_strategy_results/test_evolution_strategy-schaffer2d-SES_history_sample_short.txt}
 
 \begin{figure}
   \begin{center}
@@ -260,13 +258,89 @@ But it was verified as well that for more dificult functions like Schaffer funct
     style=cStyle,
 ]{./../code/test_evolution_strategy_results/test_evolution_strategy-rastrigin-CMAES_history_sample_short.txt}
 
+\subsection{SES and CMA-ES comparison}
+
+For test functions like Translated Sphere and Ackley it is evident that CMA-ES performs much better than SES even with a lower population.
+
+Tests using a population of size 6 for CMA-ES and 3 diferent populations can be seen in the images Image \ref{img:best_fitness-translated_sphere} to Image \ref{img:mean_fitness-ackley} for these 2 test functions.
+
+In these cases it is clear how SES needs a population four times CMA-ES in order to get similar performance.
+
+\begin{figure}
+  \begin{center}
+  \includegraphics[width=2.8in]{./../code/benchmark_results/best_fitness-translated_sphere.png}
+  \caption{SES and CMA-ES best fitness comparison on Translated Sphere function}
+  \label{img:best_fitness-translated_sphere}
+  \end{center}
+\end{figure}
+
+\begin{figure}
+  \begin{center}
+  \includegraphics[width=2.8in]{./../code/benchmark_results/mean_fitness-translated_sphere.png}
+  \caption{SES and CMA-ES mean fitness comparison on Translated Sphere function}
+  \label{img:mean_fitness-translated_sphere}
+  \end{center}
+\end{figure}
+
+\begin{figure}
+  \begin{center}
+  \includegraphics[width=2.8in]{./../code/benchmark_results/best_fitness-ackley.png}
+  \caption{SES and CMA-ES best fitness comparison on Ackley function}
+  \label{img:best_fitness-ackley}
+  \end{center}
+\end{figure}
+
+\begin{figure}
+  \begin{center}
+  \includegraphics[width=2.8in]{./../code/benchmark_results/mean_fitness-ackley.png}
+  \caption{SES and CMA-ES mean fitness comparison on Ackley function}
+  \label{img:mean_fitness-ackley}
+  \end{center}
+\end{figure}
+
+Although when the comparison is made using more dificult test function like Schaffer function and Rastrigin (2D) the diference gap between SES and CMA-ES decrease and in some cases CMA-ES performs worse than SES with a slight bigger population.
+
+This shows that for dificult functions it may be important to increase the CMA-ES population in order to get a good performance. And shows as well that SES can have a compareble performance to CMA-ES in some cases.
+
+Tests using a population of size 6 for CMA-ES and 3 diferent populations can be seen in the images Image \ref{img:best_fitness-schaffer2d} to Image \ref{img:mean_fitness-rastrigin} for these 2 test functions.
+
+\begin{figure}
+  \begin{center}
+  \includegraphics[width=2.8in]{./../code/benchmark_results/best_fitness-schaffer2d.png}
+  \caption{SES and CMA-ES best fitness comparison on Schaffer function}
+  \label{img:best_fitness-schaffer2d}
+  \end{center}
+\end{figure}
+
+\begin{figure}
+  \begin{center}
+  \includegraphics[width=2.8in]{./../code/benchmark_results/mean_fitness-schaffer2d.png}
+  \caption{SES and CMA-ES mean fitness comparison on Schaffer function}
+  \label{img:mean_fitness-schaffer2d}
+  \end{center}
+\end{figure}
+
+\begin{figure}
+  \begin{center}
+  \includegraphics[width=2.8in]{./../code/benchmark_results/best_fitness-rastrigin.png}
+  \caption{SES and CMA-ES best fitness comparison on Rastrigin function}
+  \label{img:best_fitness-rastrigin}
+  \end{center}
+\end{figure}
+
+\begin{figure}
+  \begin{center}
+  \includegraphics[width=2.8in]{./../code/benchmark_results/mean_fitness-rastrigin.png}
+  \caption{SES and CMA-ES mean fitness comparison on Rastrigin function}
+  \label{img:mean_fitness-rastrigin}
+  \end{center}
+\end{figure}
+
 \section {Conclusion}
 
-It was clear, therefore, that \textit{PSO} method was implemented successfully. And by analyzing its results, it can be seen that \textit{PSO} has a fast conversion, but it does not converge to something necessarily great.
+It was clear, therefore, that since the SES approach not so sofisticated it needs a larger population in order to achieve as good resuls as CMA-ES gets with a smaller population.
 
-In fact, it finds local maximums and can easily be stocked on it. But for many cases, it is good enough. In the case test, the solution found was able to complete the entire track in about 11 seconds, that is, it was really fast and precise at the same time.
-
-As it is possible to see on the on Figure \ref{img:initial_line_follower_solution} and Figure \ref{img:initial_line_follower_solution} that at initials iterations the parameters are really bad, and with the time after many iterations it has a convergence to something good.
+Although in some cases they performed similary, and with a small increase in population in SES makes it perform as good as CMA-ES, and in some cases SES with a larger population performed better then CMA-ES. With this, therefore, SES is a simple and effective optimization method.
 
 \vfill
 \end{document}

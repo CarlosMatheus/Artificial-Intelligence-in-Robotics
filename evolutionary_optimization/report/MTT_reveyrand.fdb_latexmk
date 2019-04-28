@@ -1,5 +1,13 @@
 # Fdb version 3
-["pdflatex"] 1556414881 "MTT_reveyrand.tex" "MTT_reveyrand.pdf" "MTT_reveyrand" 1556414882
+["pdflatex"] 1556417015 "MTT_reveyrand.tex" "MTT_reveyrand.pdf" "MTT_reveyrand" 1556417018
+  "../code/benchmark_results/best_fitness-ackley.png" 1556404140 32421 329178b162113b9cc95f9222c0c1b156 ""
+  "../code/benchmark_results/best_fitness-rastrigin.png" 1556404244 41809 163093187b34515ecadd331cca92acea ""
+  "../code/benchmark_results/best_fitness-schaffer2d.png" 1556404192 56975 d301eb6ad3ba900ed6b4f03945ae8dd9 ""
+  "../code/benchmark_results/best_fitness-translated_sphere.png" 1556404080 33091 f4598eee9d60871dfc78fb718d70c4e5 ""
+  "../code/benchmark_results/mean_fitness-ackley.png" 1556404139 32697 bd645d03f8ef5768863dbeb448603c79 ""
+  "../code/benchmark_results/mean_fitness-rastrigin.png" 1556404243 39910 9cef20308f0b5e782f62a3c336204de1 ""
+  "../code/benchmark_results/mean_fitness-schaffer2d.png" 1556404192 43008 8f04bdd67c302cc2299d706fa1a059bd ""
+  "../code/benchmark_results/mean_fitness-translated_sphere.png" 1556404079 30071 cfeb2894769dadc4c262ec25758ef578 ""
   "../code/simple_evolution_strategy.py" 1556404086 2194 cf45dc9c7967f00f2ede6c88d21e1182 ""
   "../code/test_evolution_strategy_results/test_evolution_strategy-ackley-CMAES_fitness_short.txt" 1556403022 328 aaad53a1b777534711b1b1d40adc2030 ""
   "../code/test_evolution_strategy_results/test_evolution_strategy-ackley-CMAES_history_sample_short.txt" 1556403022 700 29ddaad30548e6017c25373a61fdf176 ""
@@ -7,7 +15,9 @@
   "../code/test_evolution_strategy_results/test_evolution_strategy-rastrigin-CMAES_fitness_short.txt" 1556403135 464 aeddd0007e14ca51cefc5c9afed72f33 ""
   "../code/test_evolution_strategy_results/test_evolution_strategy-rastrigin-CMAES_history_sample_short.txt" 1556403135 584 209f6edb55a359897126b013f7f87303 ""
   "../code/test_evolution_strategy_results/test_evolution_strategy-rastrigin-SES.png" 1556402884 25672 8a710f69b03498f71da6bd317dbd2029 ""
-  "../code/test_evolution_strategy_results/test_evolution_strategy-rastrigin-SES_history_sample_short.txt" 1556402884 680 925f19af6996bc6bd987c16b9ed750ff ""
+  "../code/test_evolution_strategy_results/test_evolution_strategy-schaffer2d-SES.png" 1556402835 27967 81e67500ffbf28e1c834d6c9ba6c5b3d ""
+  "../code/test_evolution_strategy_results/test_evolution_strategy-schaffer2d-SES_fitness_short.txt" 1556402835 520 bdb668d53bdb0b297d20dc61ae0aff31 ""
+  "../code/test_evolution_strategy_results/test_evolution_strategy-schaffer2d-SES_history_sample_short.txt" 1556402835 586 2e9832e762fd06bc95d67991d3e2b6dc ""
   "../code/test_evolution_strategy_results/test_evolution_strategy-translated_sphere-SES.png" 1556402746 9484 c97d19aabfa64126f59930bb5d26d22f ""
   "../code/test_evolution_strategy_results/test_evolution_strategy-translated_sphere-SES_fitness_short.txt" 1556412868 347 4eb7a92e15b743ae51d70cb079d03524 ""
   "../code/test_evolution_strategy_results/test_evolution_strategy-translated_sphere-SES_history_sample_short.txt" 1556402746 428 a0acda0e68e9de2174a99e152694a52a ""
@@ -85,9 +95,9 @@
   "/usr/local/texlive/2018/texmf-var/web2c/pdftex/pdflatex.fmt" 1523934516 4220280 10cab8fbd7c5a7c52aba9917e190d018 ""
   "/usr/local/texlive/2018/texmf.cnf" 1523934483 577 0b39adfd7c93507ff20c9c14c2f1a33f ""
   "IEEEtran.cls" 1554827274 201353 775b18b42342447aea341b76a89fcb61 ""
-  "MTT_reveyrand.aux" 1556414882 2994 269b54cc410387fb67baca708bcf682e ""
-  "MTT_reveyrand.tex" 1556414880 14658 84b9a142706d62f2e9b6bb4c012b219f ""
+  "MTT_reveyrand.aux" 1556417018 4566 a2fa220c5f1e52582abdd3018ea0a17b ""
+  "MTT_reveyrand.tex" 1556417012 17370 427fe0b175bb5d70576aab5a46bcbea5 ""
   (generated)
-  "MTT_reveyrand.log"
   "MTT_reveyrand.pdf"
   "MTT_reveyrand.aux"
+  "MTT_reveyrand.log"
