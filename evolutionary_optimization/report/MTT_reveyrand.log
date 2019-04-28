@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.4.16)  27 APR 2019 21:08
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.4.16)  27 APR 2019 22:28
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -263,7 +263,17 @@ File: lstmisc.sty 2015/06/04 1.6 (Carsten Heinz)
 File: listings.cfg 2015/06/04 1.6 listings configuration
 ))
 Package: listings 2015/06/04 1.6 (Carsten Heinz)
- (./MTT_reveyrand.aux)
+ (./MTT_reveyrand.aux
+
+LaTeX Warning: Label `code:translated_sphere_fitness' multiply defined.
+
+
+LaTeX Warning: Label `img:test_evolution_strategy-rastrigin-SES' multiply defined.
+
+
+LaTeX Warning: Label `code:translated_sphere_samples' multiply defined.
+
+)
 \openout1 = `MTT_reveyrand.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 73.
@@ -278,8 +288,7 @@ LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 73.
 LaTeX Font Info:    ... okay on input line 73.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 73.
 LaTeX Font Info:    ... okay on input line 73.
-
-(/usr/local/texlive/2018/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+ (/usr/local/texlive/2018/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count115
 \scratchdimen=\dimen150
@@ -334,80 +343,77 @@ Package grfext Info: Graphics extension search list:
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 ))
 \c@lstlisting=\count121
-
-./MTT_reveyrand.tex:93: Undefined control sequence.
-l.93 In this paper is evaluated an \texit
-                                         {Evolutionary Optimization Method} ...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-./MTT_reveyrand.tex:93: Undefined control sequence.
-l.93 ...ry Optimization Method} denominated \texit
-                                                  {Simple Evolution Strategy...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-./MTT_reveyrand.tex:93: Undefined control sequence.
-l.93 ...ts performance is compared with the \texit
-                                                  {Covariance Matrix Adaptat...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-./MTT_reveyrand.tex:122: Undefined control sequence.
-l.122 In this paper the \texit
-                              {Simple Evolution Strategy} (SES) approach rel...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <9> on input line 122.
+(Font)              <7> on input line 123.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 122.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 122.
-[1{/usr/local/texlive/2018/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
+(Font)              <5> on input line 123.
+ [1{/usr/local/texlive/2018/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
 
 
 ]
+(/usr/local/texlive/2018/texmf-dist/tex/latex/listings/lstlang1.sty
+File: lstlang1.sty 2015/06/04 1.6 listings language file
+) (./../code/simple_evolution_strategy.py
+LaTeX Font Info:    Try loading font information for OMS+ptm on input line 50.
+ (/usr/local/texlive/2018/texmf-dist/tex/latex/psnfss/omsptm.fd
+File: omsptm.fd 
+)
+LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <7> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 50.
+)
+<./../code/test_evolution_strategy_results/test_evolution_strategy-translated_sphere-SES.png, id=16, 462.528pt x 346.896pt>
+File: ./../code/test_evolution_strategy_results/test_evolution_strategy-translated_sphere-SES.png Graphic file (type png)
+<use ./../code/test_evolution_strategy_results/test_evolution_strategy-translated_sphere-SES.png>
+Package pdftex.def Info: ./../code/test_evolution_strategy_results/test_evolution_strategy-translated_sphere-SES.png  used on input line 175.
+(pdftex.def)             Requested size: 202.35622pt x 151.76662pt.
+ (./../code/test_evolution_strategy_results/test_evolution_strategy-translated_sphere-SES_fitness_short.txt) (./../code/test_evolution_strategy_results/test_evolution_strategy-translated_sphere-SES_history_sample_short.txt)
+<./../code/test_evolution_strategy_results/test_evolution_strategy-ackley-SES.png, id=18, 462.528pt x 346.896pt>
+File: ./../code/test_evolution_strategy_results/test_evolution_strategy-ackley-SES.png Graphic file (type png)
+<use ./../code/test_evolution_strategy_results/test_evolution_strategy-ackley-SES.png>
+Package pdftex.def Info: ./../code/test_evolution_strategy_results/test_evolution_strategy-ackley-SES.png  used on input line 197.
+(pdftex.def)             Requested size: 202.35622pt x 151.76662pt.
+ (./../code/test_evolution_strategy_results/test_evolution_strategy-ackley-CMAES_fitness_short.txt [2 <./../code/test_evolution_strategy_results/test_evolution_strategy-translated_sphere-SES.png> <./../code/test_evolution_strategy_results/test_evolution_strategy-ackley-SES.png>]) (./../code/test_evolution_strategy_results/test_evolution_strategy-ackley-CMAES_history_sample_short.txt)
+<./../code/test_evolution_strategy_results/test_evolution_strategy-rastrigin-SES.png, id=25, 462.528pt x 346.896pt>
+File: ./../code/test_evolution_strategy_results/test_evolution_strategy-rastrigin-SES.png Graphic file (type png)
+<use ./../code/test_evolution_strategy_results/test_evolution_strategy-rastrigin-SES.png>
+Package pdftex.def Info: ./../code/test_evolution_strategy_results/test_evolution_strategy-rastrigin-SES.png  used on input line 221.
+(pdftex.def)             Requested size: 202.35622pt x 151.76662pt.
+ (./../code/test_evolution_strategy_results/test_evolution_strategy-translated_sphere-SES_fitness_short.txt) (./../code/test_evolution_strategy_results/test_evolution_strategy-rastrigin-SES_history_sample_short.txt)
+File: ./../code/test_evolution_strategy_results/test_evolution_strategy-rastrigin-SES.png Graphic file (type png)
+<use ./../code/test_evolution_strategy_results/test_evolution_strategy-rastrigin-SES.png>
+Package pdftex.def Info: ./../code/test_evolution_strategy_results/test_evolution_strategy-rastrigin-SES.png  used on input line 243.
+(pdftex.def)             Requested size: 202.35622pt x 151.76662pt.
 
-LaTeX Warning: Reference `code:particle_swarm_optimization' on page 2 undefined on input line 157.
+(./../code/test_evolution_strategy_results/test_evolution_strategy-rastrigin-CMAES_fitness_short.txt) (./../code/test_evolution_strategy_results/test_evolution_strategy-rastrigin-CMAES_history_sample_short.txt [3 <./../code/test_evolution_strategy_results/test_evolution_strategy-rastrigin-SES.png>])
+
+LaTeX Warning: Reference `img:initial_line_follower_solution' on page 4 undefined on input line 269.
 
 
-LaTeX Warning: Reference `code:notify_evaluation' on page 2 undefined on input line 157.
+LaTeX Warning: Reference `img:initial_line_follower_solution' on page 4 undefined on input line 269.
+
+[4
+
+] (./MTT_reveyrand.aux)
+
+LaTeX Warning: There were undefined references.
 
 
-! Package Listings Error: File `./../code/particle_swarm_optimization(.py)' not found.
+LaTeX Warning: There were multiply-defined labels.
 
-Type X to quit or <RETURN> to proceed,
-or enter new name. (Default extension: py)
-
-Enter file name: 
-./MTT_reveyrand.tex:166: Emergency stop.
-<read *> 
-         
-l.166 ]{./../code/particle_swarm_optimization.py}
-                                                 ^^M
-*** (cannot \read from terminal in nonstop modes)
-
- 
+ ) 
 Here is how much of TeX's memory you used:
- 5232 strings out of 492649
- 74511 string characters out of 6129622
- 160654 words of memory out of 5000000
- 9040 multiletter control sequences out of 15000+600000
- 40580 words of font info for 75 fonts, out of 8000000 for 9000
+ 5727 strings out of 492649
+ 82319 string characters out of 6129622
+ 406566 words of memory out of 5000000
+ 9498 multiletter control sequences out of 15000+600000
+ 42165 words of font info for 72 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
- 41i,6n,35p,920b,271s stack positions out of 5000i,500n,10000p,200000b,80000s
-./MTT_reveyrand.tex:166:  ==> Fatal error occurred, no output PDF file produced!
+ 41i,7n,43p,920b,1721s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
+Output written on MTT_reveyrand.pdf (4 pages, 152815 bytes).
+PDF statistics:
+ 69 PDF objects out of 1000 (max. 8388607)
+ 45 compressed objects within 1 object stream
+ 0 named destinations out of 1000 (max. 500000)
+ 16 words of extra memory for PDF output out of 10000 (max. 10000000)
+
