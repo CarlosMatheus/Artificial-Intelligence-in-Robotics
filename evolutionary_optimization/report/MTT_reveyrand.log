@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.4.16)  27 APR 2019 20:41
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.4.16)  27 APR 2019 21:08
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -362,35 +362,30 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <9> on input line 124.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 124.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 124.
-./MTT_reveyrand.tex:124: Undefined control sequence.
-l.124 Formally, let $f: \mathbb
-                               {R}^{n} \to \mathbb{R}$ be the cost function ...
+./MTT_reveyrand.tex:122: Undefined control sequence.
+l.122 In this paper the \texit
+                              {Simple Evolution Strategy} (SES) approach rel...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-./MTT_reveyrand.tex:124: Undefined control sequence.
-l.124 Formally, let $f: \mathbb{R}^{n} \to \mathbb
-                                                  {R}$ be the cost function ...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <9> on input line 122.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 122.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 122.
+[1{/usr/local/texlive/2018/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
 
 
-LaTeX Warning: Reference `code:particle_swarm_optimization' on page 1 undefined on input line 134.
+]
+
+LaTeX Warning: Reference `code:particle_swarm_optimization' on page 2 undefined on input line 157.
 
 
-LaTeX Warning: Reference `code:notify_evaluation' on page 1 undefined on input line 134.
+LaTeX Warning: Reference `code:notify_evaluation' on page 2 undefined on input line 157.
 
 
 ! Package Listings Error: File `./../code/particle_swarm_optimization(.py)' not found.
@@ -399,20 +394,20 @@ Type X to quit or <RETURN> to proceed,
 or enter new name. (Default extension: py)
 
 Enter file name: 
-./MTT_reveyrand.tex:143: Emergency stop.
+./MTT_reveyrand.tex:166: Emergency stop.
 <read *> 
          
-l.143 ]{./../code/particle_swarm_optimization.py}
+l.166 ]{./../code/particle_swarm_optimization.py}
                                                  ^^M
 *** (cannot \read from terminal in nonstop modes)
 
  
 Here is how much of TeX's memory you used:
- 5215 strings out of 492649
- 74350 string characters out of 6129622
- 159638 words of memory out of 5000000
- 9036 multiletter control sequences out of 15000+600000
- 28530 words of font info for 64 fonts, out of 8000000 for 9000
+ 5232 strings out of 492649
+ 74511 string characters out of 6129622
+ 160654 words of memory out of 5000000
+ 9040 multiletter control sequences out of 15000+600000
+ 40580 words of font info for 75 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
- 41i,5n,35p,616b,271s stack positions out of 5000i,500n,10000p,200000b,80000s
-./MTT_reveyrand.tex:143:  ==> Fatal error occurred, no output PDF file produced!
+ 41i,6n,35p,920b,271s stack positions out of 5000i,500n,10000p,200000b,80000s
+./MTT_reveyrand.tex:166:  ==> Fatal error occurred, no output PDF file produced!
