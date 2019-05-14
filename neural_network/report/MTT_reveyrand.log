@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.4.16)  14 MAY 2019 16:09
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.4.16)  14 MAY 2019 17:24
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -348,10 +348,10 @@ File: omsptm.fd
 )
 LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <7> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 47.
-) (./../code/neural_network.py [1{/usr/local/texlive/2018/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
+) (./../code/neural_network.py) (./../code/neural_network.py [1{/usr/local/texlive/2018/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
 
 
-]) (./../code/neural_network.py)
+])
 <./../code/result_greater_than/cost_function_convergence.png, id=11, 462.528pt x 346.896pt>
 File: ./../code/result_greater_than/cost_function_convergence.png Graphic file (type png)
 <use ./../code/result_greater_than/cost_function_convergence.png>
@@ -399,15 +399,15 @@ Package pdftex.def Info: ./../code/result/cost_function_convergence_segmentation
 (pdftex.def)             Requested size: 202.35622pt x 151.76662pt.
  [2 <./../code/result_greater_than/cost_function_convergence.png> <./../code/result_greater_than/dataset.png> <./../code/result_greater_than/neural_net_classification.png>] [3 <./../code/result_xor/cost_function_convergence.png> <./../code/result_xor/dataset.png> <./../code/result_xor/neural_net_classification.png> <./../code/result/original_image.png> <./../code/result/segmented_image.png> <./../code/result/cost_function_convergence_segmentation.png>] (./MTT_reveyrand.aux) ) 
 Here is how much of TeX's memory you used:
- 5751 strings out of 492649
- 81259 string characters out of 6129622
- 629382 words of memory out of 5000000
+ 5748 strings out of 492649
+ 81228 string characters out of 6129622
+ 587098 words of memory out of 5000000
  9538 multiletter control sequences out of 15000+600000
  41058 words of font info for 71 fonts, out of 8000000 for 9000
- 1144 hyphenation exceptions out of 8191
- 41i,7n,43p,946b,1729s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 1141 hyphenation exceptions out of 8191
+ 41i,7n,43p,946b,1713s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on MTT_reveyrand.pdf (3 pages, 502794 bytes).
+Output written on MTT_reveyrand.pdf (3 pages, 502427 bytes).
 PDF statistics:
  54 PDF objects out of 1000 (max. 8388607)
  25 compressed objects within 1 object stream
