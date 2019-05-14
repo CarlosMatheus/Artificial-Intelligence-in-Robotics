@@ -1,5 +1,5 @@
 # Fdb version 3
-["pdflatex"] 1557865460 "MTT_reveyrand.tex" "MTT_reveyrand.pdf" "MTT_reveyrand" 1557865463
+["pdflatex"] 1557865749 "MTT_reveyrand.tex" "MTT_reveyrand.pdf" "MTT_reveyrand" 1557865752
   "../code/neural_network.py" 1557853166 5808 12186d6a224002001c9507ee0d5ca657 ""
   "../code/result/cost_function_convergence_segmentation.png" 1557844217 26506 086edfbfe20878cc24bf7c11813db65b ""
   "../code/result/original_image.png" 1557844297 240157 1842b3007219e1fb4072f213dd25d9d1 ""
@@ -78,9 +78,9 @@
   "/usr/local/texlive/2018/texmf-var/web2c/pdftex/pdflatex.fmt" 1523934516 4220280 10cab8fbd7c5a7c52aba9917e190d018 ""
   "/usr/local/texlive/2018/texmf.cnf" 1523934483 577 0b39adfd7c93507ff20c9c14c2f1a33f ""
   "IEEEtran.cls" 1554827274 201353 775b18b42342447aea341b76a89fcb61 ""
-  "MTT_reveyrand.aux" 1557865463 2402 b204cd0a7c9468b7cd384085f9cdc88d ""
-  "MTT_reveyrand.tex" 1557865457 9841 776c952f1af68e66ac78c5617cd2e7a8 ""
+  "MTT_reveyrand.aux" 1557865752 2402 b204cd0a7c9468b7cd384085f9cdc88d ""
+  "MTT_reveyrand.tex" 1557865749 9855 df9204cf3eeca8bc6fa802376df2dcfd ""
   (generated)
+  "MTT_reveyrand.pdf"
   "MTT_reveyrand.log"
   "MTT_reveyrand.aux"
-  "MTT_reveyrand.pdf"
