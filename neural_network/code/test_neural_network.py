@@ -6,8 +6,8 @@ from utils import sum_gt_zero, xor
 
 num_cases = 200  # number of auto-generated cases
 num_epochs = 1000  # number of epochs for training
-# classification_function = sum_gt_zero  # selects sum_gt_zero as the classification function
-classification_function = xor  # selects xor as the classification function
+classification_function = sum_gt_zero  # selects sum_gt_zero as the classification function
+# classification_function = xor  # selects xor as the classification function
 # Figure format used for saving figures
 fig_format = 'png'
 # fig_format = 'svg'
@@ -41,7 +41,7 @@ for i in range(len(negatives)):
     negatives_array[1, i] = negatives[i][1, 0]
 
 # Creating and training the neural network
-neural_network = NeuralNetwork(2, 10, 1, 6.0)
+neural_network = NeuralNetwork(2, 10, 1, 6)
 costs = np.zeros(num_epochs)
 for i in range(num_epochs):
     neural_network.back_propagation(inputs, expected_outputs)

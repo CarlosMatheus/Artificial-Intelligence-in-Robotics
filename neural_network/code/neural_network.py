@@ -116,18 +116,18 @@ class NeuralNetwork:
             inp = inputs[i]
 
             dz2 = y_hat - y
-            dw2 = (1 / num_cases) * np.dot(dz2, np.transpose(a[1]))
-            db2 = (1 / num_cases) * np.sum(dz2, axis=1)
+            dw2 = np.dot(dz2, np.transpose(a[1]))
+            db2 = np.sum(dz2, axis=1)
 
             dz1 = np.multiply(np.dot(np.transpose(self.weights[2]), dz2), 1 - np.power(a[1], 2))
-            dw1 = (1 / num_cases) * np.dot(dz1, np.transpose(inp))
-            db1 = (1 / num_cases) * np.sum(dz1, axis=1)
+            dw1 = np.dot(dz1, np.transpose(inp))
+            db1 = np.sum(dz1, axis=1)
 
-            biases_gradient[1] += db1
-            biases_gradient[2] += db2
+            biases_gradient[1] += db1 / num_cases
+            biases_gradient[2] += db2 / num_cases
 
-            weights_gradient[1] += dw1
-            weights_gradient[2] += dw2
+            weights_gradient[1] += dw1 / num_cases
+            weights_gradient[2] += dw2 / num_cases
 
         return weights_gradient, biases_gradient
 
