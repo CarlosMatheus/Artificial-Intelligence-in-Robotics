@@ -46,10 +46,16 @@ class NeuralNetwork:
         """
         z = [None] * 3
         a = [None] * 3
+
         z[0] = input
         a[0] = input
-        # Add logic for neural network inference
-        a[2] = 0.001 * np.ones((self.num_outputs, 1))  # Change this line
+
+        z[1] = self.weights[1]*a[0] + self.biases[1]
+        a[1] = sigmoid(z[1])
+
+        z[2] = self.weights[2] * a[1] + self.biases[2]
+        a[2] = sigmoid(z[2])
+
         return z, a
 
     def compute_cost(self, inputs, expected_outputs):
@@ -110,4 +116,5 @@ class NeuralNetwork:
         """
         weights_gradient, biases_gradient = self.compute_gradient_back_propagation(inputs, expected_outputs)
         # Add logic to update the weights and biases
-        pass  # Remove this line
+
+        return
