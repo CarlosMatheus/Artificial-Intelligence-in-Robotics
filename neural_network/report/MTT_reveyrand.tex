@@ -1,23 +1,3 @@
-%
-% IEEE Transactions on Microwave Theory and Techniques example
-% Thibault Reveyrand - http://www.microwave.fr
-%
-% http://www.microwave.fr/LaTeX.html
-% ---------------------------------------
-
-
-
-% ================================================
-% Please HIGHLIGHT the new inputs such like this :
-% Text :
-%  \hl{comment}
-% Aligned Eq.
-% \begin{shaded}
-% \end{shaded}
-% ================================================
-
-
-
 \documentclass[journal]{IEEEtran}
 
 %\usepackage[retainorgcmds]{IEEEtrantools}
@@ -72,14 +52,12 @@
 %=== TITLE & AUTHORS ====================================================================
 \begin{document}
 \bstctlcite{IEEEexample:BSTcontrol}
-    \title{Otimizations Based on Evolutionary Methods}
-  \author{Carlos~Matheus~Barros~da~Silva,~\IEEEmembership{Bachelor Student of ITA}\\Prof. Marcos~Ricardo~Omena~de~Albuquerque~Máximo}
-
+    \title{Neural Networks}
+  \author{Carlos~Matheus~Barros~da~Silva,~\IEEEmembership{Computer Engineering Bachelor Student of ITA}\\Prof. Marcos~Ricardo~Omena~de~Albuquerque~Máximo}
 
 % The paper headers
-\markboth{INSTITUTO TECNOLÓGICO DE AERONÁUTICA, APRIL~2019
-}{Otimizations Based on Evolutionary Methods}
-
+\markboth{INSTITUTO TECNOLÓGICO DE AERONÁUTICA, May~2019
+}{Neural Networks}
 
 % ====================================================================
 \maketitle
@@ -89,7 +67,7 @@
 % === ABSTRACT ==============================================================
 % ============================================================================
 \begin{abstract}
-%\boldmath
+
 In this paper is the evaluation of an Evolutionary Optimization Method denominated Simple Evolution Strategy (SES) and its performance is compared with the Covariance Matrix Adaptation Evolution Strategy (CMA-ES).
 
 The results show that since the SES approach not so sophisticated it needs a larger population in order to achieve as good results as CMA-ES gets with a smaller population.
@@ -114,42 +92,20 @@ Although in some cases they performed similarly, and with a small increase in po
 % =============================================================================
 \section{Introduction}
 
-\IEEEPARstart{I}{n} computer science, an evolution strategy (ES) is an optimization technique based on ideas of evolution. It belongs to the general class of evolutionary computation or artificial evolution methodologies.
+\IEEEPARstart{N}{e}ural networks (NN) are computing systems vaguely inspired by the biological neural networks and astrocytes that constitute animal brains. The neural network itself is not an algorithm, but rather a framework for many different machine learning algorithms to work together and process complex data inputs. Such systems "learn" to perform tasks by considering examples, generally without being programmed with any task-specific rules. For example, in image recognition, they might learn to identify images that contain cats by analyzing example images that have been manually labeled as "cat" or "no cat" and using the results to identify cats in other images. They do this without any prior knowledge about cats, for example, that they have fur, tails, whiskers and cat-like faces. Instead, they automatically generate identifying characteristics from the learning material that they process.
 
-Usually, Evolution strategies use natural problem-dependent representations, and primarily mutation and selection, as search operators. In common with evolutionary algorithms, the operators are applied in a loop. An iteration of the loop is called a generation. The sequence of generations is continued until a termination criterion is met.
+An NN is based on a collection of connected units or nodes called artificial neurons, which loosely model the neurons in a biological brain. Each connection, like the synapses in a biological brain, can transmit a signal from one artificial neuron to another. An artificial neuron that receives a signal can process it and then signal additional artificial neurons connected to it.
 
-\subsection{Simple Evolution Strategy}
+In common NN implementations, the signal at a connection between artificial neurons is a real number, and the output of each artificial neuron is computed by some non-linear function of the sum of its inputs. The connections between artificial neurons are called 'edges'. Artificial neurons and edges typically have a weight that adjusts as learning proceeds. The weight increases or decreases the strength of the signal at a connection. Artificial neurons may have a threshold such that the signal is only sent if the aggregate signal crosses that threshold. Typically, artificial neurons are aggregated into layers. Different layers may perform different kinds of transformations on their inputs. Signals travel from the first layer (the input layer), to the last layer (the output layer), possibly after traversing the layers multiple times.
 
-In this paper, the Simple Evolution Strategy (SES) approach relies on a covariance matrix and a mean. For each iteration, the algorithm makes a uniform sampling with the mean and covariance matrix and then gets the $\mu$ best positions and makes the mean of its position be the next mean and update the covariance matrix. This SES behavior can be described with the Equation \ref{equation:esemean} and Equation \ref{equation:eseconvariancematrix}.
-
-\begin{equation}
-    \label{equation:esemean}
-    m^{g+1} = \frac{1}{\mu} \sum_{i=1}^{\mu} S_{i:\lambda}^{g+1}
-\end{equation}
-
-\begin{equation}
-    \label{equation:eseconvariancematrix}
-    C^{g+1} = \frac{1}{\mu} \sum_{i=1}^{\mu} (S_{i:\lambda}^{g+1} - m^g) (S_{i:\lambda}^{g+1} - m^g)^T
-\end{equation}
-
-\subsection{Covariance Matrix Adaptation Evolution Strategy}
-
-CMA-ES stands for covariance matrix adaptation evolution strategy. Evolution strategies (ES) are stochastic, derivative-free methods for numerical optimization of non-linear or non-convex continuous optimization problems. They belong to the class of evolutionary algorithms and evolutionary computation. An evolutionary algorithm is broadly based on the principle of biological evolution, namely the repeated interplay of variation (via recombination and mutation) and selection: in each generation (iteration) new individuals (candidate solutions, denoted as $x$) are generated by variation, usually in a stochastic way, of the current parental individuals. Then, some individuals are selected to become the parents in the next generation based on their fitness or objective function value $f(x)$. Like this, over the generation sequence, individuals with better and better $f$-values are generated.
-
-In an evolution strategy, new candidate solutions are sampled according to a multivariate normal distribution in ${R}^{n}$. Recombination amounts to selecting a new mean value for the distribution. Mutation amounts to adding a random vector, a perturbation with zero means. Pairwise dependencies between the variables in the distribution are represented by a covariance matrix. The covariance matrix adaptation (CMA) is a method to update the covariance matrix of this distribution. This is particularly useful if the function $f$ is ill-conditioned.
-
-Two main principles for the adaptation of parameters of the search distribution are exploited in the CMA-ES algorithm.
-
-First, a maximum-likelihood principle, based on the idea to increase the probability of successful candidate solutions and search steps. The mean of the distribution is updated such that the likelihood of previously successful candidate solutions is maximized. The covariance matrix of the distribution is updated (incrementally) such that the likelihood of previously successful search steps is increased. Both updates can be interpreted as natural gradient descent. Also, in consequence, the CMA conducts an iterated principal components analysis of successful search steps while retaining all principal axes. Estimation of distribution algorithms and the Cross-Entropy Method are based on very similar ideas, but estimate (non-incrementally) the covariance matrix by maximizing the likelihood of successful solution points instead of successful search steps.
-
-Second, two paths of the time evolution of the distribution mean of the strategy are recorded, called search or evolution paths. These paths contain significant information about the correlation between consecutive steps. Specifically, if consecutive steps are taken in a similar direction, the evolution paths become long. The evolution paths are exploited in two ways. One path is used for the covariance matrix adaptation procedure in place of single successful search steps and facilitates a possibly much faster variance increase of favorable directions. The other path is used to conduct additional step-size control. This step-size control aims to make consecutive movements of the distribution mean orthogonal in expectation. The step-size control effectively prevents premature convergence yet allowing fast convergence to an optimum.
+The original goal of the NN approach was to solve problems in the same way that a human brain would. However, over time, attention moved to performing specific tasks, leading to deviations from biology. Artificial neural networks have been used on a variety of tasks, including computer vision, speech recognition, machine translation, social network filtering, playing board and video games and medical diagnosis.
 
 % ==========================================================================
 \section{Neural Network Implementation}
 
 The implementation was based on the file \textit{neural network}. The essence of the implementation is on the methods \textit{forward propagation}, \textit{compute gradient back propagation} and \textit{back propagation}.
 
-Those methods can be seen on the codes from Code \ref{forward} to Code \ref{compute}.
+Those methods can be seen on the codes from Code \ref{code:forward} to Code \ref{code:compute}.
 
 \lstinputlisting[
     language=python,
@@ -178,203 +134,95 @@ Those methods can be seen on the codes from Code \ref{forward} to Code \ref{comp
     lastline=132
 ]{./../code/neural_network.py}
 
+\section{Neural Network Analysis on Test Function}
 
+In this analysis was used two test functions: \textit{sum greater than} and \textit{xor}.
 
-
-The implementation was based on the file \textit{simple evolution strategy}. The essence of the implementation is on \textit{SimpleEvolutionStrategy} Class and on \textit{tell} method.
-
-The \textit{tell} method updates the mean and the covariance matrix of SES and its implementation can be seen on Code \ref{code:tell}.
-
-\lstinputlisting[
-    language=python,
-    caption={Code of \textit{tell} method},
-    label={code:tell},
-    style=cStyle,
-    firstline=39,
-    lastline=58
-]{./../code/simple_evolution_strategy.py}
-
-\section{SES performance analysis}
-
-In this analysis was used four functions: Translated Sphere, Ackley, Schaffer function, Rastrigin (2D).
-
-SES performed very well in most case finding the minimum global. In Translated Sphere and Ackley using the parameters defined on the file test evolution strategy, the result of SES for these two test functions was similar to the result of CMA-ES.
-
-On the images Image \ref{img:test_evolution_strategy-translated_sphere-SES} and Image \ref{img:test_evolution_strategy-ackley-SES} is shown the convergence of SES on these two test functions. And for these two tests the codes from Code \ref{code:translated_sphere_fitness} to Code \ref{code:ackley_samples} shown its fitness and sample progresses.
+The Neural Network performed very well on \textit{sum greater than} function. On the graphs represented by the images from Image \ref{img:greater_cost} to Image \ref{img:greater_cost}
 
 \begin{figure}
   \begin{center}
-  \includegraphics[width=2.8in]{./../code/test_evolution_strategy_results/test_evolution_strategy-translated_sphere-SES.png}
-  \caption{Convergence of SES on Translated Sphere function}
-  \label{img:test_evolution_strategy-translated_sphere-SES}
-  \end{center}
-\end{figure}
-
-\lstinputlisting[
-    language=python,
-    caption={First 10 and last 10 fitness results of SES on Translated Sphere function},
-    label={code:translated_sphere_fitness},
-    style=cStyle,
-]{./../code/test_evolution_strategy_results/test_evolution_strategy-translated_sphere-SES_fitness_short.txt}
-
-\lstinputlisting[
-    language=python,
-    caption={First 10 and last 10 samples of SES on Translated Sphere function},
-    label={code:translated_sphere_samples},
-    style=cStyle,
-]{./../code/test_evolution_strategy_results/test_evolution_strategy-translated_sphere-SES_history_sample_short.txt}
-
-\begin{figure}
-  \begin{center}
-  \includegraphics[width=2.8in]{./../code/test_evolution_strategy_results/test_evolution_strategy-ackley-SES.png}
-  \caption{Convergence of SES on Translated Sphere function}
-  \label{img:test_evolution_strategy-ackley-SES}
-  \end{center}
-\end{figure}
-
-\lstinputlisting[
-    language=python,
-    caption={First 10 and last 10 fitness results of SES on Ackley function},
-    label={code:ackley_fitness},
-    style=cStyle,
-]{./../code/test_evolution_strategy_results/test_evolution_strategy-ackley-CMAES_fitness_short.txt}
-
-\lstinputlisting[
-    language=python,
-    caption={First 10 and last 10 samples of SES on Ackley function},
-    label={code:ackley_samples},
-    style=cStyle,
-]{./../code/test_evolution_strategy_results/test_evolution_strategy-ackley-CMAES_history_sample_short.txt}
-
-But it was verified as well that for more dificult functions like Schaffer function and Rastrigin (2D) the SES can easily be stocked on a local minimum. The images Image \ref{img:test_evolution_strategy-schaffer-SES} and Image \ref{img:test_evolution_strategy-rastrigin-SES} shows Schaffer and Rastrigin respectively. And for these two tests the codes from Code \ref{code:schaffer_fitness} to Code \ref{code:rastrigin_samples} shown its fitness and sample progresses.
-
-\begin{figure}
-  \begin{center}
-  \includegraphics[width=2.8in]{./../code/test_evolution_strategy_results/test_evolution_strategy-schaffer2d-SES.png}
-  \caption{Convergence of SES on Schaffer function}
-  \label{img:test_evolution_strategy-schaffer-SES}
-  \end{center}
-\end{figure}
-
-\lstinputlisting[
-    language=python,
-    caption={First 10 and last 10 fitness results of SES on Schaffer function},
-    label={code:schaffer_fitness},
-    style=cStyle,
-]{./../code/test_evolution_strategy_results/test_evolution_strategy-schaffer2d-SES_fitness_short.txt}
-
-\lstinputlisting[
-    language=python,
-    caption={First 10 and last 10 samples of SES on Schaffer function},
-    label={code:schaffer_samples},
-    style=cStyle,
-]{./../code/test_evolution_strategy_results/test_evolution_strategy-schaffer2d-SES_history_sample_short.txt}
-
-\begin{figure}
-  \begin{center}
-  \includegraphics[width=2.8in]{./../code/test_evolution_strategy_results/test_evolution_strategy-rastrigin-SES.png}
-  \caption{Convergence of SES on Rastrigin (2D) function}
-  \label{img:test_evolution_strategy-rastrigin-SES}
-  \end{center}
-\end{figure}
-
-\lstinputlisting[
-    language=python,
-    caption={First 10 and last 10 fitness results of SES on Rastrigin (2D) function},
-    label={code:rastrigin_fitness},
-    style=cStyle,
-]{./../code/test_evolution_strategy_results/test_evolution_strategy-rastrigin-CMAES_fitness_short.txt}
-
-\lstinputlisting[
-    language=python,
-    caption={First 10 and last 10 samples of SES on Rastrigin (2D) function},
-    label={code:rastrigin_samples},
-    style=cStyle,
-]{./../code/test_evolution_strategy_results/test_evolution_strategy-rastrigin-CMAES_history_sample_short.txt}
-
-\subsection{SES and CMA-ES comparison}
-
-For test functions like Translated Sphere and Ackley, it is evident that CMA-ES performs much better than SES even with a lower population.
-
-Tests using a population of size 6 for CMA-ES and 3 diferent populations can be seen in the images Image \ref{img:best_fitness-translated_sphere} to Image \ref{img:mean_fitness-ackley} for these 2 test functions.
-
-In these cases, it is clear how SES needs a population four times CMA-ES in order to get similar performance.
-
-\begin{figure}
-  \begin{center}
-  \includegraphics[width=2.8in]{./../code/benchmark_results/best_fitness-translated_sphere.png}
-  \caption{SES and CMA-ES best fitness comparison on Translated Sphere function}
-  \label{img:best_fitness-translated_sphere}
+  \includegraphics[width=2.8in]{./../code/result_greater_than/cost_function_convergence.png}
+  \caption{Convergence of cost function on greater than function test case}
+  \label{img:greater_cost}
   \end{center}
 \end{figure}
 
 \begin{figure}
   \begin{center}
-  \includegraphics[width=2.8in]{./../code/benchmark_results/mean_fitness-translated_sphere.png}
-  \caption{SES and CMA-ES mean fitness comparison on Translated Sphere function}
-  \label{img:mean_fitness-translated_sphere}
+  \includegraphics[width=2.8in]{./../code/result_greater_than/dataset.png}
+  \caption{Dataset of greater than function}
+  \label{img:greater_data_set}
   \end{center}
 \end{figure}
 
 \begin{figure}
   \begin{center}
-  \includegraphics[width=2.8in]{./../code/benchmark_results/best_fitness-ackley.png}
-  \caption{SES and CMA-ES best fitness comparison on Ackley function}
-  \label{img:best_fitness-ackley}
+  \includegraphics[width=2.8in]{./../code/result_greater_than/neural_net_classification.png}
+  \caption{Neural Network Classification on greater than function}
+  \label{img:greater_classification}
+  \end{center}
+\end{figure}
+
+The Neural Network performed well on \textit{xor} function. On the graphs represented by the images from Image \ref{img:xor_cost} to Image \ref{img:xor_classification}. It is also possible to see that in this case it heapped some overfit causing some distorsion and leading to some mistakes on the data set on the graph represented by the Image \ref{img:xor_classification}.
+
+\begin{figure}
+  \begin{center}
+  \includegraphics[width=2.8in]{./../code/result_xor/cost_function_convergence.png}
+  \caption{Convergence of cost function on xor function test case}
+  \label{img:xor_cost}
   \end{center}
 \end{figure}
 
 \begin{figure}
   \begin{center}
-  \includegraphics[width=2.8in]{./../code/benchmark_results/mean_fitness-ackley.png}
-  \caption{SES and CMA-ES mean fitness comparison on Ackley function}
-  \label{img:mean_fitness-ackley}
-  \end{center}
-\end{figure}
-
-Although when the comparison is made using more difficult test function like Schaffer function and Rastrigin (2D) the difference gap between SES and CMA-ES decrease and in some cases CMA-ES performs worse than SES with a slightly bigger population.
-
-This shows that for difficult functions it may be important to increase the CMA-ES population in order to get a good performance. And shows as well that SES can have comparable performance to CMA-ES in some cases.
-
-Tests using a population of size 6 for CMA-ES and 3 diferent populations can be seen in the images Image \ref{img:best_fitness-schaffer2d} to Image \ref{img:mean_fitness-rastrigin} for these 2 test functions.
-
-\begin{figure}
-  \begin{center}
-  \includegraphics[width=2.8in]{./../code/benchmark_results/best_fitness-schaffer2d.png}
-  \caption{SES and CMA-ES best fitness comparison on Schaffer function}
-  \label{img:best_fitness-schaffer2d}
+  \includegraphics[width=2.8in]{./../code/result_xor/dataset.png}
+  \caption{Dataset of xor function}
+  \label{img:xor_data_set}
   \end{center}
 \end{figure}
 
 \begin{figure}
   \begin{center}
-  \includegraphics[width=2.8in]{./../code/benchmark_results/mean_fitness-schaffer2d.png}
-  \caption{SES and CMA-ES mean fitness comparison on Schaffer function}
-  \label{img:mean_fitness-schaffer2d}
+  \includegraphics[width=2.8in]{./../code/result_xor/neural_net_classification.png}
+  \caption{Neural Network Classification on xor function}
+  \label{img:xor_classification}
+  \end{center}
+\end{figure}
+
+\subsection{Neural Network Analysis on Color Segmentation}
+
+In order to do a color segmentation, this Neural Network performed very well. This performance can be seen on the results figures on from Image \ref{img:result_original_img} to Image \ref{img:result_convergence}.
+
+\begin{figure}
+  \begin{center}
+  \includegraphics[width=2.8in]{./../code/result/original_image.png}
+  \caption{Original image, before segmentation}
+  \label{img:result_original_img}
   \end{center}
 \end{figure}
 
 \begin{figure}
   \begin{center}
-  \includegraphics[width=2.8in]{./../code/benchmark_results/best_fitness-rastrigin.png}
-  \caption{SES and CMA-ES best fitness comparison on Rastrigin function}
-  \label{img:best_fitness-rastrigin}
+  \includegraphics[width=2.8in]{./../code/result/segmented_image.png}
+  \caption{Segmented image output}
+  \label{img:result_segmented_img}
   \end{center}
 \end{figure}
 
 \begin{figure}
   \begin{center}
-  \includegraphics[width=2.8in]{./../code/benchmark_results/mean_fitness-rastrigin.png}
-  \caption{SES and CMA-ES mean fitness comparison on Rastrigin function}
-  \label{img:mean_fitness-rastrigin}
+  \includegraphics[width=2.8in]{./../code/result/cost_function_convergence_segmentation.png}
+  \caption{Neural Network convergence of cost function on image color segmentation problem}
+  \label{img:result_convergence}
   \end{center}
 \end{figure}
 
 \section {Conclusion}
 
-It was clear, therefore, that since the SES approach not so sophisticated it needs a larger population in order to achieve as good results as CMA-ES gets with a smaller population.
+It was clear, therefore, that the Neural Network worked as expected. Both test cases (greater than function and xor function) the Neural Network worked as expected.
 
-Although in some cases they performed similarly, and with a small increase in population in SES makes it perform as good as CMA-ES, and in some cases, SES with a larger population performed better then CMA-ES. With this, therefore, SES is a simple and effective optimization method.
+For the color segmentation, the Neural Network also provided a concise well segmented result.
 
 \vfill
 \end{document}
