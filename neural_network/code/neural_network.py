@@ -102,29 +102,32 @@ class NeuralNetwork:
         weights_gradient[2] = np.zeros((self.num_outputs, self.num_hiddens))
         biases_gradient[1] = np.zeros((self.num_hiddens, 1))
         biases_gradient[2] = np.zeros((self.num_outputs, 1))
-        # Add logic to compute the gradients
 
         num_cases = len(inputs)
         outputs = [None] * num_cases
+
         for i in range(num_cases):
+
             z, a = self.forward_propagation(inputs[i])
             outputs[i] = a[-1]
 
             y = expected_outputs[i]
-            yHat = outputs[i]
+            y_hat = outputs[i]
+            inp = inputs[i]
 
+            dz2 = y_hat - y
+            dw2 = (1 / num_cases) * np.dot(dz2, np.transpose(a[1]))
+            db2 = (1 / num_cases) * np.sum(dz2, axis=1)
 
-            delta3 = np.multiply(-(y-yHat), sigmoid_derivative(z[2]))
-            dJdW2 = np.dot(np.transpose(a[1]), delta3)
+            dz1 = np.multiply(np.dot(np.transpose(self.weights[2]), dz2), 1 - np.power(a[1], 2))
+            dw1 = (1 / num_cases) * np.dot(dz1, np.transpose(inp))
+            db1 = (1 / num_cases) * np.sum(dz1, axis=1)
 
-            delta2 = np.dot(delta3, sigmoid_derivative(z[2]))
-            dJdW1 = np.dot(a[1])
+            biases_gradient[1] += db1
+            biases_gradient[2] += db2
 
-            biases_gradient[1] = np.zeros((self.num_hiddens, 1))
-            biases_gradient[2] = np.zeros((self.num_outputs, 1))
-
-            weights_gradient[1] = dJdW1/num_cases
-            weights_gradient[2] = dJdW2/num_cases
+            weights_gradient[1] += dw1
+            weights_gradient[2] += dw2
 
         return weights_gradient, biases_gradient
 
