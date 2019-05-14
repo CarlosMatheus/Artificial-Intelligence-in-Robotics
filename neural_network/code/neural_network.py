@@ -119,25 +119,9 @@ class NeuralNetwork:
             dw2 = np.dot(dz2, np.transpose(a[1]))
             db2 = np.sum(dz2, axis=1)
 
-            # dz1 = np.multiply(np.dot(np.transpose(self.weights[2]), dz2), 1 - np.power(a[1], 2))
             dz1 = np.multiply(np.dot(np.transpose(self.weights[2]), dz2), sigmoid_derivative(z[1]))
             dw1 = np.dot(dz1, np.transpose(inp))
             db1 = np.sum(dz1, axis=1)
-
-            # delta_c2 = y_hat - y
-            # db2 = delta_c2
-            # dw2 = np.nditer(delta_c2)[0] * a[1]
-            #
-            # delta_k1 = 0
-            # d = sigmoid_derivative(z[1])
-            # for j in range(len(np.nditer(self.weights[2]))):
-            #     weight = self.weights[2]
-            #     sig_der = np.nditer(d)[j]
-            #     c = np.nditer(delta_c2)[0] * weight
-            #     delta_k1 += sig_der * c
-            #
-            # db1 = delta_k1
-            # dw1 = np.nditer(delta_k1)[0] * a[0]
 
             biases_gradient[1] += db1 / num_cases
             biases_gradient[2] += db2 / num_cases
