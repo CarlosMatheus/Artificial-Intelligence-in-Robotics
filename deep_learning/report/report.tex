@@ -218,37 +218,53 @@ In order to do the Imitation Learning, it was used the Code \ref{code:imitation}
 
 It was made using Keras, not using regularization, and using mean squared error.
 
-The result of this Neural Network on the robot moviment can be seen on the graphs from Image \ref{} to Image \ref{}.
+The result of this Neural Network on the robot movement can be seen on the graphs from Image \ref{img:right_ankle_pitch} to Image \ref{img:right_knee_pitch}.
 
-% \begin{figure}
-%   \begin{center}
-%   \includegraphics[width=2.8in]{./../code/result/original_image.png}
-%   \caption{Original image, before segmentation}
-%   \label{img:result_original_img}
-%   \end{center}
-% \end{figure}
-%
-% \begin{figure}
-%   \begin{center}
-%   \includegraphics[width=2.8in]{./../code/result/segmented_image.png}
-%   \caption{Segmented image output}
-%   \label{img:result_segmented_img}
-%   \end{center}
-% \end{figure}
-%
-% \begin{figure}
-%   \begin{center}
-%   \includegraphics[width=2.8in]{./../code/result/cost_function_convergence_segmentation.png}
-%   \caption{Neural Network convergence of cost function on image color segmentation problem}
-%   \label{img:result_convergence}
-%   \end{center}
-% \end{figure}
+\begin{figure}
+  \begin{center}
+  \includegraphics[width=2.8in]{./../code/imitation_learning_result/rightAnklePitch.png}
+  \caption{Neural Network's movement imitation of robot's right ankle pitch}
+  \label{img:right_ankle_pitch}
+  \end{center}
+\end{figure}
+
+\begin{figure}
+  \begin{center}
+  \includegraphics[width=2.8in]{./../code/imitation_learning_result/rightAnkleRoll.png}
+  \caption{Neural Network's movement imitation of robot's right ankle roll}
+  \label{img:right_ankle_roll}
+  \end{center}
+\end{figure}
+
+\begin{figure}
+  \begin{center}
+  \includegraphics[width=2.8in]{./../code/imitation_learning_result/rightHipPitch.png}
+  \caption{Neural Network's movement imitation of robot's right Hip pitch}
+  \label{img:right_hip_pitch}
+  \end{center}
+\end{figure}
+
+\begin{figure}
+  \begin{center}
+  \includegraphics[width=2.8in]{./../code/imitation_learning_result/rightHipRoll.png}
+  \caption{Neural Network's movement imitation of robot's right hip roll}
+  \label{img:right_hip_roll}
+  \end{center}
+\end{figure}
+
+\begin{figure}
+  \begin{center}
+  \includegraphics[width=2.8in]{./../code/imitation_learning_result/rightKneePitch.png}
+  \caption{Neural Network's movement imitation of robot's right Knee pitch}
+  \label{img:right_knee_pitch}
+  \end{center}
+\end{figure}
 
 \section {Conclusion}
 
-It was clear, therefore, that the Neural Network worked as expected. Both test cases (greater than function and xor function) the Neural Network worked as expected.
+It was clear, therefore, that the Keras' Neural Network worked as expected. Both test cases (greater than function and xor function) the Neural Network worked as well, with a much better result with regularization, because without regularization the results were overfitted.
 
-For the color segmentation, the Neural Network also provided a concise well-segmented result.
+For the Imitation Learning with Keras, the results were good in some cases and very precise in most some cases.
 
 \vfill
 \end{document}
