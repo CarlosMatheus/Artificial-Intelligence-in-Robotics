@@ -2,13 +2,16 @@ import numpy as np
 import matplotlib.pyplot as plt
 from utils import sum_gt_zero, xor
 from keras import models, layers, losses, optimizers, activations, metrics, regularizers
+import os
 
-lambda_l2 = 0.000  # lambda parameter of the L2 regularization
-# lambda_l2 = 0.002  # lambda parameter of the L2 regularization
+# lambda_l2 = 0.000  # lambda parameter of the L2 regularization
+lambda_l2 = 0.002  # lambda parameter of the L2 regularization
 num_cases = 200  # number of auto-generated cases
 num_epochs = 5000  # number of epochs for training
-classification_function = sum_gt_zero  # selects sum_gt_zero as the classification function
-# classification_function = xor  # selects xor as the classification function
+
+# classification_function = sum_gt_zero  # selects sum_gt_zero as the classification function
+classification_function = xor  # selects xor as the classification function
+
 # Figure format used for saving figures
 fig_format = 'png'
 # fig_format = 'svg'
@@ -61,7 +64,10 @@ plt.xlabel('Epoch')
 plt.ylabel('Cost')
 plt.title('Cost Function Convergence')
 plt.grid()
-plt.savefig('convergence_' + function_name + '_l' + str(lambda_l2) + '.' + fig_format, format=fig_format)
+if not os.path.exists(function_name + '_result'):
+    os.makedirs(function_name + '_result')
+file_name = 'convergence_' + function_name + '_l' + str(lambda_l2) + '.' + fig_format
+plt.savefig(os.path.join(function_name + '_result', file_name), format=fig_format)
 
 # Plotting positive and negative samples
 plt.figure()
@@ -72,7 +78,8 @@ plt.ylim([-10.0, 10.0])
 plt.xlabel('x1')
 plt.ylabel('x2')
 plt.title('Dataset')
-plt.savefig('dataset_' + function_name + '_l' + str(lambda_l2) + '.' + fig_format, format=fig_format)
+file_name = 'dataset_' + function_name + '_l' + str(lambda_l2) + '.' + fig_format
+plt.savefig(os.path.join(function_name + '_result', file_name), format=fig_format)
 
 
 # Plotting the decision regions of the neural network
@@ -93,5 +100,6 @@ plt.plot(negatives_array[:, 0], negatives_array[:, 1], 'x')
 plt.xlabel('x1')
 plt.ylabel('x2')
 plt.title('Neural Network Classification')
-plt.savefig('nn_classification_' + function_name + '_l' + str(lambda_l2) + '.' + fig_format, format=fig_format)
+file_name = 'nn_classification_' + function_name + '_l' + str(lambda_l2) + '.' + fig_format
+plt.savefig(os.path.join(function_name + '_result', file_name), format=fig_format)
 plt.show()
