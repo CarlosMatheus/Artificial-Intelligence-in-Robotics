@@ -78,7 +78,7 @@ for joint in right_leg_joints:
     plt.grid()
     plt.title(joint)
     plt.xlabel('Time (s)')
-    plt.ylabel('Joint Position (°)')
+    plt.ylabel('Joint Position')
     plt.legend(['Original', 'Neural Network'])
     plt.savefig(os.path.join('imitation_learning_result', joint + '.' + fig_format), format=fig_format)
 plt.show()

@@ -1,95 +1,108 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.4.16)  14 MAY 2019 17:29
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.4.16)  19 MAY 2019 20:07
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**MTT_reveyrand.tex
-(./MTT_reveyrand.tex
+**report.tex
+(./report.tex
 LaTeX2e <2018-04-01> patch level 2
 Babel <3.18> and hyphenation patterns for 84 language(s) loaded.
-(./IEEEtran.cls
-Document Class: IEEEtran 2007/03/05 V1.7a by Michael Shell
+(/usr/local/texlive/2018/texmf-dist/tex/latex/IEEEtran/IEEEtran.cls
+Document Class: IEEEtran 2015/08/26 V1.8b by Michael Shell
 -- See the "IEEEtran_HOWTO" manual for usage information.
 -- http://www.michaelshell.org/tex/ieeetran/
 \@IEEEtrantmpdimenA=\dimen102
 \@IEEEtrantmpdimenB=\dimen103
+\@IEEEtrantmpdimenC=\dimen104
 \@IEEEtrantmpcountA=\count80
 \@IEEEtrantmpcountB=\count81
+\@IEEEtrantmpcountC=\count82
 \@IEEEtrantmptoksA=\toks14
-LaTeX Font Info:    Try loading font information for OT1+ptm on input line 366.
+LaTeX Font Info:    Try loading font information for OT1+ptm on input line 503.
 (/usr/local/texlive/2018/texmf-dist/tex/latex/psnfss/ot1ptm.fd
 File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
 )
 -- Using 8.5in x 11in (letter) paper.
 -- Using PDF output.
-\@IEEEnormalsizeunitybaselineskip=\dimen104
+\@IEEEnormalsizeunitybaselineskip=\dimen105
 -- This is a 10 point document.
-\CLASSINFOnormalsizebaselineskip=\dimen105
-\CLASSINFOnormalsizeunitybaselineskip=\dimen106
-\IEEEnormaljot=\dimen107
+\CLASSINFOnormalsizebaselineskip=\dimen106
+\CLASSINFOnormalsizeunitybaselineskip=\dimen107
+\IEEEnormaljot=\dimen108
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <5> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 724.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1090.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <5> not available
-(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 724.
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 1090.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 724.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1090.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <7> not available
-(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 724.
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 1090.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <8> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 724.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1090.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <8> not available
-(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 724.
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 1090.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <9> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 724.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1090.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <9> not available
-(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 724.
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 1090.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 724.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1090.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <10> not available
-(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 724.
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 1090.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <11> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 724.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1090.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <11> not available
-(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 724.
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 1090.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 724.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1090.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <12> not available
-(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 724.
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 1090.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <17> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 724.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1090.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <17> not available
-(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 724.
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 1090.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <20> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 724.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1090.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <20> not available
-(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 724.
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 1090.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <24> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 724.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1090.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <24> not available
-(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 724.
-\IEEEilabelindentA=\dimen108
-\IEEEilabelindentB=\dimen109
-\IEEEilabelindent=\dimen110
-\IEEEelabelindent=\dimen111
-\IEEEdlabelindent=\dimen112
-\IEEElabelindent=\dimen113
-\IEEEiednormlabelsep=\dimen114
-\IEEEiedmathlabelsep=\dimen115
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 1090.
+\IEEEquantizedlength=\dimen109
+\IEEEquantizedlengthdiff=\dimen110
+\IEEEquantizedtextheightdiff=\dimen111
+\IEEEilabelindentA=\dimen112
+\IEEEilabelindentB=\dimen113
+\IEEEilabelindent=\dimen114
+\IEEEelabelindent=\dimen115
+\IEEEdlabelindent=\dimen116
+\IEEElabelindent=\dimen117
+\IEEEiednormlabelsep=\dimen118
+\IEEEiedmathlabelsep=\dimen119
 \IEEEiedtopsep=\skip41
-\c@section=\count82
-\c@subsection=\count83
-\c@subsubsection=\count84
-\c@paragraph=\count85
-\c@IEEEsubequation=\count86
+\c@section=\count83
+\c@subsection=\count84
+\c@subsubsection=\count85
+\c@paragraph=\count86
+\c@IEEEsubequation=\count87
 \abovecaptionskip=\skip42
 \belowcaptionskip=\skip43
-\c@figure=\count87
-\c@table=\count88
-\@IEEEeqnnumcols=\count89
-\@IEEEeqncolcnt=\count90
-\@IEEEtmpitemindent=\dimen116
-\c@IEEEbiography=\count91
-\@IEEEtranrubishbin=\box26
+\c@figure=\count88
+\c@table=\count89
+\@IEEEeqnnumcols=\count90
+\@IEEEeqncolcnt=\count91
+\@IEEEsubeqnnumrollback=\count92
+\@IEEEquantizeheightA=\dimen120
+\@IEEEquantizeheightB=\dimen121
+\@IEEEquantizeheightC=\dimen122
+\@IEEEquantizeprevdepth=\dimen123
+\@IEEEquantizemultiple=\count93
+\@IEEEquantizeboxA=\box26
+\@IEEEtmpitemindent=\dimen124
+\IEEEPARstartletwidth=\dimen125
+\c@IEEEbiography=\count94
+\@IEEEtranrubishbin=\box27
 ) (/usr/local/texlive/2018/texmf-dist/tex/latex/xcolor/xcolor.sty
 Package: xcolor 2016/05/11 v2.12 LaTeX color extensions (UK)
  (/usr/local/texlive/2018/texmf-dist/tex/latex/graphics-cfg/color.cfg
@@ -116,16 +129,16 @@ Package: soul 2003/11/17 v2.4 letterspacing/underlining (mf)
 \SOUL@buffer=\toks18
 \SOUL@token=\toks19
 \SOUL@spaceskip=\skip44
-\SOUL@ttwidth=\dimen117
-\SOUL@uldp=\dimen118
-\SOUL@ulht=\dimen119
+\SOUL@ttwidth=\dimen126
+\SOUL@uldp=\dimen127
+\SOUL@ulht=\dimen128
 ) (/usr/local/texlive/2018/texmf-dist/tex/latex/framed/framed.sty
 Package: framed 2011/10/22 v 0.96: framed or shaded text with page breaks
 \OuterFrameSep=\skip45
-\fb@frw=\dimen120
-\fb@frh=\dimen121
-\FrameRule=\dimen122
-\FrameSep=\dimen123
+\fb@frw=\dimen129
+\fb@frh=\dimen130
+\FrameRule=\dimen131
+\FrameSep=\dimen132
 ) (/usr/local/texlive/2018/texmf-dist/tex/latex/graphics/graphicx.sty
 Package: graphicx 2017/06/01 v1.1a Enhanced LaTeX Graphics (DPC,SPQR)
  (/usr/local/texlive/2018/texmf-dist/tex/latex/graphics/keyval.sty
@@ -140,8 +153,8 @@ File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
 )
 Package graphics Info: Driver file: pdftex.def on input line 99.
 )
-\Gin@req@height=\dimen124
-\Gin@req@width=\dimen125
+\Gin@req@height=\dimen133
+\Gin@req@width=\dimen134
 ) (/usr/local/texlive/2018/texmf-dist/tex/latex/amsmath/amsmath.sty
 Package: amsmath 2017/09/02 v2.17a AMS math features
 \@mathmargin=\skip46
@@ -152,44 +165,44 @@ Package: amstext 2000/06/29 v2.01 AMS text
  (/usr/local/texlive/2018/texmf-dist/tex/latex/amsmath/amsgen.sty
 File: amsgen.sty 1999/11/30 v2.0 generic functions
 \@emptytoks=\toks21
-\ex@=\dimen126
+\ex@=\dimen135
 )) (/usr/local/texlive/2018/texmf-dist/tex/latex/amsmath/amsbsy.sty
 Package: amsbsy 1999/11/29 v1.2d Bold Symbols
-\pmbraise@=\dimen127
+\pmbraise@=\dimen136
 ) (/usr/local/texlive/2018/texmf-dist/tex/latex/amsmath/amsopn.sty
 Package: amsopn 2016/03/08 v2.02 operator names
 )
-\inf@bad=\count92
+\inf@bad=\count95
 LaTeX Info: Redefining \frac on input line 213.
-\uproot@=\count93
-\leftroot@=\count94
+\uproot@=\count96
+\leftroot@=\count97
 LaTeX Info: Redefining \overline on input line 375.
-\classnum@=\count95
-\DOTSCASE@=\count96
+\classnum@=\count98
+\DOTSCASE@=\count99
 LaTeX Info: Redefining \ldots on input line 472.
 LaTeX Info: Redefining \dots on input line 475.
 LaTeX Info: Redefining \cdots on input line 596.
-\Mathstrutbox@=\box27
-\strutbox@=\box28
-\big@size=\dimen128
+\Mathstrutbox@=\box28
+\strutbox@=\box29
+\big@size=\dimen137
 LaTeX Font Info:    Redeclaring font encoding OML on input line 712.
 LaTeX Font Info:    Redeclaring font encoding OMS on input line 713.
-\macc@depth=\count97
-\c@MaxMatrixCols=\count98
+\macc@depth=\count100
+\c@MaxMatrixCols=\count101
 \dotsspace@=\muskip10
-\c@parentequation=\count99
-\dspbrk@lvl=\count100
+\c@parentequation=\count102
+\dspbrk@lvl=\count103
 \tag@help=\toks22
-\row@=\count101
-\column@=\count102
-\maxfields@=\count103
+\row@=\count104
+\column@=\count105
+\maxfields@=\count106
 \andhelp@=\toks23
-\eqnshift@=\dimen129
-\alignsep@=\dimen130
-\tagshift@=\dimen131
-\tagwidth@=\dimen132
-\totwidth@=\dimen133
-\lineht@=\dimen134
+\eqnshift@=\dimen138
+\alignsep@=\dimen139
+\tagshift@=\dimen140
+\tagwidth@=\dimen141
+\totwidth@=\dimen142
+\lineht@=\dimen143
 \@envbody=\toks24
 \multlinegap=\skip47
 \multlinetaggap=\skip48
@@ -198,41 +211,41 @@ LaTeX Info: Redefining \[ on input line 2817.
 LaTeX Info: Redefining \] on input line 2818.
 ) (/usr/local/texlive/2018/texmf-dist/tex/latex/tools/array.sty
 Package: array 2018/04/07 v2.4g Tabular extension package (FMi)
-\col@sep=\dimen135
-\ar@mcellbox=\box29
-\extrarowheight=\dimen136
+\col@sep=\dimen144
+\ar@mcellbox=\box30
+\extrarowheight=\dimen145
 \NC@list=\toks26
 \extratabsurround=\skip49
 \backup@length=\skip50
-\ar@cellbox=\box30
+\ar@cellbox=\box31
 ) (/usr/local/texlive/2018/texmf-dist/tex/latex/mdwtools/mdwmath.sty
 Package: mdwmath 1996/04/11 1.1 Nice mathematical things
-\sq@sqrt=\count104
+\sq@sqrt=\count107
 LaTeX Info: Redefining \sqrt on input line 84.
 ) (/usr/local/texlive/2018/texmf-dist/tex/latex/mdwtools/mdwtab.sty
 Package: mdwtab 1998/04/28 1.9 Table typesetting with style
-\tab@state=\count105
-\tab@columns=\count106
+\tab@state=\count108
+\tab@columns=\count109
 \tab@preamble=\toks27
 \tab@shortline=\toks28
-\extrarowheight=\dimen137
-\tabextrasep=\dimen138
-\arrayextrasep=\dimen139
-\smarraycolsep=\dimen140
-\smarrayextrasep=\dimen141
-\tab@width=\dimen142
-\col@sep=\dimen143
-\tab@endheight=\dimen144
+\extrarowheight=\dimen146
+\tabextrasep=\dimen147
+\arrayextrasep=\dimen148
+\smarraycolsep=\dimen149
+\smarrayextrasep=\dimen150
+\tab@width=\dimen151
+\col@sep=\dimen152
+\tab@endheight=\dimen153
 \tab@leftskip=\skip51
 \tab@rightskip=\skip52
-\fn@notes=\box31
-\fn@width=\dimen145
+\fn@notes=\box32
+\fn@width=\dimen154
 ) (/usr/local/texlive/2018/texmf-dist/tex/latex/eqparbox/eqparbox.sty
 Package: eqparbox 2017/09/03 v4.1 Create equal-widthed boxes
 \eqp@tempdima=\skip53
 \eqp@tempdimb=\skip54
-\eqp@tabular@box=\box32
-\eqp@list@box=\box33
+\eqp@tabular@box=\box33
+\eqp@list@box=\box34
 \eqp@list@indent=\skip55
  (/usr/local/texlive/2018/texmf-dist/tex/latex/environ/environ.sty
 Package: environ 2014/05/04 v0.3 A new way to define environments
@@ -242,29 +255,29 @@ Package: trimspaces 2009/09/17 v1.1 Trim spaces around a token list
 \Urlmuskip=\muskip11
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 ) (/usr/local/texlive/2018/texmf-dist/tex/latex/listings/listings.sty
-\lst@mode=\count107
-\lst@gtempboxa=\box34
+\lst@mode=\count110
+\lst@gtempboxa=\box35
 \lst@token=\toks29
-\lst@length=\count108
-\lst@currlwidth=\dimen146
-\lst@column=\count109
-\lst@pos=\count110
-\lst@lostspace=\dimen147
-\lst@width=\dimen148
-\lst@newlines=\count111
-\lst@lineno=\count112
-\lst@maxwidth=\dimen149
+\lst@length=\count111
+\lst@currlwidth=\dimen155
+\lst@column=\count112
+\lst@pos=\count113
+\lst@lostspace=\dimen156
+\lst@width=\dimen157
+\lst@newlines=\count114
+\lst@lineno=\count115
+\lst@maxwidth=\dimen158
  (/usr/local/texlive/2018/texmf-dist/tex/latex/listings/lstmisc.sty
 File: lstmisc.sty 2015/06/04 1.6 (Carsten Heinz)
-\c@lstnumber=\count113
-\lst@skipnumbers=\count114
-\lst@framebox=\box35
+\c@lstnumber=\count116
+\lst@skipnumbers=\count117
+\lst@framebox=\box36
 ) (/usr/local/texlive/2018/texmf-dist/tex/latex/listings/listings.cfg
 File: listings.cfg 2015/06/04 1.6 listings configuration
 ))
 Package: listings 2015/06/04 1.6 (Carsten Heinz)
- (./MTT_reveyrand.aux)
-\openout1 = `MTT_reveyrand.aux'.
+ (./report.aux)
+\openout1 = `report.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 53.
 LaTeX Font Info:    ... okay on input line 53.
@@ -279,18 +292,19 @@ LaTeX Font Info:    ... okay on input line 53.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 53.
 LaTeX Font Info:    ... okay on input line 53.
 
+-- Lines per column: 58 (exact).
 (/usr/local/texlive/2018/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count115
-\scratchdimen=\dimen150
-\scratchbox=\box36
-\nofMPsegments=\count116
-\nofMParguments=\count117
+\scratchcounter=\count118
+\scratchdimen=\dimen159
+\scratchbox=\box37
+\nofMPsegments=\count119
+\nofMParguments=\count120
 \everyMPshowfont=\toks30
-\MPscratchCnt=\count118
-\MPscratchDim=\dimen151
-\MPnumerator=\count119
-\makeMPintoPDFobject=\count120
+\MPscratchCnt=\count121
+\MPscratchDim=\dimen160
+\MPnumerator=\count122
+\makeMPintoPDFobject=\count123
 \everyMPtoPDFconversion=\toks31
 ) (/usr/local/texlive/2018/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
 Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
@@ -333,84 +347,102 @@ Package grfext Info: Graphics extension search list:
  (/usr/local/texlive/2018/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 ))
-\c@lstlisting=\count121
+\c@lstlisting=\count124
  (/usr/local/texlive/2018/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2015/06/04 1.6 listings language file
-) (./../code/neural_network.py
+) (./../code/imitation_learning.py
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 43.
+(Font)              <7> on input line 70.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 43.
-LaTeX Font Info:    Try loading font information for OMS+ptm on input line 47.
+(Font)              <5> on input line 70.
+LaTeX Font Info:    Try loading font information for OMS+ptm on input line 76.
 
 (/usr/local/texlive/2018/texmf-dist/tex/latex/psnfss/omsptm.fd
 File: omsptm.fd 
 )
 LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <7> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 47.
-) (./../code/neural_network.py) (./../code/neural_network.py [1{/usr/local/texlive/2018/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 76.
+)
+<./../code/sgz_result/convergence_sgz_l0_0.png, id=1, 462.528pt x 346.896pt>
+File: ./../code/sgz_result/convergence_sgz_l0_0.png Graphic file (type png)
+<use ./../code/sgz_result/convergence_sgz_l0_0.png>
+Package pdftex.def Info: ./../code/sgz_result/convergence_sgz_l0_0.png  used on input line 127.
+(pdftex.def)             Requested size: 202.35622pt x 151.76662pt.
+ [1{/usr/local/texlive/2018/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
 
 
-])
-<./../code/result_greater_than/cost_function_convergence.png, id=11, 462.528pt x 346.896pt>
-File: ./../code/result_greater_than/cost_function_convergence.png Graphic file (type png)
-<use ./../code/result_greater_than/cost_function_convergence.png>
-Package pdftex.def Info: ./../code/result_greater_than/cost_function_convergence.png  used on input line 145.
+]
+<./../code/sgz_result/dataset_sgz_l0_0.png, id=13, 462.528pt x 346.896pt>
+File: ./../code/sgz_result/dataset_sgz_l0_0.png Graphic file (type png)
+<use ./../code/sgz_result/dataset_sgz_l0_0.png>
+Package pdftex.def Info: ./../code/sgz_result/dataset_sgz_l0_0.png  used on input line 135.
 (pdftex.def)             Requested size: 202.35622pt x 151.76662pt.
-<./../code/result_greater_than/dataset.png, id=13, 462.528pt x 346.896pt>
-File: ./../code/result_greater_than/dataset.png Graphic file (type png)
-<use ./../code/result_greater_than/dataset.png>
-Package pdftex.def Info: ./../code/result_greater_than/dataset.png  used on input line 153.
+<./../code/sgz_result/nn_classification_sgz_l0_0.png, id=14, 462.528pt x 346.896pt>
+File: ./../code/sgz_result/nn_classification_sgz_l0_0.png Graphic file (type png)
+<use ./../code/sgz_result/nn_classification_sgz_l0_0.png>
+Package pdftex.def Info: ./../code/sgz_result/nn_classification_sgz_l0_0.png  used on input line 143.
 (pdftex.def)             Requested size: 202.35622pt x 151.76662pt.
-<./../code/result_greater_than/neural_net_classification.png, id=14, 462.528pt x 346.896pt>
-File: ./../code/result_greater_than/neural_net_classification.png Graphic file (type png)
-<use ./../code/result_greater_than/neural_net_classification.png>
-Package pdftex.def Info: ./../code/result_greater_than/neural_net_classification.png  used on input line 161.
+<./../code/xor_result/convergence_xor_l0_0.png, id=15, 462.528pt x 346.896pt>
+File: ./../code/xor_result/convergence_xor_l0_0.png Graphic file (type png)
+<use ./../code/xor_result/convergence_xor_l0_0.png>
+Package pdftex.def Info: ./../code/xor_result/convergence_xor_l0_0.png  used on input line 153.
 (pdftex.def)             Requested size: 202.35622pt x 151.76662pt.
-<./../code/result_xor/cost_function_convergence.png, id=15, 462.528pt x 346.896pt>
-File: ./../code/result_xor/cost_function_convergence.png Graphic file (type png)
-<use ./../code/result_xor/cost_function_convergence.png>
-Package pdftex.def Info: ./../code/result_xor/cost_function_convergence.png  used on input line 171.
+<./../code/xor_result/dataset_xor_l0_0.png, id=16, 462.528pt x 346.896pt>
+File: ./../code/xor_result/dataset_xor_l0_0.png Graphic file (type png)
+<use ./../code/xor_result/dataset_xor_l0_0.png>
+Package pdftex.def Info: ./../code/xor_result/dataset_xor_l0_0.png  used on input line 161.
 (pdftex.def)             Requested size: 202.35622pt x 151.76662pt.
-<./../code/result_xor/dataset.png, id=16, 462.528pt x 346.896pt>
-File: ./../code/result_xor/dataset.png Graphic file (type png)
-<use ./../code/result_xor/dataset.png>
-Package pdftex.def Info: ./../code/result_xor/dataset.png  used on input line 179.
+<./../code/xor_result/nn_classification_xor_l0_0.png, id=17, 462.528pt x 346.896pt>
+File: ./../code/xor_result/nn_classification_xor_l0_0.png Graphic file (type png)
+<use ./../code/xor_result/nn_classification_xor_l0_0.png>
+Package pdftex.def Info: ./../code/xor_result/nn_classification_xor_l0_0.png  used on input line 169.
 (pdftex.def)             Requested size: 202.35622pt x 151.76662pt.
-<./../code/result_xor/neural_net_classification.png, id=17, 462.528pt x 346.896pt>
-File: ./../code/result_xor/neural_net_classification.png Graphic file (type png)
-<use ./../code/result_xor/neural_net_classification.png>
-Package pdftex.def Info: ./../code/result_xor/neural_net_classification.png  used on input line 187.
+ [2 <./../code/sgz_result/convergence_sgz_l0_0.png> <./../code/sgz_result/dataset_sgz_l0_0.png> <./../code/sgz_result/nn_classification_sgz_l0_0.png> <./../code/xor_result/convergence_xor_l0_0.png> <./../code/xor_result/dataset_xor_l0_0.png> <./../code/xor_result/nn_classification_xor_l0_0.png>]
+<./../code/sgz_result/convergence_sgz_l0_002.png, id=31, 462.528pt x 346.896pt>
+File: ./../code/sgz_result/convergence_sgz_l0_002.png Graphic file (type png)
+<use ./../code/sgz_result/convergence_sgz_l0_002.png>
+Package pdftex.def Info: ./../code/sgz_result/convergence_sgz_l0_002.png  used on input line 183.
 (pdftex.def)             Requested size: 202.35622pt x 151.76662pt.
-<./../code/result/original_image.png, id=18, 462.528pt x 346.896pt>
-File: ./../code/result/original_image.png Graphic file (type png)
-<use ./../code/result/original_image.png>
-Package pdftex.def Info: ./../code/result/original_image.png  used on input line 199.
+<./../code/sgz_result/nn_classification_sgz_l0_002.png, id=32, 462.528pt x 346.896pt>
+File: ./../code/sgz_result/nn_classification_sgz_l0_002.png Graphic file (type png)
+<use ./../code/sgz_result/nn_classification_sgz_l0_002.png>
+Package pdftex.def Info: ./../code/sgz_result/nn_classification_sgz_l0_002.png  used on input line 191.
 (pdftex.def)             Requested size: 202.35622pt x 151.76662pt.
-<./../code/result/segmented_image.png, id=19, 462.528pt x 346.896pt>
-File: ./../code/result/segmented_image.png Graphic file (type png)
-<use ./../code/result/segmented_image.png>
-Package pdftex.def Info: ./../code/result/segmented_image.png  used on input line 207.
+<./../code/xor_result/convergence_xor_l0_002.png, id=33, 462.528pt x 346.896pt>
+File: ./../code/xor_result/convergence_xor_l0_002.png Graphic file (type png)
+<use ./../code/xor_result/convergence_xor_l0_002.png>
+Package pdftex.def Info: ./../code/xor_result/convergence_xor_l0_002.png  used on input line 201.
 (pdftex.def)             Requested size: 202.35622pt x 151.76662pt.
-<./../code/result/cost_function_convergence_segmentation.png, id=20, 462.528pt x 346.896pt>
-File: ./../code/result/cost_function_convergence_segmentation.png Graphic file (type png)
-<use ./../code/result/cost_function_convergence_segmentation.png>
-Package pdftex.def Info: ./../code/result/cost_function_convergence_segmentation.png  used on input line 215.
+<./../code/xor_result/nn_classification_xor_l0_002.png, id=34, 462.528pt x 346.896pt>
+File: ./../code/xor_result/nn_classification_xor_l0_002.png Graphic file (type png)
+<use ./../code/xor_result/nn_classification_xor_l0_002.png>
+Package pdftex.def Info: ./../code/xor_result/nn_classification_xor_l0_002.png  used on input line 209.
 (pdftex.def)             Requested size: 202.35622pt x 151.76662pt.
- [2 <./../code/result_greater_than/cost_function_convergence.png> <./../code/result_greater_than/dataset.png> <./../code/result_greater_than/neural_net_classification.png>] [3 <./../code/result_xor/cost_function_convergence.png> <./../code/result_xor/dataset.png> <./../code/result_xor/neural_net_classification.png> <./../code/result/original_image.png> <./../code/result/segmented_image.png> <./../code/result/cost_function_convergence_segmentation.png>] (./MTT_reveyrand.aux) ) 
+
+
+LaTeX Warning: Reference `' on page 3 undefined on input line 221.
+
+
+LaTeX Warning: Reference `' on page 3 undefined on input line 221.
+
+[3 <./../code/sgz_result/convergence_sgz_l0_002.png> <./../code/sgz_result/nn_classification_sgz_l0_002.png> <./../code/xor_result/convergence_xor_l0_002.png> <./../code/xor_result/nn_classification_xor_l0_002.png>] (./report.aux)
+
+LaTeX Warning: There were undefined references.
+
+ ) 
 Here is how much of TeX's memory you used:
- 5748 strings out of 492649
- 81228 string characters out of 6129622
- 587102 words of memory out of 5000000
- 9538 multiletter control sequences out of 15000+600000
- 41058 words of font info for 71 fonts, out of 8000000 for 9000
+ 5915 strings out of 492649
+ 85165 string characters out of 6129622
+ 306523 words of memory out of 5000000
+ 9704 multiletter control sequences out of 15000+600000
+ 42165 words of font info for 72 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 41i,7n,43p,946b,1713s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on MTT_reveyrand.pdf (3 pages, 502426 bytes).
+ 41i,6n,43p,939b,1468s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
+Output written on report.pdf (3 pages, 283958 bytes).
 PDF statistics:
- 54 PDF objects out of 1000 (max. 8388607)
- 25 compressed objects within 1 object stream
+ 72 PDF objects out of 1000 (max. 8388607)
+ 37 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 46 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 51 words of extra memory for PDF output out of 10000 (max. 10000000)
 
