@@ -139,10 +139,7 @@ INPUT ./../code/imitation_learning.py
 INPUT ./../code/imitation_learning.py
 INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/psnfss/omsptm.fd
 INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/psnfss/omsptm.fd
-INPUT ./../code/sgz_result/convergence_sgz_l0_0.png
-INPUT ./../code/sgz_result/convergence_sgz_l0_0.png
 OUTPUT report.pdf
-INPUT ./../code/sgz_result/convergence_sgz_l0_0.png
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/vf/adobe/times/ptmr7t.vf
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/adobe/times/ptmr8r.tfm
 INPUT /usr/local/texlive/2018/texmf-var/fonts/map/pdftex/updmap/pdftex.map
@@ -171,6 +168,9 @@ INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/adobe/times/ptmb8r.tfm
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/vf/adobe/times/ptmr7t.vf
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/vf/adobe/times/ptmri7t.vf
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/adobe/times/ptmri8r.tfm
+INPUT ./../code/sgz_result/convergence_sgz_l0_0.png
+INPUT ./../code/sgz_result/convergence_sgz_l0_0.png
+INPUT ./../code/sgz_result/convergence_sgz_l0_0.png
 INPUT ./../code/sgz_result/dataset_sgz_l0_0.png
 INPUT ./../code/sgz_result/dataset_sgz_l0_0.png
 INPUT ./../code/sgz_result/dataset_sgz_l0_0.png

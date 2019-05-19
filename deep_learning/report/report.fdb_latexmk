@@ -1,5 +1,5 @@
 # Fdb version 3
-["pdflatex"] 1558308836 "report.tex" "report.pdf" "report" 1558308838
+["pdflatex"] 1558309382 "report.tex" "report.pdf" "report" 1558309384
   "../code/imitation_learning.py" 1558306410 3184 9e675ee93aaca09db111e8fdbb27bacd ""
   "../code/imitation_learning_result/rightAnklePitch.png" 1558301009 33315 215fbdf1dacd99f13dcb7f72eaa48ad3 ""
   "../code/imitation_learning_result/rightAnkleRoll.png" 1558301009 36394 5c0c6acfdc5c1eca75614fa703150d37 ""
@@ -88,9 +88,9 @@
   "/usr/local/texlive/2018/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1523934492 2717033 f61a5287d9c22a39a74f1979fe3f905c ""
   "/usr/local/texlive/2018/texmf-var/web2c/pdftex/pdflatex.fmt" 1523934516 4220280 10cab8fbd7c5a7c52aba9917e190d018 ""
   "/usr/local/texlive/2018/texmf.cnf" 1523934483 577 0b39adfd7c93507ff20c9c14c2f1a33f ""
-  "report.aux" 1558308838 3831 fd80fa4361a52e025e8fd9023d53e06c ""
-  "report.tex" 1558308836 12777 5a2903d5fb3985ae3ff85548e1812d41 ""
+  "report.aux" 1558309384 3831 fd80fa4361a52e025e8fd9023d53e06c ""
+  "report.tex" 1558309382 12859 3e1f30a59e7c3138ac460f011731243d ""
   (generated)
   "report.log"
-  "report.aux"
   "report.pdf"
+  "report.aux"
