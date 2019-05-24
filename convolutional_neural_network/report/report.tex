@@ -114,151 +114,94 @@ The implementation was based on the file \textit{lenet5}. The essence of the imp
     style=cStyle,
     firstline=5,
     lastline=83
-]{./../code/imitation_learning.py}
+]{./../code/lenet5.py}
 
 \section{Neural Network Analysis}
 
-\subsection{Keras' Neural Network Analysis without regularization}
+\subsection{LeNet-5 Convolutional Neural Network Analysis}
 
-In this analysis was used two test functions: \textit{sum greater than} and \textit{xor}. This initial analysis is not using regularization.
+In order to evaluate the Neural Network, it was trained to identify the MNIST dataset. This dataset is a big set of images that represents decimal numbers.
 
-The Keras' Neural Network performed regular on \textit{sum greater than} function. On the graphs represented by the images from Image \ref{img:greater_cost_no_reg} to Image \ref{img:greater_classification_no_reg}. It is possible to verify that the result is overfitted on the Image \ref{img:greater_classification_no_reg} and the convergence is not so fast on the Image \ref{img:greater_cost_no_reg}.
+The LeNet-5 performed very well on test cases having an acuracy of 98.7\% on a set of 10000 test cases. The output for the file \textit{evaluate lenet5} can be seen on Code \ref{code:eval_lenet5_out}.
+
+On Image \ref{img:classification_one} and \ref{img:classification_two} it is possible to see two examples of correctly classified test cases.
 
 \begin{figure}
   \begin{center}
-  \includegraphics[width=2.8in]{./../code/sgz_result/convergence_sgz_l0_0.png}
-  \caption{Convergence of cost function on greater than function test case, when it is not using regularization.}
-  \label{img:greater_cost_no_reg}
+  \includegraphics[width=2.8in]{./../code/test_image_6007.png}
+  \caption{Example of a correctly classified test case, was expected 7 and was predicted as 7.}
+  \label{img:classification_one}
   \end{center}
 \end{figure}
 
 \begin{figure}
   \begin{center}
-  \includegraphics[width=2.8in]{./../code/sgz_result/dataset_sgz_l0_0.png}
-  \caption{Dataset of greater than function.}
-  \label{img:greater_data_set}
+  \includegraphics[width=2.8in]{./../code/test_image_5530.png}
+  \caption{Example of a misclassified test case, was expected 8 and was predicted as 8.}
+  \label{img:classification_two}
   \end{center}
 \end{figure}
 
-\begin{figure}
-    \begin{center}
-    \includegraphics[width=2.8in]{./../code/sgz_result/nn_classification_sgz_l0_0.png}
-    \caption{Neural Network Classification on greater than function, when it is not using regularization.}
-    \label{img:greater_classification_no_reg}
-    \end{center}
-\end{figure}
+\lstinputlisting[
+    language=python,
+    caption={Output for \textit{evaluate lenet5}},
+    label={code:eval_lenet5_out},
+    style=cStyle,
+]{./../code/output.txt}
 
-The Neural Network performed regular on \textit{xor} function. On the graphs represented by the images from Image \ref{img:xor_cost_no_reg} to Image \ref{img:xor_classification_no_reg}. It is also possible to see that in this case, it also heaped some overfit causing some distortion and leading to some mistakes on the data set on the graph represented by the Image \ref{img:xor_classification_no_reg}.
-
-\begin{figure}
-  \begin{center}
-  \includegraphics[width=2.8in]{./../code/xor_result/convergence_xor_l0_0.png}
-  \caption{Convergence of cost function on xor function test case, when it is not using regularization.}
-  \label{img:xor_cost_no_reg}
-  \end{center}
-\end{figure}
+As said before, in 1.3\% of the test cases ware misclassified. In Image \ref{img:misclassification_one} and Image \ref{img:misclassification_two} is possible to see two examples of test cases of misclassification.
 
 \begin{figure}
   \begin{center}
-  \includegraphics[width=2.8in]{./../code/xor_result/dataset_xor_l0_0.png}
-  \caption{Dataset of xor function.}
-  \label{img:xor_data_set}
-  \end{center}
-\end{figure}
-
-\begin{figure}
-    \begin{center}
-    \includegraphics[width=2.8in]{./../code/xor_result/nn_classification_xor_l0_0.png}
-    \caption{Neural Network Classification on xor function, when it is not using regularization.}
-    \label{img:xor_classification_no_reg}
-    \end{center}
-\end{figure}
-
-\subsection{Keras' Neural Network Analysis without regularization}
-
-In this analysis was used the same two test functions: \textit{sum greater than} and \textit{xor}. But now using regularization $\lambda_{l_2} = 0.002$.
-
-The Keras' Neural Network performed well on \textit{sum greater than} function. On the graphs represented by the images from Image \ref{img:greater_cost_reg} to Image \ref{img:greater_classification_reg}. It is possible to verify that the result now is much less overfitted on the Image \ref{img:greater_classification_reg}, it is much softer, and the convergence is now faster on the Image \ref{img:greater_cost_reg}.
-
-\begin{figure}
-  \begin{center}
-  \includegraphics[width=2.8in]{./../code/sgz_result/convergence_sgz_l0_002.png}
-  \caption{Convergence of cost function on greater than function test case, when it is using regularization.}
-  \label{img:greater_cost_reg}
-  \end{center}
-\end{figure}
-
-\begin{figure}
-    \begin{center}
-    \includegraphics[width=2.8in]{./../code/sgz_result/nn_classification_sgz_l0_002.png}
-    \caption{Neural Network Classification on greater than function, when it is using regularization.}
-    \label{img:greater_classification_reg}
-    \end{center}
-\end{figure}
-
-The Neural Network performed well on \textit{xor} function. On the graphs represented by the images from Image \ref{img:xor_cost_reg} to Image \ref{img:xor_classification_reg}. It is also possible to see that in this case, it also heaped much less overfit leading to a much softer image on the graph represented by the Image \ref{img:xor_classification_reg}.
-
-\begin{figure}
-  \begin{center}
-  \includegraphics[width=2.8in]{./../code/xor_result/convergence_xor_l0_002.png}
-  \caption{Convergence of cost function on xor function test case, when it is using regularization.}
-  \label{img:xor_cost_reg}
-  \end{center}
-\end{figure}
-
-\begin{figure}
-    \begin{center}
-    \includegraphics[width=2.8in]{./../code/xor_result/nn_classification_xor_l0_002.png}
-    \caption{Neural Network Classification on xor function, when it is using regularization.}
-    \label{img:xor_classification_reg}
-    \end{center}
-\end{figure}
-
-\subsection{Keras' Neural Network Analysis in Imitation Learning}
-
-In order to do the Imitation Learning, it was used the Code \ref{code:imitation} implementation.
-
-It was made using Keras, not using regularization, and using mean squared error.
-
-The result of this Neural Network on the robot movement can be seen on the graphs from Image \ref{img:right_ankle_pitch} to Image \ref{img:right_knee_pitch}.
-
-\begin{figure}
-  \begin{center}
-  \includegraphics[width=2.8in]{./../code/imitation_learning_result/rightAnklePitch.png}
-  \caption{Neural Network's movement imitation of robot's right ankle pitch}
-  \label{img:right_ankle_pitch}
+  \includegraphics[width=2.8in]{./../code/misclassified_image_259.png}
+  \caption{Example of a misclassified test case, was expected 6 and was predicted as 0.}
+  \label{img:misclassification_one}
   \end{center}
 \end{figure}
 
 \begin{figure}
   \begin{center}
-  \includegraphics[width=2.8in]{./../code/imitation_learning_result/rightAnkleRoll.png}
-  \caption{Neural Network's movement imitation of robot's right ankle roll}
-  \label{img:right_ankle_roll}
+  \includegraphics[width=2.8in]{./../code/misclassified_image_340.png}
+  \caption{Example of a misclassified test case, was expected 5 and was predicted as 3.}
+  \label{img:misclassification_two}
+  \end{center}
+\end{figure}
+
+\subsection{LeNet-5 Convolutional Neural Network Analysis on TensorBoard}
+
+In \textit{Tensor Board} it was possible to see that occured a fast decrase on loss function and a rapidly accuracy to converge in more than 98\% of acuracy. On Image \ref{img:accuracy} and Image \ref{img:loss_func} it is possible to see the graphs representing the converge of \textit{accuracy} and \textit{loss function} respectively.
+
+\begin{figure}
+  \begin{center}
+  \includegraphics[width=2.8in]{./../code/tensorboard/tensor_board_accuracy_graph.png}
+  \caption{Accuracy Graph generated by TensorBoard}
+  \label{img:accuracy}
   \end{center}
 \end{figure}
 
 \begin{figure}
   \begin{center}
-  \includegraphics[width=2.8in]{./../code/imitation_learning_result/rightHipPitch.png}
-  \caption{Neural Network's movement imitation of robot's right Hip pitch}
-  \label{img:right_hip_pitch}
+  \includegraphics[width=2.8in]{./../code/tensorboard/tensor_board_loss_graph.png}
+  \caption{Loss Function Graph generated by TensorBoard}
+  \label{img:loss_func}
+  \end{center}
+\end{figure}
+
+TensorBoard also provided an overview of the Neural Network format, this is denoted on Image \ref{img:tensorboard_main} and Image \ref{img:tensorboard_aux}.
+
+\begin{figure}
+  \begin{center}
+  \includegraphics[width=2.8in]{./../code/tensorboard/tensor_board_main_graph.png}
+  \caption{TensorBoard Main Graph.}
+  \label{img:tensorboard_main}
   \end{center}
 \end{figure}
 
 \begin{figure}
   \begin{center}
-  \includegraphics[width=2.8in]{./../code/imitation_learning_result/rightHipRoll.png}
-  \caption{Neural Network's movement imitation of robot's right hip roll}
-  \label{img:right_hip_roll}
-  \end{center}
-\end{figure}
-
-\begin{figure}
-  \begin{center}
-  \includegraphics[width=2.8in]{./../code/imitation_learning_result/rightKneePitch.png}
-  \caption{Neural Network's movement imitation of robot's right Knee pitch}
-  \label{img:right_knee_pitch}
+  \includegraphics[width=2.8in]{./../code/tensorboard/tensor_board_auxiliary_nodes.png}
+  \caption{TensorBoard Auxiliary Nodes.}
+  \label{img:tensorboard_aux}
   \end{center}
 \end{figure}
 
