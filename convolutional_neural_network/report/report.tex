@@ -52,7 +52,7 @@
 %=== TITLE & AUTHORS ====================================================================
 \begin{document}
 \bstctlcite{IEEEexample:BSTcontrol}
-    \title{Imitation Learning with Keras}
+    \title{Convolutional Neural Network}
   \author{Carlos~Matheus~Barros~da~Silva,~\IEEEmembership{Computer Engineering Bachelor Student of ITA}\\Prof. Marcos~Ricardo~Omena~de~Albuquerque~Máximo}
 
 % The paper headers
@@ -68,14 +68,14 @@
 % ============================================================================
 \begin{abstract}
 
-This paper evaluates two Keras' Neural Network by test it in different scenarios with two simple tests and an imitation learning problem.
+This paper evaluate a Convolutional Neural Network created using Keras. It was evaluated in a data set of handwritten decimals numbers, in which the Neural Network had to predict correctly the numbers.
 
-It was observed that the Neural Network worked fine for those purposes, and in some case, the result was really good, in the imitation learning case, for example.
+It was observed that the Convolutional Neural Network worked as expected. The number prediction was very accurate having 98.7\% of accuracy on the data set.
 
 % === KEYWORDS ===============================================================
 % ============================================================================
 \begin{IEEEkeywords}
-    Simple Evolution Strategy, SES, Covariance Matrix Adaptation Evolution Strategy, CMA-ES, optimization
+    Keras, Neural Network, Convolutional Neural Network
 \end{IEEEkeywords}
 \end{abstract}
 
@@ -94,13 +94,11 @@ It was observed that the Neural Network worked fine for those purposes, and in s
 
 Keras is an open-source neural-network library written in Python. It is capable of running on top of TensorFlow, Microsoft Cognitive Toolkit, Theano, or PlaidML. Designed to enable fast experimentation with deep neural networks, it focuses on being user-friendly, modular, and extensible. It was developed as part of the research effort of project ONEIROS (Open-ended Neuro-Electronic Intelligent Robot Operating System), and its primary author and maintainer is François Chollet, a Google engineer. Chollet also is the author of the XCeption deep neural network model.
 
-In 2017, Google's TensorFlow team decided to support Keras in TensorFlow's core library. Chollet explained that Keras was conceived to be an interface rather than a standalone machine-learning framework. It offers a higher-level, more intuitive set of abstractions that make it easy to develop deep learning models regardless of the computational backend used. Microsoft added a CNTK backend to Keras as well, available as of CNTK v2.0.
+In deep learning, a convolutional neural network (CNN, or ConvNet) is a class of deep neural networks, most commonly applied to analyzing visual imagery.
 
-Keras contains numerous implementations of commonly used neural-network building blocks such as layers, objectives, activation functions, optimizers, and a host of tools to make working with image and text data easier. The code is hosted on GitHub, and community support forums include the GitHub issues page and a Slack channel.
+CNNs are regularized versions of multilayer perceptrons. Multilayer perceptrons usually refer to fully connected networks, that is, each neuron in one layer is connected to all neurons in the next layer. The "fully-connectedness" of these networks make them prone to overfitting data. Typical ways of regularization includes adding some form of magnitude measurement of weights to the loss function. However, CNNs take a different approach towards regularization: they take advantage of the hierarchical pattern in data and assemble more complex patterns using smaller and simpler patterns. Therefore, on the scale of connectedness and complexity, CNNs are on the lower extreme.
 
-In addition to standard neural networks, Keras has support for convolutional and recurrent neural networks. It supports other common utility layers like dropout, batch normalization, and pooling.
-
-Keras allows users to productize deep models on smartphones (iOS and Android), on the web, or on the Java Virtual Machine. It also allows the use of distributed training of deep-learning models on clusters of Graphics Processing Units (GPU) and Tensor processing units (TPU).
+They are also known as shift invariant or space invariant artificial neural networks (SIANN), based on their shared-weights architecture and translation invariance characteristics.
 
 % ==========================================================================
 \section{Neural Network Implementation}
@@ -207,9 +205,7 @@ TensorBoard also provided an overview of the Neural Network format, this is deno
 
 \section {Conclusion}
 
-It was clear, therefore, that the Keras' Neural Network worked as expected. Both test cases (greater than function and xor function) the Neural Network worked as well, with a much better result with regularization, because without regularization the results were overfitted.
-
-For the Imitation Learning with Keras, the results were good in some cases and very precise in most some cases.
+It was clear, therefore, that the Convolutional Neural Network worked as expected. The number prediction was very accurate having 98.7\% of accuracy on the data set.
 
 \vfill
 \end{document}

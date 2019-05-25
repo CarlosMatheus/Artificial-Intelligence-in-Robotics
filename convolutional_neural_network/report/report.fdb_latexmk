@@ -1,5 +1,5 @@
 # Fdb version 3
-["pdflatex"] 1558738476 "report.tex" "report.pdf" "report" 1558738479
+["pdflatex"] 1558804205 "report.tex" "report.pdf" "report" 1558804248
   "../code/lenet5.py" 1558734142 1655 720a7a20eb6ef458dac7720bc89cae32 ""
   "../code/misclassified_image_259.png" 1558730934 16176 63e14a4f4f010469dfa88dc96db816ab ""
   "../code/misclassified_image_340.png" 1558730934 15840 8432f5c7402ae45ae27cea13369c8c25 ""
@@ -79,9 +79,9 @@
   "/usr/local/texlive/2018/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1523934492 2717033 f61a5287d9c22a39a74f1979fe3f905c ""
   "/usr/local/texlive/2018/texmf-var/web2c/pdftex/pdflatex.fmt" 1523934516 4220280 10cab8fbd7c5a7c52aba9917e190d018 ""
   "/usr/local/texlive/2018/texmf.cnf" 1523934483 577 0b39adfd7c93507ff20c9c14c2f1a33f ""
-  "report.aux" 1558738479 2331 75b8d975e835ebfe4db5d6470b3e99ca ""
-  "report.tex" 1558738475 9844 dd91989c43f2229a9bc79daec3815110 ""
+  "report.aux" 1558804207 2331 75b8d975e835ebfe4db5d6470b3e99ca ""
+  "report.tex" 1558804248 9403 72a96573eb2810998c1eead1959135ac ""
   (generated)
   "report.pdf"
-  "report.log"
   "report.aux"
+  "report.log"

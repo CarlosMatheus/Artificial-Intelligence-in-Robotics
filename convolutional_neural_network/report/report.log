@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.4.16)  24 MAY 2019 19:54
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.4.16)  25 MAY 2019 14:10
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -357,12 +357,12 @@ File: lstlang1.sty 2015/06/04 1.6 listings language file
 <./../code/test_image_6007.png, id=10, 462.528pt x 346.896pt>
 File: ./../code/test_image_6007.png Graphic file (type png)
 <use ./../code/test_image_6007.png>
-Package pdftex.def Info: ./../code/test_image_6007.png  used on input line 131.
+Package pdftex.def Info: ./../code/test_image_6007.png  used on input line 129.
 (pdftex.def)             Requested size: 202.35622pt x 151.76662pt.
 <./../code/test_image_5530.png, id=12, 462.528pt x 346.896pt>
 File: ./../code/test_image_5530.png Graphic file (type png)
 <use ./../code/test_image_5530.png>
-Package pdftex.def Info: ./../code/test_image_5530.png  used on input line 139.
+Package pdftex.def Info: ./../code/test_image_5530.png  used on input line 137.
 (pdftex.def)             Requested size: 202.35622pt x 151.76662pt.
  (./../code/output.txt
 LaTeX Font Info:    External font `cmex10' loaded for size
@@ -379,50 +379,47 @@ LaTeX Font Info:    Font shape `OML/ptm/m/n' in size <7> not available
 <./../code/misclassified_image_259.png, id=13, 462.528pt x 346.896pt>
 File: ./../code/misclassified_image_259.png Graphic file (type png)
 <use ./../code/misclassified_image_259.png>
-Package pdftex.def Info: ./../code/misclassified_image_259.png  used on input line 156.
+Package pdftex.def Info: ./../code/misclassified_image_259.png  used on input line 154.
 (pdftex.def)             Requested size: 202.35622pt x 151.76662pt.
 <./../code/misclassified_image_340.png, id=14, 462.528pt x 346.896pt>
 File: ./../code/misclassified_image_340.png Graphic file (type png)
 <use ./../code/misclassified_image_340.png>
-Package pdftex.def Info: ./../code/misclassified_image_340.png  used on input line 164.
+Package pdftex.def Info: ./../code/misclassified_image_340.png  used on input line 162.
 (pdftex.def)             Requested size: 202.35622pt x 151.76662pt.
- [2 <./../code/test_image_6007.png> <./../code/test_image_5530.png> <./../code/misclassified_image_259.png>]
-<./../code/tensorboard/tensor_board_accuracy_graph.png, id=23, 364.36125pt x 234.8775pt>
+<./../code/tensorboard/tensor_board_accuracy_graph.png, id=15, 364.36125pt x 234.8775pt>
 File: ./../code/tensorboard/tensor_board_accuracy_graph.png Graphic file (type png)
 <use ./../code/tensorboard/tensor_board_accuracy_graph.png>
-Package pdftex.def Info: ./../code/tensorboard/tensor_board_accuracy_graph.png  used on input line 176.
+Package pdftex.def Info: ./../code/tensorboard/tensor_board_accuracy_graph.png  used on input line 174.
 (pdftex.def)             Requested size: 202.35622pt x 130.44456pt.
-<./../code/tensorboard/tensor_board_loss_graph.png, id=24, 353.32pt x 235.88126pt>
+<./../code/tensorboard/tensor_board_loss_graph.png, id=16, 353.32pt x 235.88126pt>
 File: ./../code/tensorboard/tensor_board_loss_graph.png Graphic file (type png)
 <use ./../code/tensorboard/tensor_board_loss_graph.png>
-Package pdftex.def Info: ./../code/tensorboard/tensor_board_loss_graph.png  used on input line 184.
+Package pdftex.def Info: ./../code/tensorboard/tensor_board_loss_graph.png  used on input line 182.
 (pdftex.def)             Requested size: 202.35622pt x 135.09798pt.
-<./../code/tensorboard/tensor_board_main_graph.png, id=25, 486.81876pt x 821.0675pt>
+<./../code/tensorboard/tensor_board_main_graph.png, id=17, 486.81876pt x 821.0675pt>
 File: ./../code/tensorboard/tensor_board_main_graph.png Graphic file (type png)
 <use ./../code/tensorboard/tensor_board_main_graph.png>
-Package pdftex.def Info: ./../code/tensorboard/tensor_board_main_graph.png  used on input line 194.
+Package pdftex.def Info: ./../code/tensorboard/tensor_board_main_graph.png  used on input line 192.
 (pdftex.def)             Requested size: 202.35622pt x 341.28792pt.
-<./../code/tensorboard/tensor_board_auxiliary_nodes.png, id=26, 694.595pt x 615.29875pt>
+<./../code/tensorboard/tensor_board_auxiliary_nodes.png, id=18, 694.595pt x 615.29875pt>
 File: ./../code/tensorboard/tensor_board_auxiliary_nodes.png Graphic file (type png)
 <use ./../code/tensorboard/tensor_board_auxiliary_nodes.png>
-Package pdftex.def Info: ./../code/tensorboard/tensor_board_auxiliary_nodes.png  used on input line 202.
+Package pdftex.def Info: ./../code/tensorboard/tensor_board_auxiliary_nodes.png  used on input line 200.
 (pdftex.def)             Requested size: 202.35622pt x 179.25827pt.
- [3 <./../code/misclassified_image_340.png> <./../code/tensorboard/tensor_board_accuracy_graph.png> <./../code/tensorboard/tensor_board_loss_graph.png> <./../code/tensorboard/tensor_board_main_graph.png> <./../code/tensorboard/tensor_board_auxiliary_nodes.png>] [4
-
-] (./report.aux) ) 
+ [2 <./../code/test_image_6007.png> <./../code/test_image_5530.png> <./../code/misclassified_image_259.png>] [3 <./../code/misclassified_image_340.png> <./../code/tensorboard/tensor_board_accuracy_graph.png> <./../code/tensorboard/tensor_board_loss_graph.png> <./../code/tensorboard/tensor_board_main_graph.png> <./../code/tensorboard/tensor_board_auxiliary_nodes.png>] (./report.aux) ) 
 Here is how much of TeX's memory you used:
  5906 strings out of 492649
  84481 string characters out of 6129622
- 442541 words of memory out of 5000000
+ 445399 words of memory out of 5000000
  9696 multiletter control sequences out of 15000+600000
  41058 words of font info for 71 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  41i,7n,43p,939b,1855s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on report.pdf (4 pages, 241743 bytes).
+Output written on report.pdf (3 pages, 241110 bytes).
 PDF statistics:
- 59 PDF objects out of 1000 (max. 8388607)
- 30 compressed objects within 1 object stream
+ 56 PDF objects out of 1000 (max. 8388607)
+ 28 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  41 words of extra memory for PDF output out of 10000 (max. 10000000)
 
