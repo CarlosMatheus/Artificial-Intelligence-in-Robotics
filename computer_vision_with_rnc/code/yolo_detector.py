@@ -49,8 +49,9 @@ class YoloDetector:
         :return: image suitable for use in the neural network.
         :rtype: NumPy 4-dimensional array with dimensions (1, 120, 160, 3).
         """
-        # Todo: implement image preprocessing logic
-
+        image = cv2.resize(image, (120, 160), interpolation=cv2.INTER_AREA)
+        image = np.array(image) / 255.0
+        image = np.reshape(image, (1, 120, 160, 3))
         return image
 
     def process_yolo_output(self, output):
