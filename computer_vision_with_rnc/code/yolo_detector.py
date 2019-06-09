@@ -34,11 +34,15 @@ class YoloDetector:
                 by a 5-dimensional tuple: (probability, x, y, width, height).
         :rtype: 3-dimensional tuple of 5-dimensional tuples.
         """
+        image = self.preprocess_image(image)
+        output = self.network.predict(image)
+        # print(output)
+        return self.process_yolo_output(output)
         # Todo: implement object detection logic
-        ball_detection = (0.0, 0.0, 0.0, 0.0, 0.0)  # Todo: remove this line
-        post1_detection = (0.0, 0.0, 0.0, 0.0, 0.0)  # Todo: remove this line
-        post2_detection = (0.0, 0.0, 0.0, 0.0, 0.0)  # Todo: remove this line
-        return ball_detection, post1_detection, post2_detection
+        # ball_detection = (0.0, 0.0, 0.0, 0.0, 0.0)  # Todo: remove this line
+        # post1_detection = (0.0, 0.0, 0.0, 0.0, 0.0)  # Todo: remove this line
+        # post2_detection = (0.0, 0.0, 0.0, 0.0, 0.0)  # Todo: remove this line
+        # return ball_detection, post1_detection, post2_detection
 
     def preprocess_image(self, image):
         """
@@ -68,9 +72,43 @@ class YoloDetector:
         bb_scale = 640  # bounding box scale used for computing width and height
         output = np.reshape(output, (15, 20, 10))  # reshaping to remove the first dimension
 
+        max_ball_prob = 0
+        max_ball_row_idx = 0
+        max_ball_col_idx = 0
+
+        max_cross_first_prob = 0
+        max_cross_first_row_idx = 0
+        max_cross_first_col_idx = 0
+        max_cross_sec_prob = 0
+        max_cross_sec_row_idx = 0
+        max_cross_sec_col_idx = 0
+
+        for row_idx, row in enumerate(output):
+            for elm_idx, elm in enumerate(row):
+
+                # treat ball case:
+                ball_prob = sigmoid(elm[0])
+                if ball_prob > max_ball_prob:
+                    max_ball_prob = ball_prob
+                    max_ball_row_idx = row_idx
+                    max_ball_col_idx = elm_idx
+
+                # treat crossbar case:
+                # ball_prob = sigmoid(elm[5])
+                # if ball_prob > max_ball_prob:
+                #     max_ball_prob = ball_prob
+                #     max_ball_row_idx = row_idx
+                #     max_ball_col_idx = elm_idx
+
+        # print(output)
+
         # Todo: implement YOLO logic
         ball_detection = (0.0, 0.0, 0.0, 0.0, 0.0)  # Todo: change this line
         post1_detection = (0.0, 0.0, 0.0, 0.0, 0.0)  # Todo: change this line
         post2_detection = (0.0, 0.0, 0.0, 0.0, 0.0)  # Todo: change this line
+
+        x_ball = max_ball_col_idx*coord_scale
+        y_ball = max_ball_row_idx*coord_scale
+        ball_detection = (max_ball_prob, x_ball, y_ball, coord_scale, coord_scale)
 
         return ball_detection, post1_detection, post2_detection
