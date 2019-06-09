@@ -35,19 +35,19 @@ def make_detector_network(img_cols, img_rows):
     layer = Conv2D(filters=16, kernel_size=(3, 3), strides=(1, 1), padding='same', name='conv_3', use_bias=False)(layer)
     layer = BatchNormalization(name='norm_3')(layer)
     layer = LeakyReLU(alpha=0.1, name='leaky_relu_3')(layer)
-    layer = MaxPooling2D(pool_size=(2, 2), strides=(1, 1), padding='same', name='max_pool_3')(layer)
+    layer = MaxPooling2D(pool_size=(2, 2), strides=(2, 2), padding='same', name='max_pool_3')(layer)
 
     # Layer 4
     layer = Conv2D(filters=32, kernel_size=(3, 3), strides=(1, 1), padding='same', name='conv_4', use_bias=False)(layer)
     layer = BatchNormalization(name='norm_4')(layer)
     layer = LeakyReLU(alpha=0.1, name='leaky_relu_4')(layer)
-    layer = MaxPooling2D(pool_size=(2, 2), strides=(1, 1), padding='same', name='max_pool_4')(layer)
+    layer = MaxPooling2D(pool_size=(2, 2), strides=(2, 2), padding='same', name='max_pool_4')(layer)
 
     # Layer 5
     layer = Conv2D(filters=64, kernel_size=(3, 3), strides=(1, 1), padding='same', name='conv_5', use_bias=False)(layer)
     layer = BatchNormalization(name='norm_5')(layer)
     layer = LeakyReLU(alpha=0.1, name='leaky_relu_5')(layer)
-    layer = MaxPooling2D(pool_size=(2, 2), strides=(1, 1), padding='same', name='max_pool_5')(layer)
+    layer = MaxPooling2D(pool_size=(2, 2), strides=(2, 2), padding='same', name='max_pool_5')(layer)
 
     # Layer 6
     layer = Conv2D(filters=64, kernel_size=(3, 3), strides=(1, 1), padding='same', name='conv_6', use_bias=False)(layer)
@@ -62,12 +62,12 @@ def make_detector_network(img_cols, img_rows):
     layer = BatchNormalization(name='norm_7')(layer)
     layer = LeakyReLU(alpha=0.1, name='leaky_relu_7')(layer)
 
-    conv_skip = Conv2D(filters=128, kernel_size=(3, 3), strides=(1, 1), padding='same', name='conv_skip', use_bias=False)(skip_connection)
+    conv_skip = Conv2D(filters=128, kernel_size=(1, 1), strides=(1, 1), padding='same', name='conv_skip', use_bias=False)(skip_connection)
 
     # Layer 8
     layer = Conv2D(filters=256, kernel_size=(3, 3), strides=(1, 1), padding='same', name='conv_8', use_bias=False)(
         layer)
-    skip_connection = BatchNormalization(name='norm_skip')(skip_connection)
+    skip_connection = BatchNormalization(name='norm_skip')(conv_skip)
     layer = BatchNormalization(name='norm_8')(layer)
     skip_connection = LeakyReLU(alpha=0.1, name='leaky_relu_skip')(skip_connection)
     layer = LeakyReLU(alpha=0.1, name='leaky_relu_8')(layer)
