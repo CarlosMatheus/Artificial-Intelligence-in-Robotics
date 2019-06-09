@@ -8,7 +8,7 @@ import time
 os.environ["CUDA_VISIBLE_DEVICES"] = "-1"
 
 NUM_IMAGES = 10
-DETECTION_THRESHOLD = 0.05  # probability threshold used to discard object detections
+DETECTION_THRESHOLD = 0.5  # probability threshold used to discard object detections
 # Used for plotting purposes
 RECT_THICKNESS = 5
 CIRCLE_RADIUS = 5

@@ -73,45 +73,36 @@ class YoloDetector:
 
         output = np.reshape(output, (15, 20, 10))  # reshaping to remove the first dimension
 
-        max_ball_prob = 0
+        def get_crossbar_params(row_idx, elm_idx, elm):
+            x_cross = (elm_idx + sigmoid(elm[6])) * coord_scale
+            y_cross = (row_idx + sigmoid(elm[7])) * coord_scale
+            w_cross = bb_scale * 2 * np.exp(elm[8])
+            h_cross = bb_scale * 5 * np.exp(elm[9])
+            return x_cross, y_cross, w_cross, h_cross
 
-        max_cross_first_prob = 0
-        max_cross_first_row_idx = 0
-        max_cross_first_col_idx = 0
-        max_cross_sec_prob = 0
-        max_cross_sec_row_idx = 0
-        max_cross_sec_col_idx = 0
+        ball_detection = (0.0, 0.0, 0.0, 0.0, 0.0)
+        post1_detection = (0.0, 0.0, 0.0, 0.0, 0.0)
+        post2_detection = (0.0, 0.0, 0.0, 0.0, 0.0)
 
-        print('-----------------')
         for row_idx, row in enumerate(output):
             for elm_idx, elm in enumerate(row):
 
                 # treat ball case:
                 ball_prob = sigmoid(elm[0])
-                if ball_prob > max_ball_prob:
+                if ball_prob > ball_detection[0]:
                     x_ball = (elm_idx + sigmoid(elm[1]) )* coord_scale
                     y_ball = (row_idx + sigmoid(elm[2]) )* coord_scale
                     w_ball = bb_scale * 5 * np.exp(elm[3])
                     h_ball = bb_scale * 5 * np.exp(elm[4])
                     ball_detection = (ball_prob, x_ball, y_ball, w_ball, h_ball)
-                    max_ball_prob = ball_prob
 
                 # treat crossbar case:
-                # ball_prob = sigmoid(elm[5])
-                # if ball_prob > max_ball_prob:
-                #     max_ball_prob = ball_prob
-                #     max_ball_row_idx = row_idx
-                #     max_ball_col_idx = elm_idx
-
-        # print(output)
-
-        # Todo: implement YOLO logic
-        # ball_detection = (0.0, 0.0, 0.0, 0.0, 0.0)  # Todo: change this line
-        post1_detection = (0.0, 0.0, 0.0, 0.0, 0.0)  # Todo: change this line
-        post2_detection = (0.0, 0.0, 0.0, 0.0, 0.0)  # Todo: change this line
-
-
-        # ball_detection = (max_ball_prob, y_ball, x_ball, coord_scale, coord_scale)
-        print(ball_detection)
+                cross_prob = sigmoid(elm[5])
+                if cross_prob > post1_detection[0]:
+                    x_cross, y_cross, w_cross, h_cross = get_crossbar_params(row_idx, elm_idx, elm)
+                    post1_detection = (cross_prob, x_cross, y_cross, w_cross, h_cross)
+                elif cross_prob > post2_detection[0]:
+                    x_cross, y_cross, w_cross, h_cross = get_crossbar_params(row_idx, elm_idx, elm)
+                    post2_detection = (cross_prob, x_cross, y_cross, w_cross, h_cross)
 
         return ball_detection, post1_detection, post2_detection
