@@ -53,7 +53,7 @@ class YoloDetector:
         :return: image suitable for use in the neural network.
         :rtype: NumPy 4-dimensional array with dimensions (1, 120, 160, 3).
         """
-        image = cv2.resize(image, (120, 160), interpolation=cv2.INTER_AREA)
+        image = cv2.resize(image, (160, 120), interpolation=cv2.INTER_AREA)
         image = np.array(image) / 255.0
         image = np.reshape(image, (1, 120, 160, 3))
         return image
@@ -74,8 +74,6 @@ class YoloDetector:
         output = np.reshape(output, (15, 20, 10))  # reshaping to remove the first dimension
 
         max_ball_prob = 0
-        max_ball_row_idx = 0
-        max_ball_col_idx = 0
 
         max_cross_first_prob = 0
         max_cross_first_row_idx = 0
@@ -91,15 +89,12 @@ class YoloDetector:
                 # treat ball case:
                 ball_prob = sigmoid(elm[0])
                 if ball_prob > max_ball_prob:
-                    x_ball = elm_idx + sigmoid(elm[1]) * coord_scale
-                    y_ball = row_idx + sigmoid(elm[2]) * coord_scale
+                    x_ball = (elm_idx + sigmoid(elm[1]) )* coord_scale
+                    y_ball = (row_idx + sigmoid(elm[2]) )* coord_scale
                     w_ball = bb_scale * 5 * np.exp(elm[3])
                     h_ball = bb_scale * 5 * np.exp(elm[4])
                     ball_detection = (ball_prob, x_ball, y_ball, w_ball, h_ball)
                     max_ball_prob = ball_prob
-                    # max_ball_prob = ball_prob
-                    # max_ball_row_idx = row_idx
-                    # max_ball_col_idx = elm_idx
 
                 # treat crossbar case:
                 # ball_prob = sigmoid(elm[5])
