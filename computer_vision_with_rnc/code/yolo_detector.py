@@ -70,6 +70,7 @@ class YoloDetector:
         """
         coord_scale = 4 * 8  # coordinate scale used for computing the x and y coordinates of the BB's center
         bb_scale = 640  # bounding box scale used for computing width and height
+
         output = np.reshape(output, (15, 20, 10))  # reshaping to remove the first dimension
 
         max_ball_prob = 0
@@ -83,15 +84,22 @@ class YoloDetector:
         max_cross_sec_row_idx = 0
         max_cross_sec_col_idx = 0
 
+        print('-----------------')
         for row_idx, row in enumerate(output):
             for elm_idx, elm in enumerate(row):
 
                 # treat ball case:
                 ball_prob = sigmoid(elm[0])
                 if ball_prob > max_ball_prob:
+                    x_ball = elm_idx + sigmoid(elm[1]) * coord_scale
+                    y_ball = row_idx + sigmoid(elm[2]) * coord_scale
+                    w_ball = bb_scale * 5 * np.exp(elm[3])
+                    h_ball = bb_scale * 5 * np.exp(elm[4])
+                    ball_detection = (ball_prob, x_ball, y_ball, w_ball, h_ball)
                     max_ball_prob = ball_prob
-                    max_ball_row_idx = row_idx
-                    max_ball_col_idx = elm_idx
+                    # max_ball_prob = ball_prob
+                    # max_ball_row_idx = row_idx
+                    # max_ball_col_idx = elm_idx
 
                 # treat crossbar case:
                 # ball_prob = sigmoid(elm[5])
@@ -103,12 +111,12 @@ class YoloDetector:
         # print(output)
 
         # Todo: implement YOLO logic
-        ball_detection = (0.0, 0.0, 0.0, 0.0, 0.0)  # Todo: change this line
+        # ball_detection = (0.0, 0.0, 0.0, 0.0, 0.0)  # Todo: change this line
         post1_detection = (0.0, 0.0, 0.0, 0.0, 0.0)  # Todo: change this line
         post2_detection = (0.0, 0.0, 0.0, 0.0, 0.0)  # Todo: change this line
 
-        x_ball = max_ball_col_idx*coord_scale
-        y_ball = max_ball_row_idx*coord_scale
-        ball_detection = (max_ball_prob, x_ball, y_ball, coord_scale, coord_scale)
+
+        # ball_detection = (max_ball_prob, y_ball, x_ball, coord_scale, coord_scale)
+        print(ball_detection)
 
         return ball_detection, post1_detection, post2_detection
