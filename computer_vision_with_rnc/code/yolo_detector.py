@@ -36,13 +36,7 @@ class YoloDetector:
         """
         image = self.preprocess_image(image)
         output = self.network.predict(image)
-        # print(output)
         return self.process_yolo_output(output)
-        # Todo: implement object detection logic
-        # ball_detection = (0.0, 0.0, 0.0, 0.0, 0.0)  # Todo: remove this line
-        # post1_detection = (0.0, 0.0, 0.0, 0.0, 0.0)  # Todo: remove this line
-        # post2_detection = (0.0, 0.0, 0.0, 0.0, 0.0)  # Todo: remove this line
-        # return ball_detection, post1_detection, post2_detection
 
     def preprocess_image(self, image):
         """
