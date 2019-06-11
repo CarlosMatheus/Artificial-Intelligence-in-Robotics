@@ -82,10 +82,21 @@ def policy_evaluation(grid_world, initial_value, policy, num_iterations=10000, e
     dimensions = grid_world.dimensions
     value = np.copy(initial_value)
     # Todo: implement policy evaluation.
+
+    print('policy_evaluation')
+
+    """
+    Intera chamando value interaion? 
+    até convergir o value e entao retornando aquela policy evaluated
+    
+    
+    
+    """
+
     return value
 
 
-def value_iteration(grid_world, initial_value, num_iterations=10000, epsilon=1.0e-5):
+def value_iteration(grid_world, initial_value, num_iterations=10000, epsilon=1.0e-5): # "I think I got this one"
     """
     Executes value iteration for a grid world.
 
@@ -103,7 +114,27 @@ def value_iteration(grid_world, initial_value, num_iterations=10000, epsilon=1.0
     dimensions = grid_world.dimensions
     value = np.copy(initial_value)
     # Todo: implement value iteration.
+
+    """
+    executes just one value iteration???
+    
+    
+    Will use the bellman equation
+    the value iteration, 
+    initialize all grid with -1, and end with 0
+    iterate using bellman, not makaing recursion, but using the previos genaratiiin board
+    after a large number of iterations, the values inside the grid will converge
+    """
+
+    print('value_iteration')
+    for asdf in asdf:
+        print("asf")
+
     return value
+
+
+def check_policy(old_policy, new_policy):
+    return np.array_equal(old_policy, new_policy)
 
 
 def policy_iteration(grid_world, initial_value, initial_policy, evaluations_per_policy=3, num_iterations=10000,
@@ -128,8 +159,30 @@ def policy_iteration(grid_world, initial_value, initial_policy, evaluations_per_
     :return policy: optimal policy.
     :rtype policy: tridimensional NumPy array.
     """
+
+    """
+    alterna entre (avaliacao de politica) e (aprimoramento de politica) 
+    o aprimoramento eh realizado atravws de tomar uma politica gulosa a partir da funcao valor da autal politirca ?? 
+    pode-se mostrar que esse alg converge pra uma politica otima
+    
+    for:
+        intera chamando police evaluation e depois police improvement (greedy) até que convergimos para a melhor police e melhor value funciotn
+    intera ate convergir
+    
+    """
+    # Todo: Check if it is correct
+
     value = np.copy(initial_value)
     policy = np.copy(initial_policy)
-    # Todo: implement policy iteration.
+
+    for i in range(num_iterations):
+        new_value = policy_evaluation(grid_world, value, policy)
+        new_policy = greedy_policy(grid_world, new_value)
+        if not check_policy(policy, new_policy):
+            policy = new_policy
+            value = new_value
+        else:
+            break
+
     return value, policy
 
