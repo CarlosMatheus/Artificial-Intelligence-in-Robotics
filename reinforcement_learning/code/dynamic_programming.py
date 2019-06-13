@@ -162,9 +162,9 @@ def changed_val(old_value, new_value, dimensions, epsilon):
     """
     for j in range(dimensions[0]):
         for i in range(dimensions[1]):
-            if abs(new_value[i][j] - old_value[i][j]) < epsilon:
-                return False
-    return True
+            if abs(new_value[i][j] - old_value[i][j]) > epsilon:
+                return True
+    return False
 
 
 def policy_evaluation(grid_world, initial_value, policy, num_iterations=10000, epsilon=1.0e-5):
