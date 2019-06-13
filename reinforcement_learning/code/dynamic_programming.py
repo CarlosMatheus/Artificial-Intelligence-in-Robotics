@@ -190,15 +190,7 @@ def policy_evaluation(grid_world, initial_value, policy, num_iterations=10000, e
     """
     # Todo: Test
     dimensions = grid_world.dimensions
-    value = np.copy(initial_value)
-
-    for i in range(num_iterations):
-        new_value = evaluate(grid_world, value, dimensions)
-        if not diff_in_val_greater_than_epsilon(value, new_value, dimensions, epsilon):
-            value = new_value
-        else:
-            break
-
+    value = evaluate(grid_world, initial_value, policy, dimensions, num_iterations, epsilon)
     return value
 
 
