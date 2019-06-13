@@ -215,20 +215,26 @@ def value_iteration(grid_world, initial_value, num_iterations=10000, epsilon=1.0
     ja existe a funcao reward => r(s, a)
     ja existe get_valid_sucessors
     """
-
     dimensions = grid_world.dimensions
     value = np.copy(initial_value)
-
     possible_actions = [STOP, UP, RIGHT, DOWN, LEFT]
 
-    old_value = value
-    value = np.copy(old_value)
+    policy = np.ones((dimensions[0], dimensions[1], len(possible_actions)))
+    for i in range(dimensions[0]):
+        for j in range(dimensions[1]):
+            policy[i][j] = np.array(possible_actions)
 
+    # value = policy_evaluation(grid_world, value, policy, num_iterations, epsilon)
+    old_value = initial_value
+    value = np.copy(initial_value)
     for _ in range(num_iterations):
+        # print(_)
         for i in range(dimensions[0]):
             for j in range(dimensions[1]):
                 current_state = (i, j)
                 max_val = -float('inf')
+                possible_actions = policy[current_state[0]][current_state[1]]
+                # print(possible_actions)
                 for action in possible_actions:
                     rew = grid_world.reward(current_state, action)
                     successors_states = grid_world.get_valid_sucessors(current_state)
@@ -237,10 +243,15 @@ def value_iteration(grid_world, initial_value, num_iterations=10000, epsilon=1.0
                         prob = grid_world.transition_probability(current_state, action, successor)
                         val = old_value[successor[0]][successor[1]]
                         val_sum += prob * val
+                    # print(rew)
+                    # sum_val += (rew + grid_world.gamma * val_sum) * prob_action # isso esta na policy
                     max_val = max(max_val, rew + grid_world.gamma * val_sum)
+
+                # print(max_val)
 
                 value[current_state[0]][current_state[1]] = max_val
 
+        # print_value(grid_world, value)
         if changed_val(old_value, value, dimensions, epsilon):
             old_value = value
             value = np.copy(old_value)
