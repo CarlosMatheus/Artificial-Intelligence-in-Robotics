@@ -93,14 +93,11 @@ def policy_evaluation(grid_world, initial_value, policy, num_iterations=10000, e
     :return: value function of the given policy.
     :rtype: bidimensional NumPy array.
     """
-
     """
     Intera chamando value interaion? 
     até convergir o value e entao retornando aquela policy evaluated
-    
     """
-    # Todo: implement policy evaluation.
-
+    # Todo: Test
     dimensions = grid_world.dimensions
     value = np.copy(initial_value)
 
@@ -114,22 +111,21 @@ def policy_evaluation(grid_world, initial_value, policy, num_iterations=10000, e
     return value
 
 
-def value_iteration(grid_world, initial_value, num_iterations=10000, epsilon=1.0e-5): # "I think I got this one"
+def value_iteration(grid_world, initial_value, num_iterations=10000, epsilon=1.0e-5):
     """
     Executes value iteration for a grid world.
 
     :param grid_world: the grid world.
     :type grid_world: GridWorld.
     :param initial_value: initial value function used to bootstrap the algorithm.
-    :type initial_value: bidimensional NumPy array.
+    :type initial_value: bi-dimensional NumPy array.
     :param num_iterations: maximum number of iterations used in policy evaluation.
     :type num_iterations: int.
     :param epsilon: tolerance used in stopping criterion.
     :type epsilon: float.
     :return value: optimal value function.
-    :rtype value: bidimensional NumPy array.
+    :rtype value: bi-dimensional NumPy array.
     """
-
     """
     executes just one value iteration???
     Will use the bellman equation
@@ -137,8 +133,6 @@ def value_iteration(grid_world, initial_value, num_iterations=10000, epsilon=1.0
     initialize all grid with -1, and end with 0
     iterate using bellman, not makaing recursion, but using the previos genaratiiin board
     after a large number of iterations, the values inside the grid will converge
-    """
-    """
     the CORRECT_ACTION_PROB and GAMMA are inside grid_world'
     ja existe a funcao transition_probability => p(s'|s, a)
     ja existe a funcao reward => r(s, a)
@@ -182,6 +176,12 @@ def value_iteration(grid_world, initial_value, num_iterations=10000, epsilon=1.0
 
 
 def is_policy_equal(old_policy, new_policy):
+    """
+    Check whether a new policy is equal to the old policy
+    :param old_policy: the old policy
+    :param new_policy: the new policy
+    :return: boolean true if equal
+    """
     return np.array_equal(old_policy, new_policy)
 
 
@@ -212,11 +212,9 @@ def policy_iteration(grid_world, initial_value, initial_policy, evaluations_per_
     alterna entre (avaliacao de politica) e (aprimoramento de politica) 
     o aprimoramento eh realizado atravws de tomar uma politica gulosa a partir da funcao valor da autal politirca ?? 
     pode-se mostrar que esse alg converge pra uma politica otima
-    
     for:
         intera chamando police evaluation e depois police improvement (greedy) até que convergimos para a melhor police e melhor value funciotn
     intera ate convergir
-    
     """
     # Todo: Check if it is correct
 
