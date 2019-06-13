@@ -113,13 +113,53 @@ def greedy_policy(grid_world, value, epsilon=1.0e-3):
     return policy
 
 
-def evaluate(grid_world, value, policy, dimensions):
-    new_value = np.copy(initial_value)
+def evaluate(grid_world, initial_value, policy, dimensions, num_iterations, epsilon):
 
-    return new_value
+    old_value = initial_value
+    value = np.copy(initial_value)
+
+    for _ in range(num_iterations):
+        # print(_)
+        for i in range(dimensions[0]):
+            for j in range(dimensions[1]):
+                current_state = (i, j)
+                max_val = -float('inf')
+                possible_actions = policy[current_state[0]][current_state[1]]
+                # print(possible_actions)
+                for action in possible_actions:
+                    rew = grid_world.reward(current_state, action)
+                    successors_states = grid_world.get_valid_sucessors(current_state)
+                    val_sum = 0
+                    for successor in successors_states:
+                        prob = grid_world.transition_probability(current_state, action, successor)
+                        val = old_value[successor[0]][successor[1]]
+                        val_sum += prob * val
+                    # print(rew)
+                    max_val = max(max_val, rew + grid_world.gamma * val_sum)
+
+                # print(max_val)
+
+                value[current_state[0]][current_state[1]] = max_val
+
+        # print_value(grid_world, value)
+        if changed_val(old_value, value, dimensions, epsilon):
+            old_value = value
+            value = np.copy(old_value)
+        else:
+            break
+
+    return value
 
 
-def diff_in_val_greater_than_epsilon(old_value, new_value, dimensions, epsilon):
+def changed_val(old_value, new_value, dimensions, epsilon):
+    """
+    Checks whether the value changed some of its elements values or not
+    :param old_value: the old value of the last iteration
+    :param new_value: the new value of the actual iteration
+    :param dimensions: The dimensions of the grid
+    :param epsilon: the threshold in which two numbers are considered equals
+    :return: boolean telling if occurred a change of value
+    """
     for j in range(dimensions[0]):
         for i in range(dimensions[1]):
             if abs(new_value[i][j] - old_value[i][j]) < epsilon:
