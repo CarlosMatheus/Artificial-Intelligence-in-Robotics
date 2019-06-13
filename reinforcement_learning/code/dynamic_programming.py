@@ -119,14 +119,12 @@ def evaluate(grid_world, initial_value, policy, dimensions, num_iterations, epsi
     value = np.copy(initial_value)
 
     for _ in range(num_iterations):
-        # print(_)
         for i in range(dimensions[0]):
             for j in range(dimensions[1]):
                 current_state = (i, j)
-                max_val = -float('inf')
                 possible_actions = policy[current_state[0]][current_state[1]]
-                # print(possible_actions)
-                for action in possible_actions:
+                sum_val = 0
+                for action in range(len(possible_actions)):
                     rew = grid_world.reward(current_state, action)
                     successors_states = grid_world.get_valid_sucessors(current_state)
                     val_sum = 0
@@ -134,14 +132,10 @@ def evaluate(grid_world, initial_value, policy, dimensions, num_iterations, epsi
                         prob = grid_world.transition_probability(current_state, action, successor)
                         val = old_value[successor[0]][successor[1]]
                         val_sum += prob * val
-                    # print(rew)
-                    max_val = max(max_val, rew + grid_world.gamma * val_sum)
+                    sum_val += (rew + grid_world.gamma * val_sum) * possible_actions[action]
 
-                # print(max_val)
+                value[current_state[0]][current_state[1]] = sum_val
 
-                value[current_state[0]][current_state[1]] = max_val
-
-        # print_value(grid_world, value)
         if changed_val(old_value, value, dimensions, epsilon):
             old_value = value
             value = np.copy(old_value)
