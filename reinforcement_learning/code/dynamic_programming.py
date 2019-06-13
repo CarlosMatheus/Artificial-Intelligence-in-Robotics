@@ -3,6 +3,57 @@ from math import inf, fabs
 from utils import *
 
 
+def print_value(grid_world, value):
+    """
+    Prints a value function.
+
+    :param value: table (i, j) representing the value function.
+    :type value: bidimensional NumPy array.
+    """
+    print('Value function:')
+    dimensions = value.shape
+    for i in range(dimensions[0]):
+        print('[', end='')
+        for j in range(dimensions[1]):
+            state = (i, j)
+            if grid_world.is_cell_valid(state):
+                print('%9.2f' % value[i, j], end='')
+            else:
+                print('    *    ', end='')
+            if j < dimensions[1] - 1:
+                print(',', end='')
+        print(']')
+
+
+def print_policy(grid_world, policy):
+    """
+    Prints a policy. For a given state, assumes that the policy executes a single action
+    or a set of actions with the same probability.
+
+    :param policy: table (i, j, a) representing the policy.
+    :type policy: tridimensional NumPy array.
+    """
+    print('Policy:')
+    action_chars = 'SURDL'
+    dimensions = policy.shape[0:2]
+    for i in range(dimensions[0]):
+        print('[', end='')
+        for j in range(dimensions[1]):
+            state = (i, j)
+            if grid_world.is_cell_valid(state):
+                cell_text = ''
+                for action in range(NUM_ACTIONS):
+                    if policy[i, j, action] > 1.0e-3:
+                        cell_text += action_chars[action]
+            else:
+                cell_text = '*'
+            cell_text = cell_text.center(9)
+            print(cell_text, end='')
+            if j < dimensions[1] - 1:
+                print(',', end='')
+        print(']')
+
+
 def random_policy(grid_world):
     """
     Creates a random policy for a grid world.
