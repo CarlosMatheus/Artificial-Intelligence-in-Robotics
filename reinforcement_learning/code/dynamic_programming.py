@@ -230,8 +230,6 @@ def value_iteration(grid_world, initial_value, num_iterations=10000, epsilon=1.0
     ja existe get_valid_sucessors
     """
 
-    # Todo: Test this function
-
     dimensions = grid_world.dimensions
     value = np.copy(initial_value)
 
@@ -247,17 +245,17 @@ def value_iteration(grid_world, initial_value, num_iterations=10000, epsilon=1.0
                 max_val = -float('inf')
                 for action in possible_actions:
                     rew = grid_world.reward(current_state, action)
-                    sucessors_states = grid_world.get_valid_sucessors(current_state)
+                    successors_states = grid_world.get_valid_sucessors(current_state)
                     val_sum = 0
-                    for sucessor in sucessors_states:
-                        prob = grid_world.transition_probability(current_state, action, sucessor)
-                        val = old_value[sucessor[0]][sucessor[1]]
+                    for successor in successors_states:
+                        prob = grid_world.transition_probability(current_state, action, successor)
+                        val = old_value[successor[0]][successor[1]]
                         val_sum += prob * val
                     max_val = max(max_val, rew + grid_world.gamma * val_sum)
 
                 value[current_state[0]][current_state[1]] = max_val
 
-        if diff_in_val_greater_than_epsilon(old_value, value, dimensions, epsilon):
+        if changed_val(old_value, value, dimensions, epsilon):
             old_value = value
             value = np.copy(old_value)
         else:
