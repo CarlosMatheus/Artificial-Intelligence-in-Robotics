@@ -297,17 +297,17 @@ def policy_iteration(grid_world, initial_value, initial_policy, evaluations_per_
         intera chamando police evaluation e depois police improvement (greedy) até que convergimos para a melhor police e melhor value funciotn
     intera ate convergir
     """
-    # Todo: Check if it is correct
-
     value = np.copy(initial_value)
     policy = np.copy(initial_policy)
 
     for i in range(num_iterations):
-        new_value = policy_evaluation(grid_world, value, policy)
-        new_policy = greedy_policy(grid_world, new_value)
+        value = policy_evaluation(grid_world, initial_value, policy, evaluations_per_policy, epsilon)
+        print_value(grid_world, value)
+        new_policy = greedy_policy(grid_world, value)
+
+        print_policy(grid_world, policy)
         if not is_policy_equal(policy, new_policy):
             policy = new_policy
-            value = new_value
         else:
             break
 
