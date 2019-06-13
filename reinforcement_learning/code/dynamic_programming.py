@@ -295,11 +295,9 @@ def policy_iteration(grid_world, initial_value, initial_policy, evaluations_per_
     policy = np.copy(initial_policy)
 
     for i in range(num_iterations):
-        value = policy_evaluation(grid_world, initial_value, policy, evaluations_per_policy, epsilon)
-        print_value(grid_world, value)
+        value = policy_evaluation(grid_world, value, policy, evaluations_per_policy, epsilon)
         new_policy = greedy_policy(grid_world, value)
 
-        print_policy(grid_world, policy)
         if not is_policy_equal(policy, new_policy):
             policy = new_policy
         else:
