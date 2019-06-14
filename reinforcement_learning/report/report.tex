@@ -39,25 +39,22 @@
 }
 \renewcommand*{\lstlistingname}{Code}
 
-% ----------------------------------------------
-
-
+% ------------------------------------------------------------------------------
 
 
 % \hyphenation{op-tical net-works semi-conduc-tor}
 
 %\bstctlcite{IEEE:BSTcontrol}
 
-
 %=== TITLE & AUTHORS ===========================================================
 \begin{document}
-\bstctlcite{IEEEexample:BSTcontrol}
-    \title{Imitation Learning with Keras}
+\bstctlcite{Reinforcement Learning}
+  \title{Reinforcement Learning}
   \author{Carlos~Matheus~Barros~da~Silva,~
   \IEEEmembership{Computer Engineering Bachelor Student of ITA}
   \\Prof. Marcos~Ricardo~Omena~de~Albuquerque~Máximo}
 
-% The paper headers
+% The paper headers ------------------------------------------------------------
 \markboth{INSTITUTO TECNOLÓGICO DE AERONÁUTICA, May~2019
 }{Reinforcement Learning}
 
@@ -71,16 +68,17 @@
 \begin{abstract}
 
 This paper evaluates the core concepts of the behind the Reinforcement Learning
-theory on the environment of the Markov Decision Process (MDP).
+theory on the environment of the Markov Decision Process (MDP) and Dynamic
+programming.
 
 It was observed how policy iteration and value itaration works and how they are
 affected by the probability of correctly executing the chosen action factor
 ($\alpha$) and the discount factor($\gamma$).
 
 It was observed that for a deterministic world ($\gamma = 1$ and $\alpha = 1$),
-the learning is sensibly slower, which means that was required much more iterations
-in order to the value converge when compared to a little decrease on $\gamma$ and
-$\alpha$ ($\gamma = 0.98$ and $\alpha = 0.8$).
+the learning is sensibly slower, which means that was required much more
+iterations in order to the value converge when compared to a little decrease
+on $\gamma$ and $\alpha$ ($\gamma = 0.98$ and $\alpha = 0.8$).
 
 % === KEYWORDS =================================================================
 % ==============================================================================
@@ -117,77 +115,69 @@ programming methods and reinforcement learning algorithms is that the latter
 do not assume knowledge of an exact mathematical model of the MDP and they
 target large MDPs where exact methods become infeasible.
 
-% ==========================================================================
-\section{Neural Network Implementation}
+% ==============================================================================
+\section{Dynamic Programming Implementation}
 
-The implementation was based on the file \textit{imitatino learning}. The essence of the implementation is shown in Code \ref{code:imitation}.
+The implementation was based on the file \textit{dynamic programming}.
+The essence of the implementation is shown from Code \ref{code:policy_iteration} to Code \ref{code:changed_val}.
 
 \lstinputlisting[
     language=python,
-    caption={Code of \textit{imitatino learning}},
-    label={code:imitation},
+    caption={Code of function \textit{policy iteration}, executes policy iteration for a grid world.},
+    label={code:policy_iteration},
     style=cStyle,
-    firstline=53,
-    lastline=84
-]{./../code/imitation_learning.py}
+    firstline=217,
+    lastline=229
+]{./../code/dynamic_programming.py}
 
-\section{Neural Network Analysis}
+\lstinputlisting[
+    language=python,
+    caption={Code of function \textit{value iteration}, executes value iteration for a grid world.},
+    label={code:value_iteration},
+    style=cStyle,
+    firstline=152,
+    lastline=181
+]{./../code/dynamic_programming.py}
 
-\subsection{Keras' Neural Network Analysis without regularization}
+\lstinputlisting[
+    language=python,
+    caption={Code of function \textit{policy evaluation}, executes policy evaluation fora a policy executed on a grid world. },
+    label={code:policy_evaluation},
+    style=cStyle,
+    firstline=131,
+    lastline=133
+]{./../code/dynamic_programming.py}
+
+\lstinputlisting[
+    language=python,
+    caption={Code of function \textit{evaluate}, will evaluate for the \textit{policy evaluation} function. },
+    label={code:evaluate},
+    style=cStyle,
+    firstline=67,
+    lastline=94
+]{./../code/dynamic_programming.py}
+
+\lstinputlisting[
+    language=python,
+    caption={Code of function \textit{changed val}, will check whether the value changed some of its elements values or not. },
+    label={code:changed_val},
+    style=cStyle,
+    firstline=106,
+    lastline=110
+]{./../code/dynamic_programming.py}
+
+\section{Dynamic Programming Analysis}
+
+\subsection{Dynamic Programming Analysis }
 
 In this analysis was used two test functions: \textit{sum greater than} and \textit{xor}. This initial analysis is not using regularization.
 
 The Keras' Neural Network performed regular on \textit{sum greater than} function. On the graphs represented by the images from Image \ref{img:greater_cost_no_reg} to Image \ref{img:greater_classification_no_reg}. It is possible to verify that the result is overfitted on the Image \ref{img:greater_classification_no_reg} and the convergence is not so fast on the Image \ref{img:greater_cost_no_reg}.
 
-\begin{figure}
-  \begin{center}
-  \includegraphics[width=2.8in]{./../code/sgz_result/convergence_sgz_l0_0.png}
-  \caption{Convergence of cost function on greater than function test case, when it is not using regularization.}
-  \label{img:greater_cost_no_reg}
-  \end{center}
-\end{figure}
-
-\begin{figure}
-  \begin{center}
-  \includegraphics[width=2.8in]{./../code/sgz_result/dataset_sgz_l0_0.png}
-  \caption{Dataset of greater than function.}
-  \label{img:greater_data_set}
-  \end{center}
-\end{figure}
-
-\begin{figure}
-    \begin{center}
-    \includegraphics[width=2.8in]{./../code/sgz_result/nn_classification_sgz_l0_0.png}
-    \caption{Neural Network Classification on greater than function, when it is not using regularization.}
-    \label{img:greater_classification_no_reg}
-    \end{center}
-\end{figure}
 
 The Neural Network performed regular on \textit{xor} function. On the graphs represented by the images from Image \ref{img:xor_cost_no_reg} to Image \ref{img:xor_classification_no_reg}. It is also possible to see that in this case, it also heaped some overfit causing some distortion and leading to some mistakes on the data set on the graph represented by the Image \ref{img:xor_classification_no_reg}.
 
-\begin{figure}
-  \begin{center}
-  \includegraphics[width=2.8in]{./../code/xor_result/convergence_xor_l0_0.png}
-  \caption{Convergence of cost function on xor function test case, when it is not using regularization.}
-  \label{img:xor_cost_no_reg}
-  \end{center}
-\end{figure}
 
-\begin{figure}
-  \begin{center}
-  \includegraphics[width=2.8in]{./../code/xor_result/dataset_xor_l0_0.png}
-  \caption{Dataset of xor function.}
-  \label{img:xor_data_set}
-  \end{center}
-\end{figure}
-
-\begin{figure}
-    \begin{center}
-    \includegraphics[width=2.8in]{./../code/xor_result/nn_classification_xor_l0_0.png}
-    \caption{Neural Network Classification on xor function, when it is not using regularization.}
-    \label{img:xor_classification_no_reg}
-    \end{center}
-\end{figure}
 
 \subsection{Keras' Neural Network Analysis without regularization}
 
@@ -195,39 +185,10 @@ In this analysis was used the same two test functions: \textit{sum greater than}
 
 The Keras' Neural Network performed well on \textit{sum greater than} function. On the graphs represented by the images from Image \ref{img:greater_cost_reg} to Image \ref{img:greater_classification_reg}. It is possible to verify that the result now is much less overfitted on the Image \ref{img:greater_classification_reg}, it is much softer, and the convergence is now faster on the Image \ref{img:greater_cost_reg}.
 
-\begin{figure}
-  \begin{center}
-  \includegraphics[width=2.8in]{./../code/sgz_result/convergence_sgz_l0_002.png}
-  \caption{Convergence of cost function on greater than function test case, when it is using regularization.}
-  \label{img:greater_cost_reg}
-  \end{center}
-\end{figure}
 
-\begin{figure}
-    \begin{center}
-    \includegraphics[width=2.8in]{./../code/sgz_result/nn_classification_sgz_l0_002.png}
-    \caption{Neural Network Classification on greater than function, when it is using regularization.}
-    \label{img:greater_classification_reg}
-    \end{center}
-\end{figure}
 
 The Neural Network performed well on \textit{xor} function. On the graphs represented by the images from Image \ref{img:xor_cost_reg} to Image \ref{img:xor_classification_reg}. It is also possible to see that in this case, it also heaped much less overfit leading to a much softer image on the graph represented by the Image \ref{img:xor_classification_reg}.
 
-\begin{figure}
-  \begin{center}
-  \includegraphics[width=2.8in]{./../code/xor_result/convergence_xor_l0_002.png}
-  \caption{Convergence of cost function on xor function test case, when it is using regularization.}
-  \label{img:xor_cost_reg}
-  \end{center}
-\end{figure}
-
-\begin{figure}
-    \begin{center}
-    \includegraphics[width=2.8in]{./../code/xor_result/nn_classification_xor_l0_002.png}
-    \caption{Neural Network Classification on xor function, when it is using regularization.}
-    \label{img:xor_classification_reg}
-    \end{center}
-\end{figure}
 
 \subsection{Keras' Neural Network Analysis in Imitation Learning}
 
@@ -237,45 +198,7 @@ It was made using Keras, not using regularization, and using mean squared error.
 
 The result of this Neural Network on the robot movement can be seen on the graphs from Image \ref{img:right_ankle_pitch} to Image \ref{img:right_knee_pitch}.
 
-\begin{figure}
-  \begin{center}
-  \includegraphics[width=2.8in]{./../code/imitation_learning_result/rightAnklePitch.png}
-  \caption{Neural Network's movement imitation of robot's right ankle pitch}
-  \label{img:right_ankle_pitch}
-  \end{center}
-\end{figure}
 
-\begin{figure}
-  \begin{center}
-  \includegraphics[width=2.8in]{./../code/imitation_learning_result/rightAnkleRoll.png}
-  \caption{Neural Network's movement imitation of robot's right ankle roll}
-  \label{img:right_ankle_roll}
-  \end{center}
-\end{figure}
-
-\begin{figure}
-  \begin{center}
-  \includegraphics[width=2.8in]{./../code/imitation_learning_result/rightHipPitch.png}
-  \caption{Neural Network's movement imitation of robot's right Hip pitch}
-  \label{img:right_hip_pitch}
-  \end{center}
-\end{figure}
-
-\begin{figure}
-  \begin{center}
-  \includegraphics[width=2.8in]{./../code/imitation_learning_result/rightHipRoll.png}
-  \caption{Neural Network's movement imitation of robot's right hip roll}
-  \label{img:right_hip_roll}
-  \end{center}
-\end{figure}
-
-\begin{figure}
-  \begin{center}
-  \includegraphics[width=2.8in]{./../code/imitation_learning_result/rightKneePitch.png}
-  \caption{Neural Network's movement imitation of robot's right Knee pitch}
-  \label{img:right_knee_pitch}
-  \end{center}
-\end{figure}
 
 \section {Conclusion}
 
