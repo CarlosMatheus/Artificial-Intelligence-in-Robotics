@@ -1,4 +1,4 @@
-\documentclass[journal]{IEEEtran}
+\documentclass[journal,10pt,onecolumn,draftclsnofoot,]{IEEEtran}
 
 %\usepackage[retainorgcmds]{IEEEtrantools}
 %\usepackage{bibentry}
@@ -20,9 +20,9 @@
 \usepackage{url}
 
 
-% ----------------------------------------------
+% ------------------------------------------------------------------------------
 
-% Definitions of languages: ------------
+% Definitions of languages: ----------------------------------------------------
 \usepackage{listings}
 \lstdefinestyle{cStyle}{
   basicstyle=\scriptsize,
@@ -83,7 +83,7 @@ on $\gamma$ and $\alpha$ ($\gamma = 0.98$ and $\alpha = 0.8$).
 % === KEYWORDS =================================================================
 % ==============================================================================
 \begin{IEEEkeywords}
-    Reinforcement Learning, policy, states
+    Reinforcement Learning, Markov Decision Process, MDP, Dynamic Programming,  policy, states
 \end{IEEEkeywords}
 \end{abstract}
 
@@ -168,43 +168,38 @@ The essence of the implementation is shown from Code \ref{code:policy_iteration}
 
 \section{Dynamic Programming Analysis}
 
-\subsection{Dynamic Programming Analysis }
+\subsection{Dynamic Programming Analysis With $\gamma = 1$ and $\alpha = 1$}
 
-In this analysis was used two test functions: \textit{sum greater than} and \textit{xor}. This initial analysis is not using regularization.
+For this case, the output can be seen on the Code \ref{output1}.
 
-The Keras' Neural Network performed regular on \textit{sum greater than} function. On the graphs represented by the images from Image \ref{img:greater_cost_no_reg} to Image \ref{img:greater_classification_no_reg}. It is possible to verify that the result is overfitted on the Image \ref{img:greater_classification_no_reg} and the convergence is not so fast on the Image \ref{img:greater_cost_no_reg}.
+\lstinputlisting[
+    language=python,
+    caption={Output for \textit{test dynamic programming} for $\gamma = 1$ and $\alpha = 1$ case. },
+    label={output1},
+    style=cStyle,
+]{./../code/output1.txt}
 
+\subsection{Dynamic Programming Analysis With $\gamma = 0.98$ and $\alpha = 0.8$}
 
-The Neural Network performed regular on \textit{xor} function. On the graphs represented by the images from Image \ref{img:xor_cost_no_reg} to Image \ref{img:xor_classification_no_reg}. It is also possible to see that in this case, it also heaped some overfit causing some distortion and leading to some mistakes on the data set on the graph represented by the Image \ref{img:xor_classification_no_reg}.
+For this case, the output can be seen on the Code \ref{output2}.
 
-
-
-\subsection{Keras' Neural Network Analysis without regularization}
-
-In this analysis was used the same two test functions: \textit{sum greater than} and \textit{xor}. But now using regularization $\lambda_{l_2} = 0.002$.
-
-The Keras' Neural Network performed well on \textit{sum greater than} function. On the graphs represented by the images from Image \ref{img:greater_cost_reg} to Image \ref{img:greater_classification_reg}. It is possible to verify that the result now is much less overfitted on the Image \ref{img:greater_classification_reg}, it is much softer, and the convergence is now faster on the Image \ref{img:greater_cost_reg}.
-
-
-
-The Neural Network performed well on \textit{xor} function. On the graphs represented by the images from Image \ref{img:xor_cost_reg} to Image \ref{img:xor_classification_reg}. It is also possible to see that in this case, it also heaped much less overfit leading to a much softer image on the graph represented by the Image \ref{img:xor_classification_reg}.
-
-
-\subsection{Keras' Neural Network Analysis in Imitation Learning}
-
-In order to do the Imitation Learning, it was used the Code \ref{code:imitation} implementation.
-
-It was made using Keras, not using regularization, and using mean squared error.
-
-The result of this Neural Network on the robot movement can be seen on the graphs from Image \ref{img:right_ankle_pitch} to Image \ref{img:right_knee_pitch}.
-
-
+\lstinputlisting[
+    language=python,
+    caption={Output for \textit{test dynamic programming} for $\gamma = 0.98$ and $\alpha = 0.8$ case. },
+    label={output2},
+    style=cStyle,
+]{./../code/output2.txt}
 
 \section {Conclusion}
 
-It was clear, therefore, that the Keras' Neural Network worked as expected. Both test cases (greater than function and xor function) the Neural Network worked as well, with a much better result with regularization, because without regularization the results were overfitted.
+It is clear, therefore, that this experiment exemplifies that \textit{value iteration} algorithm allows in a given world define a value grid that leads to an optimal policy by getting a greedy solution. It also shows that this can be achieved by iterate in \textit{policy itaration}, by vary between evaluating a policy and getting a greedy approach, which leads to an optimal policy much quicker (with fewer iterations) when compared to \textit{value iteration}.
 
-For the Imitation Learning with Keras, the results were good in some cases and very precise in most some cases.
+This paper also shown how policy iteration and value itaration works and how they are affected by the probability of correctly executing the chosen action factor ($\alpha$) and the discount factor($\gamma$).
+
+It was observed that for a deterministic world ($\gamma = 1$ and $\alpha = 1$),
+the learning is sensibly slower, which means that was required much more
+iterations in order to the value converge when compared to a little decrease
+on $\gamma$ and $\alpha$ ($\gamma = 0.98$ and $\alpha = 0.8$), which is as expected for this problem, since this increases the exploration and allows the algorithm find a better solution quicker.
 
 \vfill
 \end{document}
