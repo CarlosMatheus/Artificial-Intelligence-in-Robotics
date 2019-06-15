@@ -1,5 +1,5 @@
 # Fdb version 3
-["pdflatex"] 1560555123 "report.tex" "report.pdf" "report" 1560555125
+["pdflatex"] 1560555604 "report.tex" "report.pdf" "report" 1560555606
   "../code/dynamic_programming.py" 1560453914 8999 5f743017a2b203231b7556265036bb95 ""
   "../code/output1.txt" 1560453412 2625 fb0348b18f6d75bc4fdbdf9f5d600bf3 ""
   "../code/output2.txt" 1560453370 2625 e013dd1a5b1e278e6787122ca9874af9 ""
@@ -85,9 +85,9 @@
   "/usr/local/texlive/2018/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1523934492 2717033 f61a5287d9c22a39a74f1979fe3f905c ""
   "/usr/local/texlive/2018/texmf-var/web2c/pdftex/pdflatex.fmt" 1523934516 4220280 10cab8fbd7c5a7c52aba9917e190d018 ""
   "/usr/local/texlive/2018/texmf.cnf" 1523934483 577 0b39adfd7c93507ff20c9c14c2f1a33f ""
-  "report.aux" 1560555125 2075 493fd46b5746f551894a73cb95b62b5f ""
-  "report.tex" 1560555123 8009 e4cade493454964a89f55c2b13764f44 ""
+  "report.aux" 1560555606 2075 493fd46b5746f551894a73cb95b62b5f ""
+  "report.tex" 1560555604 8006 4b9a00eee97dc3351290e54926584e4b ""
   (generated)
+  "report.aux"
   "report.pdf"
   "report.log"
-  "report.aux"
