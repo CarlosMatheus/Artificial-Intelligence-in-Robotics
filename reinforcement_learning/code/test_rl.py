@@ -78,8 +78,8 @@ alpha = 0.1  # learning rate
 gamma = 0.99  # discount factor
 num_episodes = 1000  # number of episodes used in learning
 num_iterations = 1000  # number of steps per episode
-rl_algorithm = Sarsa(num_states, num_actions, epsilon, alpha, gamma)
-# rl_algorithm = QLearning(num_states, num_actions, epsilon, alpha, gamma)
+# rl_algorithm = Sarsa(num_states, num_actions, epsilon, alpha, gamma)
+rl_algorithm = QLearning(num_states, num_actions, epsilon, alpha, gamma)
 
 for i in range(num_episodes):
     state = np.random.randint(0, num_states)
