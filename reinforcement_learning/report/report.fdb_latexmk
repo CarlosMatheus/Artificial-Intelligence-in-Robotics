@@ -1,7 +1,14 @@
 # Fdb version 3
-["pdflatex"] 1561342156 "report.tex" "report.pdf" "report" 1561342158
+["pdflatex"] 1561344137 "report.tex" "report.pdf" "report" 1561344139
   "../code/reinforcement_learning.py" 1561339408 5381 d71ad7dae1b210898876b2e074e68235 ""
+  "../code/results_q_learning/action_value_table.png" 1561272700 20214 5b6c4ce8fe0201ecdedd3f5a53d341a4 ""
+  "../code/results_q_learning/greedy_policy_table.png" 1561272701 17369 55f4ac76e5ffcc781f94bace0611b933 ""
+  "../code/results_q_learning/line_follower_solution.jpeg" 1561272751 21889 feeacb0d9f9975417bdfcb5667494118 ""
+  "../code/results_q_learning/return_convergence.png" 1561272700 30222 931fdcbd1010c5c1e0db0718d8518772 ""
   "../code/results_q_learning/test_result.txt" 1561339971 464 cb5674277e78752a54a550751711b544 ""
+  "../code/results_sarsa/action_value_table.png" 1561271817 17647 ca845f80655d39a1792dfd85164042d0 ""
+  "../code/results_sarsa/greedy_policy_table.png" 1561271817 17458 88e3271f14501507d147cd65c0115048 ""
+  "../code/results_sarsa/return_convergence.png" 1561271817 69158 05b6378e32f370e49810d19e49665604 ""
   "../code/results_sarsa/test_result.txt" 1561339955 464 48a939e7a2aca85e87392b11821ecc38 ""
   "/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/base/8r.enc" 1480098666 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "/usr/local/texlive/2018/texmf-dist/fonts/map/fontname/texfonts.map" 1511824771 3332 103109f5612ad95229751940c61aada0 ""
@@ -71,9 +78,9 @@
   "/usr/local/texlive/2018/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1523934492 2717033 f61a5287d9c22a39a74f1979fe3f905c ""
   "/usr/local/texlive/2018/texmf-var/web2c/pdftex/pdflatex.fmt" 1523934516 4220280 10cab8fbd7c5a7c52aba9917e190d018 ""
   "/usr/local/texlive/2018/texmf.cnf" 1523934483 577 0b39adfd7c93507ff20c9c14c2f1a33f ""
-  "report.aux" 1561342158 1592 fc1f4e3ed68293ec2d589d4d2ec4f5f6 ""
-  "report.tex" 1561342154 11091 c1398c854f7ff15fc8dfa5eddc7f4d18 ""
+  "report.aux" 1561344139 2923 a5ad5f1811d42ec9914b6430d3ac488c ""
+  "report.tex" 1561344137 11487 a2afbf989b8592713634880fd0fd0f34 ""
   (generated)
+  "report.aux"
   "report.pdf"
   "report.log"
-  "report.aux"

@@ -58,7 +58,7 @@
   \\Prof. Marcos~Ricardo~Omena~de~Albuquerque~Máximo}
 
 % The paper headers
-\markboth{INSTITUTO TECNOLÓGICO DE AERONÁUTICA, May~2019
+\markboth{INSTITUTO TECNOLÓGICO DE AERONÁUTICA, June~2019
 }{Reinforcement Learning}
 
 % ====================================================================
@@ -103,7 +103,7 @@ Temporal difference (TD) learning refers to a class of model-free reinforcement 
 
 While Monte Carlo methods only adjust their estimates once the final outcome is known, TD methods adjust predictions to match later, more accurate, predictions about the future before the final outcome is known. This is a form of bootstrapping, as illustrated with the following example:
 
-''Suppose you wish to predict the weather for Saturday, and you have some model that predicts Saturday's weather, given the weather of each day in the week. In the standard case, you would wait until Saturday and then adjust all your models. However, when it is, for example, Friday, you should have a pretty good idea of what the weather would be on Saturday – and thus be able to change, say, Saturday's model before Saturday arrives.``
+``Suppose you wish to predict the weather for Saturday, and you have some model that predicts Saturday's weather, given the weather of each day in the week. In the standard case, you would wait until Saturday and then adjust all your models. However, when it is, for example, Friday, you should have a pretty good idea of what the weather would be on Saturday – and thus be able to change, say, Saturday's model before Saturday arrives.''
 
 Temporal difference methods are related to the temporal difference model of animal learning.
 
@@ -118,7 +118,7 @@ Both Techniques implementation can be seen on the file \textit{reinforcement\_le
 \lstinputlisting[
     language=python,
     caption={Code of both \textit{Temporal Difference Learning} techniques: \textit{SARSA} and \textit{Q-Learning}},
-    label={coderl},
+    label={code:rl},
     style=cStyle,
     firstline=4,
     lastline=163
@@ -134,7 +134,7 @@ Both Techniques implementation can be seen on the file \textit{reinforcement\_le
 
 \section{Temporal Difference Techniques Analysis}
 
-\subsection{Initial test Analysis}
+\subsection{Initial Test Analysis}
 
 \subsubsection{SARSA}
 
@@ -168,92 +168,87 @@ In this test was observed a faster converge of \textit{Q-Learning} technique, in
 
 It was observed as well that the \textit{Q-Learning} algorithm is, as well, slightly faster than the \textit{SARSA}, in a way that more iterations are completed in \textit{Q-Learning} in a given time.
 
-\subsection{LeNet-5 Convolutional Neural Network Analysis}
+\subsection{Car Test Analysis}
 
-On Image \ref{img:classification_one} and \ref{img:classification_two} it is possible to see two examples of correctly classified test cases.
+\subsubsection{SARSA}
+In order to initially evalute \textit{SARSA} technique, it was run the file \textit{main.py} setted to test \textit{SARSA}.
 
-% \begin{figure}
-%   \begin{center}
-%   \includegraphics[width=2.8in]{./../code/test_image_6007.png}
-%   \caption{Example of a correctly classified test case, was expected 7 and was predicted as 7.}
-%   \label{img:classification_one}
-%   \end{center}
-% \end{figure}
-%
-% \begin{figure}
-%   \begin{center}
-%   \includegraphics[width=2.8in]{./../code/test_image_5530.png}
-%   \caption{Example of a misclassified test case, was expected 8 and was predicted as 8.}
-%   \label{img:classification_two}
-%   \end{center}
-% \end{figure}
+With this setup it was obtained the output represented by the graphs from Image \ref{img:sarsa_action} to Image \ref{img:sarsa_convergence}.
 
-% \lstinputlisting[
-%     language=python,
-%     caption={Output for \textit{evaluate lenet5}},
-%     label={code:eval_lenet5_out},
-%     style=cStyle,
-% ]{./../code/output.txt}
+\begin{figure}
+  \begin{center}
+  \includegraphics[width=2.8in]{./../code/results_sarsa/action_value_table.png}
+  \caption{\textit{SARSA} Action Value Table at the end of more 700 iterations.}
+  \label{img:sarsa_action}
+  \end{center}
+\end{figure}
 
-As said before, in 1.3\% of the test cases ware misclassified. In Image \ref{img:misclassification_one} and Image \ref{img:misclassification_two} is possible to see two examples of test cases of misclassification.
+\begin{figure}
+  \begin{center}
+  \includegraphics[width=2.8in]{./../code/results_sarsa/greedy_policy_table.png}
+  \caption{\textit{SARSA} Greedy Polucy Table at the end of more 700 iterations.}
+  \label{img:sarsa_greedy}
+  \end{center}
+\end{figure}
 
-% \begin{figure}
-%   \begin{center}
-%   \includegraphics[width=2.8in]{./../code/misclassified_image_259.png}
-%   \caption{Example of a misclassified test case, was expected 6 and was predicted as 0.}
-%   \label{img:misclassification_one}
-%   \end{center}
-% \end{figure}
-%
-% \begin{figure}
-%   \begin{center}
-%   \includegraphics[width=2.8in]{./../code/misclassified_image_340.png}
-%   \caption{Example of a misclassified test case, was expected 5 and was predicted as 3.}
-%   \label{img:misclassification_two}
-%   \end{center}
-% \end{figure}
+\begin{figure}
+  \begin{center}
+  \includegraphics[width=2.8in]{./../code/results_sarsa/return_convergence.png}
+  \caption{\textit{SARSA} Return converge graph with more 700 iterations.}
+  \label{img:sarsa_convergence}
+  \end{center}
+\end{figure}
 
-\subsection{LeNet-5 Convolutional Neural Network Analysis on TensorBoard}
+With this experiment and observing the Image \ref{img:sarsa_convergence}, it is possible to see that the \textit{SARSA} technique has a slow convergence having a high variance even with hundreds of iterations already, what can be good to prevent bias.
 
-In \textit{Tensor Board} it was possible to see that occured a fast decrase on loss function and a rapidly accuracy to converge in more than 98\% of acuracy. On Image \ref{img:accuracy} and Image \ref{img:loss_func} it is possible to see the graphs representing the converge of \textit{accuracy} and \textit{loss function} respectively.
+\subsubsection{Q-Learning}
+In order to initially evalute \textit{Q-Learning} technique, it was run the file \textit{main.py} setted to test \textit{Q-Learning}.
 
-% \begin{figure}
-%   \begin{center}
-%   \includegraphics[width=2.8in]{./../code/tensorboard/tensor_board_accuracy_graph.png}
-%   \caption{Accuracy Graph generated by TensorBoard}
-%   \label{img:accuracy}
-%   \end{center}
-% \end{figure}
-%
-% \begin{figure}
-%   \begin{center}
-%   \includegraphics[width=2.8in]{./../code/tensorboard/tensor_board_loss_graph.png}
-%   \caption{Loss Function Graph generated by TensorBoard}
-%   \label{img:loss_func}
-%   \end{center}
-% \end{figure}
+With this setup it was obtained the output represented by the graphs from Image \ref{img:qlearning_action} to Image \ref{img:qlearning_convergence}.
 
-TensorBoard also provided an overview of the Neural Network format, this is denoted on Image \ref{img:tensorboard_main} and Image \ref{img:tensorboard_aux}.
+\begin{figure}
+  \begin{center}
+  \includegraphics[width=2.8in]{./../code/results_q_learning/action_value_table.png}
+  \caption{\textit{Q-Learning} Action Value Table at the end of more 700 iterations.}
+  \label{img:qlearning_action}
+  \end{center}
+\end{figure}
 
-% \begin{figure}
-%   \begin{center}
-%   \includegraphics[width=2.8in]{./../code/tensorboard/tensor_board_main_graph.png}
-%   \caption{TensorBoard Main Graph.}
-%   \label{img:tensorboard_main}
-%   \end{center}
-% \end{figure}
-%
-% \begin{figure}
-%   \begin{center}
-%   \includegraphics[width=2.8in]{./../code/tensorboard/tensor_board_auxiliary_nodes.png}
-%   \caption{TensorBoard Auxiliary Nodes.}
-%   \label{img:tensorboard_aux}
-%   \end{center}
-% \end{figure}
+\begin{figure}
+  \begin{center}
+  \includegraphics[width=2.8in]{./../code/results_q_learning/greedy_policy_table.png}
+  \caption{\textit{Q-Learning} Greedy Polucy Table at the end of more 700 iterations.}
+  \label{img:qlearning_greedy}
+  \end{center}
+\end{figure}
+
+\begin{figure}
+  \begin{center}
+  \includegraphics[width=2.8in]{./../code/results_q_learning/return_convergence.png}
+  \caption{\textit{Q-Learning} Return converge graph with more 700 iterations.}
+  \label{img:qlearning_convergence}
+  \end{center}
+\end{figure}
+
+With this experiment and observing the Image \ref{img:qlearning_convergence}, it is possible to see that the \textit{Q-Learning} technique has a faster convergence when compared with \textit{SARSA} having a low variance with time, what this is good because it learns fast a good approach, but it can have a higher bias.
+
+In fact, \textit{Q-Learning} has a so high learning rate that at about 10\% of the number of iterations of \textit{SARSA} it was perform already better, this is, at iteration 70 \textit{Q-Learning} was performing better than \textit{SARSA} at iteration 700.
+
+At the end, \textit{Q-Learning} was with a very smooth approach. It can be seen in Image \ref{img:qlearning_solution}.
+
+\begin{figure}
+  \begin{center}
+  \includegraphics[width=2.8in]{./../code/results_q_learning/line_follower_solution.jpeg}
+  \caption{\textit{Q-Learning} solution after more 700 iterations.}
+  \label{img:qlearning_solution}
+  \end{center}
+\end{figure}
 
 \section {Conclusion}
 
-It was clear, therefore, that the Convolutional Neural Network worked as expected. The number prediction was very accurate having 98.7\% of accuracy on the data set.
+It was clear, therefore, that both implementation worked as expected. The \textit{Q-Learning} having a faster learning, converging to a local maximum with much less iteration than the \textit{SARSA} algorithm.
+
+This makes \textit{Q-Learning} having a low variance but it might have a higher bias. While \textit{SARSA} have a higher viriance with a lower bias.
 
 \vfill
 \end{document}

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.4.16)  23 JUN 2019 23:09
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.4.16)  23 JUN 2019 23:42
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -348,11 +348,7 @@ Package grfext Info: Graphics extension search list:
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 ))
 \c@lstlisting=\count124
-
-
-LaTeX Warning: Reference `code:rl' on page 1 undefined on input line 114.
-
-(/usr/local/texlive/2018/texmf-dist/tex/latex/listings/lstlang1.sty
+ (/usr/local/texlive/2018/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2015/06/04 1.6 listings language file
 ) (./../code/reinforcement_learning.py
 LaTeX Font Info:    External font `cmex10' loaded for size
@@ -372,50 +368,58 @@ File: omsptm.fd
 LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <7> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 147.
 ) (./../code/results_sarsa/test_result.txt) (./../code/results_q_learning/test_result.txt [2])
+<./../code/results_sarsa/action_value_table.png, id=14, 462.528pt x 346.896pt>
+File: ./../code/results_sarsa/action_value_table.png Graphic file (type png)
+<use ./../code/results_sarsa/action_value_table.png>
+Package pdftex.def Info: ./../code/results_sarsa/action_value_table.png  used on input line 180.
+(pdftex.def)             Requested size: 202.35622pt x 151.76662pt.
+<./../code/results_sarsa/greedy_policy_table.png, id=16, 462.528pt x 346.896pt>
+File: ./../code/results_sarsa/greedy_policy_table.png Graphic file (type png)
+<use ./../code/results_sarsa/greedy_policy_table.png>
+Package pdftex.def Info: ./../code/results_sarsa/greedy_policy_table.png  used on input line 188.
+(pdftex.def)             Requested size: 202.35622pt x 151.76662pt.
+<./../code/results_sarsa/return_convergence.png, id=17, 462.528pt x 346.896pt>
+File: ./../code/results_sarsa/return_convergence.png Graphic file (type png)
+<use ./../code/results_sarsa/return_convergence.png>
+Package pdftex.def Info: ./../code/results_sarsa/return_convergence.png  used on input line 196.
+(pdftex.def)             Requested size: 202.35622pt x 151.76662pt.
+<./../code/results_q_learning/action_value_table.png, id=18, 462.528pt x 346.896pt>
+File: ./../code/results_q_learning/action_value_table.png Graphic file (type png)
+<use ./../code/results_q_learning/action_value_table.png>
+Package pdftex.def Info: ./../code/results_q_learning/action_value_table.png  used on input line 211.
+(pdftex.def)             Requested size: 202.35622pt x 151.76662pt.
+<./../code/results_q_learning/greedy_policy_table.png, id=19, 462.528pt x 346.896pt>
+File: ./../code/results_q_learning/greedy_policy_table.png Graphic file (type png)
+<use ./../code/results_q_learning/greedy_policy_table.png>
+Package pdftex.def Info: ./../code/results_q_learning/greedy_policy_table.png  used on input line 219.
+(pdftex.def)             Requested size: 202.35622pt x 151.76662pt.
+<./../code/results_q_learning/return_convergence.png, id=20, 462.528pt x 346.896pt>
+File: ./../code/results_q_learning/return_convergence.png Graphic file (type png)
+<use ./../code/results_q_learning/return_convergence.png>
+Package pdftex.def Info: ./../code/results_q_learning/return_convergence.png  used on input line 227.
+(pdftex.def)             Requested size: 202.35622pt x 151.76662pt.
+ [3 <./../code/results_sarsa/action_value_table.png> <./../code/results_sarsa/greedy_policy_table.png> <./../code/results_sarsa/return_convergence.png> <./../code/results_q_learning/action_value_table.png> <./../code/results_q_learning/greedy_policy_table.png>]
+<./../code/results_q_learning/line_follower_solution.jpeg, id=29, 803.0pt x 602.25pt>
+File: ./../code/results_q_learning/line_follower_solution.jpeg Graphic file (type jpg)
+<use ./../code/results_q_learning/line_follower_solution.jpeg>
+Package pdftex.def Info: ./../code/results_q_learning/line_follower_solution.jpeg  used on input line 241.
+(pdftex.def)             Requested size: 202.35622pt x 151.76596pt.
+ [4
 
-LaTeX Warning: Reference `img:classification_one' on page 3 undefined on input line 173.
-
-
-LaTeX Warning: Reference `img:classification_two' on page 3 undefined on input line 173.
-
-
-LaTeX Warning: Reference `img:misclassification_one' on page 3 undefined on input line 198.
-
-
-LaTeX Warning: Reference `img:misclassification_two' on page 3 undefined on input line 198.
-
-
-LaTeX Warning: Reference `img:accuracy' on page 3 undefined on input line 218.
-
-
-LaTeX Warning: Reference `img:loss_func' on page 3 undefined on input line 218.
-
-
-LaTeX Warning: Reference `img:tensorboard_main' on page 3 undefined on input line 236.
-
-
-LaTeX Warning: Reference `img:tensorboard_aux' on page 3 undefined on input line 236.
-
-[3
-
-] (./report.aux)
-
-LaTeX Warning: There were undefined references.
-
- ) 
+ <./../code/results_q_learning/return_convergence.png> <./../code/results_q_learning/line_follower_solution.jpeg>] (./report.aux) ) 
 Here is how much of TeX's memory you used:
- 5867 strings out of 492649
- 82976 string characters out of 6129622
- 687304 words of memory out of 5000000
- 9661 multiletter control sequences out of 15000+600000
- 42165 words of font info for 72 fonts, out of 8000000 for 9000
+ 5898 strings out of 492649
+ 84585 string characters out of 6129622
+ 687328 words of memory out of 5000000
+ 9687 multiletter control sequences out of 15000+600000
+ 41058 words of font info for 71 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  41i,7n,43p,460b,1881s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on report.pdf (3 pages, 79825 bytes).
+Output written on report.pdf (4 pages, 265980 bytes).
 PDF statistics:
- 35 PDF objects out of 1000 (max. 8388607)
- 24 compressed objects within 1 object stream
+ 52 PDF objects out of 1000 (max. 8388607)
+ 27 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 36 words of extra memory for PDF output out of 10000 (max. 10000000)
 
