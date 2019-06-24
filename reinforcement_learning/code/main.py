@@ -17,9 +17,8 @@ def configure_rl_algorithm():
     epsilon = 0.05
     alpha = 0.1
     gamma = 0.99
-    # Todo: comment/uncomment the lines below to select the desired algorithm
-    rl_algorithm = Sarsa(num_states, num_actions, epsilon, alpha, gamma)
-    # rl_algorithm = QLearning(num_states, num_actions, epsilon, alpha, gamma)
+    # rl_algorithm = Sarsa(num_states, num_actions, epsilon, alpha, gamma)
+    rl_algorithm = QLearning(num_states, num_actions, epsilon, alpha, gamma)
     return rl_algorithm
 
 
