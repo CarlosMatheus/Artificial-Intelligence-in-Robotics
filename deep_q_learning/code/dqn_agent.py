@@ -46,14 +46,41 @@ class DQNAgent:
         :return: action-value neural network.
         :rtype: Keras' model.
         """
-        raise NotImplementedError('You need to implement the neural network model.')  # Remove this line
+        # raise NotImplementedError('You need to implement the neural network model.')  # Remove this line
         # Todo: Uncomment the lines below
-        # model = models.Sequential()
         # Todo: implement Keras' model
-        # model.compile(loss=losses.mse,
-        #               optimizer=optimizers.Adam(lr=self.learning_rate))
-        # model.summary()
-        # return model
+
+        model = models.Sequential()
+
+        # 1 layer
+        num_neurons = 24
+        model.add(layers.Dense(
+            units=num_neurons,
+            activation=activations.relu)
+        )
+
+        # 2 layer
+        num_neurons = 24
+        model.add(layers.Dense(
+            units=num_neurons,
+            activation=activations.relu)
+        )
+
+        # 3 layer
+        num_neurons = self.state_size
+        model.add(layers.Dense(
+            units=num_neurons,
+            activation=activations.linear)
+        )
+
+        model.compile(
+            loss=losses.mse,
+            optimizer=optimizers.Adam(lr=self.learning_rate)
+        )
+
+        model.summary()
+
+        return model
 
     def act(self, state):
         """
