@@ -111,8 +111,8 @@ The technique implementation can be seen on the file \textit{dqn\_agent} and on 
 
 \lstinputlisting[
     language=python,
-    caption={Code of the method \textit{make_model}, that will crate the Neural Network}
-    label={code:dqn}
+    caption={Code of the method \textit{make\_model}, that will crate the Neural Network},
+    label={code:dqn},
     style=cStyle,
     firstline=42,
     lastline=86
@@ -120,8 +120,8 @@ The technique implementation can be seen on the file \textit{dqn\_agent} and on 
 
 \lstinputlisting[
     language=python,
-    caption={Code of the method \textit{act} that will choose a $\epsilon$-greedy action.}
-    label={code:act}
+    caption={Code of the method \textit{act} that will choose a $\epsilon$-greedy action.},
+    label={code:act},
     style=cStyle,
     firstline=86,
     lastline=103
@@ -129,128 +129,60 @@ The technique implementation can be seen on the file \textit{dqn\_agent} and on 
 
 \lstinputlisting[
     language=python,
-    caption={Code that implements the reward for a given state and next_state}
-    label={code:reward}
+    caption={Code that implements the reward for a given state and next\_state},
+    label={code:reward},
     style=cStyle
 ]{./../code/utils.py}
 
-\section{Temporal Difference Techniques Analysis}
+\section{Deep Q-Learning Analysis}
 
-\subsection{Initial Test Analysis}
+\subsection{Initial Training}
 
-\subsubsection{SARSA}
+In order to train the model, it was used the \textit{dqn\_training}.
 
-In order to initially evalute \textit{SARSA} technique, it was run the file \textit{test\_rl.py} setted to test \textit{SARSA}.
-
-With this setup it was obtained the output represented on the Code \ref{code:sarsa}.
-
-\lstinputlisting[
-    language=python,
-    caption={Output of \textit{SARSA} test, It is denoted the Action-value Table and the Greedy policy learnt},
-    label={code:sarsa},
-    style=cStyle,
-]{./../code/results_sarsa/test_result.txt}
-
-In this test was observed a slow converge of \textit{SARSA} in a way that running this same test multiple times might result um some Greedy policy slightly differents.
-
-\subsubsection{Q-Learning}
-
-In order to initially evaluate \textit{Q-Learning} technique, it was run the file \textit{test\_rl.py} setted to test \textit{Q-Learning}.
-
-With this setup it was obtained the output represented on the Code \ref{code:qlearning}.
-
-\lstinputlisting[
-    language=python,
-    caption={Output of \textit{Q-Learning} test, It is denoted the Action-value Table and the Greedy policy learnt},
-    label={code:qlearning},
-    style=cStyle,
-]{./../code/results_q_learning/test_result.txt}
-
-In this test was observed a faster converge of \textit{Q-Learning} technique, in a way that it is less frequent than \textit{SARSA} to get a variation on the Greedy policy by the end of the test.
-
-It was observed as well that the \textit{Q-Learning} algorithm is, as well, slightly faster than the \textit{SARSA}, in a way that more iterations are completed in \textit{Q-Learning} in a given time.
-
-\subsection{Car Test Analysis}
-
-\subsubsection{SARSA}
-In order to initially evalute \textit{SARSA} technique, it was run the file \textit{main.py} setted to test \textit{SARSA}.
-
-With this setup it was obtained the output represented by the graphs from Image \ref{img:sarsa_action} to Image \ref{img:sarsa_convergence}.
+With this, it was obteined the graph represented on the Figure \ref{fig:train} that is the reward per training episode.
 
 \begin{figure}
   \begin{center}
-  \includegraphics[width=2.8in]{./../code/results_sarsa/action_value_table.png}
-  \caption{\textit{SARSA} Action Value Table at the end of more 700 iterations.}
-  \label{img:sarsa_action}
+  \includegraphics[width=2.8in]{./../code/output/first_train.png}
+  \caption{Reward per training episode.}
+  \label{fig:train}
+  \end{center}
+\end{figure}
+
+As it is observed, the learning was fast, in way that after the 50th trainging the car was almost ways clibing the montain, and after the 100th it always climbed the mountain.
+
+\subsection{Evaluating the Trained Model}
+
+In order to evaluate the trained model it was used the script \textit{evaluate\_dqn.py}.
+
+With it, was obtained the graphs represented on Figure \ref{fig:evaluate} and on Figure \ref{fig:policy}.
+
+\begin{figure}
+  \begin{center}
+  \includegraphics[width=2.8in]{./../code/output/dqn_evaluation.png}
+  \caption{Reward per evaluation episode.}
+  \label{fig:evaluate}
   \end{center}
 \end{figure}
 
 \begin{figure}
   \begin{center}
-  \includegraphics[width=2.8in]{./../code/results_sarsa/greedy_policy_table.png}
-  \caption{\textit{SARSA} Greedy Polucy Table at the end of more 700 iterations.}
-  \label{img:sarsa_greedy}
+  \includegraphics[width=2.8in]{./../code/output/agent_decision.png}
+  \caption{Final Agent Policy.}
+  \label{fig:policy}
   \end{center}
 \end{figure}
 
-\begin{figure}
-  \begin{center}
-  \includegraphics[width=2.8in]{./../code/results_sarsa/return_convergence.png}
-  \caption{\textit{SARSA} Return converge graph with more 700 iterations.}
-  \label{img:sarsa_convergence}
-  \end{center}
-\end{figure}
+It was observed that the convergency was good, the evaluation seen on Figure \ref{fig:evaluate} show that the returned reward was stable during the 30 tests.
 
-With this experiment and observing the Image \ref{img:sarsa_convergence}, it is possible to see that the \textit{SARSA} technique has a slow convergence having a high variance even with hundreds of iterations already, what can be good to prevent bias.
-
-\subsubsection{Q-Learning}
-In order to initially evalute \textit{Q-Learning} technique, it was run the file \textit{main.py} setted to test \textit{Q-Learning}.
-
-With this setup it was obtained the output represented by the graphs from Image \ref{img:qlearning_action} to Image \ref{img:qlearning_convergence}.
-
-\begin{figure}
-  \begin{center}
-  \includegraphics[width=2.8in]{./../code/results_q_learning/action_value_table.png}
-  \caption{\textit{Q-Learning} Action Value Table at the end of more 700 iterations.}
-  \label{img:qlearning_action}
-  \end{center}
-\end{figure}
-
-\begin{figure}
-  \begin{center}
-  \includegraphics[width=2.8in]{./../code/results_q_learning/greedy_policy_table.png}
-  \caption{\textit{Q-Learning} Greedy Polucy Table at the end of more 700 iterations.}
-  \label{img:qlearning_greedy}
-  \end{center}
-\end{figure}
-
-\begin{figure}
-  \begin{center}
-  \includegraphics[width=2.8in]{./../code/results_q_learning/return_convergence.png}
-  \caption{\textit{Q-Learning} Return converge graph with more 700 iterations.}
-  \label{img:qlearning_convergence}
-  \end{center}
-\end{figure}
-
-With this experiment and observing the Image \ref{img:qlearning_convergence}, it is possible to see that the \textit{Q-Learning} technique has a faster convergence when compared with \textit{SARSA} having a low variance with time, what this is good because it learns fast a good approach, but it can have a higher bias.
-
-In fact, \textit{Q-Learning} has a so high learning rate that at about 10\% of the number of iterations of \textit{SARSA} it was perform already better, this is, at iteration 70 \textit{Q-Learning} was performing better than \textit{SARSA} at iteration 700.
-
-At the end, \textit{Q-Learning} was with a very smooth approach. It can be seen in Image \ref{img:qlearning_solution}.
-
-\begin{figure}
-  \begin{center}
-  \includegraphics[width=2.8in]{./../code/results_q_learning/line_follower_solution.jpeg}
-  \caption{\textit{Q-Learning} solution after more 700 iterations.}
-  \label{img:qlearning_solution}
-  \end{center}
-\end{figure}
+With the Figure \ref{fig:policy} is clear the actions taken per region, it also has soft transitions with well determined actions regions, what makes sense to a well converged policy.
 
 \section {Conclusion}
 
-It was clear, therefore, that both implementation worked as expected. The \textit{Q-Learning} having a faster learning, converging to a local maximum with much less iteration than the \textit{SARSA} algorithm.
+Is was clear, therefore, that the implementation worked as expected. The \textit{Deep Q-Learning} had a fast learning and good convergency, what garanteed a good solution to Montaion Car problem.
 
-This makes \textit{Q-Learning} having a low variance but it might have a higher bias. While \textit{SARSA} have a higher viriance with a lower bias.
+At the end of the learning the success rate was near 100\% at the training, having 100\% success rate at evaluation. Thus it is possible to conclude the algorithm solved the problem.
 
 \vfill
 \end{document}

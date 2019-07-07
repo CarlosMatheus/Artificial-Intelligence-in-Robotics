@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.4.16)  7 JUL 2019 15:39
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.4.16)  7 JUL 2019 17:00
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -348,315 +348,67 @@ Package grfext Info: Graphics extension search list:
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 ))
 \c@lstlisting=\count124
-
-
-LaTeX Warning: Reference `code:dqn' on page 1 undefined on input line 110.
-
-
-LaTeX Warning: Reference `code:reward' on page 1 undefined on input line 110.
-
-(/usr/local/texlive/2018/texmf-dist/tex/latex/listings/lstlang1.sty
+ (/usr/local/texlive/2018/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2015/06/04 1.6 listings language file
 )
 Underfull \vbox (badness 1097) has occurred while \output is active []
 
-
-./report.tex:119: Missing $ inserted.
-<inserted text> 
-                $
-l.119 ]{./../code/dqn_agent.py}
-                               
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 119.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 119.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 119.
-./report.tex:119: Extra }, or forgotten $.
-<recently read> \egroup 
-                        
-l.119 ]{./../code/dqn_agent.py}
-                               
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-./report.tex:119: Extra }, or forgotten $.
-\lst@caption ...hat will crate the Neural Network}
-                                                   label
-l.119 ]{./../code/dqn_agent.py}
-                               
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-./report.tex:119: Extra }, or forgotten $.
-\@makecaption ....}\nobreakspace \nobreakspace #2}
-                                                  \ifdim \wd \@tempboxa >\hs...
-l.119 ]{./../code/dqn_agent.py}
-                               
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-./report.tex:119: Missing $ inserted.
-<inserted text> 
-                $
-l.119 ]{./../code/dqn_agent.py}
-                               
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-./report.tex:119: Missing } inserted.
-<inserted text> 
-                }
-l.119 ]{./../code/dqn_agent.py}
-                               
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-./report.tex:119: Missing } inserted.
-<inserted text> 
-                }
-l.119 ]{./../code/dqn_agent.py}
-                               
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-./report.tex:119: Missing } inserted.
-<inserted text> 
-                }
-l.119 ]{./../code/dqn_agent.py}
-                               
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-(./../code/dqn_agent.py
+ (./../code/dqn_agent.py
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <7> on input line 44.
-
-Overfull \hbox (132.0039pt too wide) in paragraph at lines 44--45
-[][][][][][][][][][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (18.00275pt too wide) in paragraph at lines 45--46
-[][][][][][][][][][][][][][][] 
- []
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 44.
+) (./../code/dqn_agent.py [1{/usr/local/texlive/2018/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
 
 
-Overfull \hbox (12.00269pt too wide) in paragraph at lines 55--56
-[][][][][][][][][] 
- []
-
-
-Overfull \hbox (12.00269pt too wide) in paragraph at lines 64--65
-[][][][][][][][][] 
- []
-
-
-Overfull \hbox (18.00275pt too wide) in paragraph at lines 72--73
-[][][][][][][][] 
- []
-
-
-Overfull \hbox (108.00366pt too wide) in paragraph at lines 81--82
-[][][][][][][][][][][][][][][] 
- []
-
-) [1{/usr/local/texlive/2018/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
-
-
-] (./../code/dqn_agent.py
-Overfull \hbox (90.00348pt too wide) in paragraph at lines 88--90
-[][][][][][][][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (78.00336pt too wide) in paragraph at lines 91--92
-[][][][][][][][][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (24.0028pt too wide) in paragraph at lines 96--98
-[][][][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (60.00317pt too wide) in paragraph at lines 98--99
-[][][][][][][][][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (174.00433pt too wide) in paragraph at lines 99--100
-[][][][][][][][][][][][][][][][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (462.00726pt too wide) in paragraph at lines 101--103
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
- []
-
-)
-./report.tex:135: Missing $ inserted.
-<inserted text> 
-                $
-l.135 ]{./../code/utils.py}
-                           
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-./report.tex:135: Extra }, or forgotten $.
-\lst@caption ... for a given state and next_state}
-                                                   label
-l.135 ]{./../code/utils.py}
-                           
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-./report.tex:135: Extra }, or forgotten $.
-\@makecaption ....}\nobreakspace \nobreakspace #2}
-                                                  \ifdim \wd \@tempboxa >\hs...
-l.135 ]{./../code/utils.py}
-                           
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-./report.tex:135: Missing $ inserted.
-<inserted text> 
-                $
-l.135 ]{./../code/utils.py}
-                           
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-./report.tex:135: Missing } inserted.
-<inserted text> 
-                }
-l.135 ]{./../code/utils.py}
-                           
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-./report.tex:135: Missing } inserted.
-<inserted text> 
-                }
-l.135 ]{./../code/utils.py}
-                           
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-(./../code/utils.py
-Overfull \hbox (210.0047pt too wide) in paragraph at lines 4--5
-[][][][][][][][][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (264.00525pt too wide) in paragraph at lines 6--8
-[][][][][][][][][][][][][][][][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (54.00311pt too wide) in paragraph at lines 9--10
-[][][][][][][][][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (84.00342pt too wide) in paragraph at lines 15--16
-[][][][][][][][][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (138.00397pt too wide) in paragraph at lines 16--17
-[][][][][][][][][][][][][][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (42.00299pt too wide) in paragraph at lines 18--19
-[][][][][][][][][][][][][][][][][] 
- []
-
+])
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <8> on input line 128.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 128.
+ (./../code/utils.py
 LaTeX Font Info:    Try loading font information for OMS+ptm on input line 30.
-(/usr/local/texlive/2018/texmf-dist/tex/latex/psnfss/omsptm.fd
+ (/usr/local/texlive/2018/texmf-dist/tex/latex/psnfss/omsptm.fd
 File: omsptm.fd 
 )
-LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <10> not available
+LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <7> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 30.
-
-Overfull \hbox (138.00397pt too wide) in paragraph at lines 30--32
-[][][][][][][][][][][][][][][][][][][][][][][] 
- []
-
 LaTeX Font Info:    Try loading font information for OML+ptm on input line 32.
-(/usr/local/texlive/2018/texmf-dist/tex/latex/psnfss/omlptm.fd
+ (/usr/local/texlive/2018/texmf-dist/tex/latex/psnfss/omlptm.fd
 File: omlptm.fd 
 )
-LaTeX Font Info:    Font shape `OML/ptm/m/n' in size <10> not available
+LaTeX Font Info:    Font shape `OML/ptm/m/n' in size <7> not available
 (Font)              Font shape `OML/cmm/m/it' tried instead on input line 32.
 )
-Underfull \vbox (badness 3724) has occurred while \output is active []
-
-
-
-LaTeX Warning: Reference `code:sarsa' on page 2 undefined on input line 145.
-
-
-! Package Listings Error: File `./../code/results_sarsa/test_result(.txt)' not found.
-
-Type X to quit or <RETURN> to proceed,
-or enter new name. (Default extension: txt)
-
-Enter file name: 
-./report.tex:152: Emergency stop.
-<read *> 
-         
-l.152 ]{./../code/results_sarsa/test_result.txt}
-                                                ^^M
-*** (cannot \read from terminal in nonstop modes)
-
- 
+<./../code/output/first_train.png, id=11, 571.13374pt x 427.5975pt>
+File: ./../code/output/first_train.png Graphic file (type png)
+<use ./../code/output/first_train.png>
+Package pdftex.def Info: ./../code/output/first_train.png  used on input line 147.
+(pdftex.def)             Requested size: 202.35622pt x 151.5013pt.
+<./../code/output/dqn_evaluation.png, id=13, 462.528pt x 346.896pt>
+File: ./../code/output/dqn_evaluation.png Graphic file (type png)
+<use ./../code/output/dqn_evaluation.png>
+Package pdftex.def Info: ./../code/output/dqn_evaluation.png  used on input line 163.
+(pdftex.def)             Requested size: 202.35622pt x 151.76662pt.
+<./../code/output/agent_decision.png, id=14, 462.528pt x 346.896pt>
+File: ./../code/output/agent_decision.png Graphic file (type png)
+<use ./../code/output/agent_decision.png>
+Package pdftex.def Info: ./../code/output/agent_decision.png  used on input line 171.
+(pdftex.def)             Requested size: 202.35622pt x 151.76662pt.
+ [2 <./../code/output/first_train.png> <./../code/output/dqn_evaluation.png> <./../code/output/agent_decision.png>] (./report.aux) ) 
 Here is how much of TeX's memory you used:
- 5886 strings out of 492649
- 83043 string characters out of 6129622
- 238010 words of memory out of 5000000
- 9676 multiletter control sequences out of 15000+600000
- 40609 words of font info for 75 fonts, out of 8000000 for 9000
+ 5907 strings out of 492649
+ 83610 string characters out of 6129622
+ 395028 words of memory out of 5000000
+ 9691 multiletter control sequences out of 15000+600000
+ 42881 words of font info for 77 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 41i,6n,43p,542b,1302s stack positions out of 5000i,500n,10000p,200000b,80000s
-./report.tex:152:  ==> Fatal error occurred, no output PDF file produced!
+ 41i,7n,43p,542b,1733s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
+Output written on report.pdf (2 pages, 282144 bytes).
+PDF statistics:
+ 47 PDF objects out of 1000 (max. 8388607)
+ 29 compressed objects within 1 object stream
+ 0 named destinations out of 1000 (max. 500000)
+ 16 words of extra memory for PDF output out of 10000 (max. 10000000)
+
