@@ -42,43 +42,44 @@ class DQNAgent:
     def make_model(self):
         """
         Makes the action-value neural network model using Keras.
-
         :return: action-value neural network.
         :rtype: Keras' model.
         """
-        # raise NotImplementedError('You need to implement the neural network model.')  # Remove this line
-        # Todo: Uncomment the lines below
-        # Todo: implement Keras' model
 
         model = models.Sequential()
 
         # 1 layer
         num_neurons = 24
         model.add(layers.Dense(
-            units=num_neurons,
-            activation=activations.relu)
+                units=num_neurons,
+                activation=activations.relu,
+                input_dim=self.state_size,
+            ),
         )
 
         # 2 layer
         num_neurons = 24
         model.add(layers.Dense(
-            units=num_neurons,
-            activation=activations.relu)
+                units=num_neurons,
+                activation=activations.relu,
+            ),
         )
 
         # 3 layer
-        num_neurons = self.state_size
+        num_neurons = self.action_size
         model.add(layers.Dense(
-            units=num_neurons,
-            activation=activations.linear)
+                units=num_neurons,
+                activation=activations.linear
+            ),
         )
+
+        model.build(input_shape=(1, 2))
+        model.summary()
 
         model.compile(
             loss=losses.mse,
             optimizer=optimizers.Adam(lr=self.learning_rate)
         )
-
-        model.summary()
 
         return model
 
@@ -92,12 +93,15 @@ class DQNAgent:
         :rtype: int.
         """
 
-        actions = self.model.predict(state)
+        actions = self.model.predict(state)[0]
 
         if np.random.binomial(1, self.epsilon) == 1:
             action = np.random.choice([a for a in range(len(actions))])
         else:
-            action = np.random.choice([action_ for action_, value_ in enumerate(actions) if value_ == np.max(actions)])
+            try:
+                action = np.random.choice([action_ for action_, value_ in enumerate(actions) if value_ == np.max(actions)])
+            except:
+                print('1')
 
         # Todo: test this code
         # return 1  # Todo: change this line
