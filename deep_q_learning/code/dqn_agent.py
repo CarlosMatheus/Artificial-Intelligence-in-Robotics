@@ -64,8 +64,17 @@ class DQNAgent:
         :return: chosen action.
         :rtype: int.
         """
-        # Todo: implement epsilon-greey action selection.
-        return 1  # Todo: change this line
+
+        actions = self.model.predict(state)
+
+        if np.random.binomial(1, self.epsilon) == 1:
+            action = np.random.choice([a for a in range(len(actions))])
+        else:
+            action = np.random.choice([action_ for action_, value_ in enumerate(actions) if value_ == np.max(actions)])
+
+        # Todo: test this code
+        # return 1  # Todo: change this line
+        return action
 
     def append_experience(self, state, action, reward, next_state, done):
         """
